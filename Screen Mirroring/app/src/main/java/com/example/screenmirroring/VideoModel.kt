@@ -4,5 +4,6 @@ import android.net.Uri
 
 data class VideoModel(
     val id: Long,
-    val contentUri: Uri
+    val contentUri: Uri,
+    val folderName: String
 )

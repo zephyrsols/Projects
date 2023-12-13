@@ -4,9 +4,14 @@ import android.content.ContentUris
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.screenmirroring.databinding.ActivityVideosBinding
+import java.io.File
 
 
 class Videos : AppCompatActivity() {
@@ -34,18 +39,37 @@ class Videos : AppCompatActivity() {
 
     //function to Initialize Recycler View
     private fun initializeRecyclerView() {
-        // Get the list of videos from the device
         val videoList = getVideoList()
-        // Initialize the adapter with the video list
         videoAdapter = VideoAdapter(this, videoList)
-        // Set the adapter to the RecyclerView
         recyclerView.adapter = videoAdapter
+
+        val folderCounts = videoList.groupBy { it.folderName }
+            .map { "${it.key} (${it.value.size})" }
+
+        val spinnerAdapter = ArrayAdapter(this, R.layout.spinner_item_layout, folderCounts)
+
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        val folderSpinner = findViewById<Spinner>(R.id.videosSpinner)
+        folderSpinner.adapter = spinnerAdapter
+
+        folderSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View?, position: Int, id: Long) {
+                val selectedFolder = videoList[position].folderName
+                val filteredVideoList = videoList.filter { it.folderName == selectedFolder }
+                videoAdapter.updateList(filteredVideoList)
+            }
+
+            override fun onNothingSelected(parentView: AdapterView<*>) {
+                // Do nothing
+            }
+        }
     }
 
     private fun getVideoList(): List<VideoModel> {
         val videoList = mutableListOf<VideoModel>()
         val projection = arrayOf(
-            MediaStore.Video.Media._ID, MediaStore.Video.Media.DISPLAY_NAME
+            MediaStore.Video.Media._ID, MediaStore.Video.Media.DISPLAY_NAME, MediaStore.Video.Media.DATA
         )
 
         val cursor = contentResolver.query(
@@ -55,18 +79,20 @@ class Videos : AppCompatActivity() {
         cursor?.use {
             val idColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media._ID)
             val displayNameColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media.DISPLAY_NAME)
+            val dataColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
 
             while (it.moveToNext()) {
                 val id = it.getLong(idColumn)
                 val contentUri = ContentUris.withAppendedId(
                     MediaStore.Video.Media.EXTERNAL_CONTENT_URI, id
                 )
-                videoList.add(VideoModel(id, contentUri))
+                val folderPath = it.getString(dataColumn)
+                val folderName = File(folderPath).parentFile?.name ?: "Unknown Folder"
+
+                videoList.add(VideoModel(id, contentUri, folderName))
             }
         }
 
         return videoList
     }
-
-
 }

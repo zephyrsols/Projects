@@ -9,16 +9,18 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class VideoAdapter(private val context: Context, private val videoList: List<VideoModel>) :
+class VideoAdapter(private val context: Context, private val originalVideoList: List<VideoModel>) :
     RecyclerView.Adapter<VideoAdapter.ViewHolder>() {
 
+    private var videoList = originalVideoList.toList()
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val thumbnailImageView: ImageView = view.findViewById(R.id.thumbnailImageView)
+        val thumbnailImageView: ImageView = view.findViewById(R.id.recyclerImage1)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_video_thumbnail, parent, false)
+            .inflate(R.layout.recycler_items, parent, false)
         return ViewHolder(view)
     }
 
@@ -40,5 +42,10 @@ class VideoAdapter(private val context: Context, private val videoList: List<Vid
 
     override fun getItemCount(): Int {
         return videoList.size
+    }
+
+    fun updateList(newList: List<VideoModel>) {
+        videoList = newList.toList()
+        notifyDataSetChanged()
     }
 }

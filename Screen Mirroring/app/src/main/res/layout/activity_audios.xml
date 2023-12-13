@@ -50,25 +50,22 @@
             android:contentDescription="@string/cast"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/allAudioBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:background="@drawable/custom_button"
-        android:text="@string/all_audios_btn"
-        android:textAllCaps="false"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:ignore="DuplicateSpeakableTextCheck" />
 
+    <Spinner
+        android:id="@+id/audioSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:popupBackground="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleViewAudio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/allAudioBtn"
+        app:layout_constraintTop_toBottomOf="@id/audioSpinner"
         tools:listitem="@layout/audio_items"
         tools:itemCount="12"/>
 

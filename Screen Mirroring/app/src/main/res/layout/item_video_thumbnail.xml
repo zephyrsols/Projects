@@ -8,6 +8,6 @@ android:padding="8dp">
 <ImageView
     android:id="@+id/thumbnailImageView"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="@dimen/_120sdp"
     android:scaleType="centerCrop" />
 </LinearLayout>
