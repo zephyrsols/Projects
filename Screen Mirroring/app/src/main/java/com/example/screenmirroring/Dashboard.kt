@@ -8,19 +8,33 @@ import android.os.Bundle
 import android.provider.Settings
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.screenmirroring.databinding.ActivityDashboardBinding
 
 class Dashboard : AppCompatActivity() {
     //declaring  binding
     private lateinit var binding: ActivityDashboardBinding
-
+    companion object {
+        private const val REQUEST_READ_STORAGE_PERMISSION = 100
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        if (ContextCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.READ_EXTERNAL_STORAGE
+            ) != android.content.pm.PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                REQUEST_READ_STORAGE_PERMISSION
+            )
+        }
 
         //video card layout with onclick listener
         binding.videoLayout.setOnClickListener {
