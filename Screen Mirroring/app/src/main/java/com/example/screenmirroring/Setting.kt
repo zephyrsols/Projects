@@ -22,6 +22,7 @@ class Setting : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        changeStatusBarColor(R.color.black, window,resources,theme)
 
         //Go back image at top bar
         binding.backImage.setOnClickListener {

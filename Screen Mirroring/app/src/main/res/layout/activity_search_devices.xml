@@ -34,7 +34,7 @@
             android:layout_height="@dimen/_20sdp"
             android:text="@string/title_search_devices"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

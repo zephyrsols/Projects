@@ -13,6 +13,7 @@ class SearchDevices : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchDevicesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        changeStatusBarColor(R.color.black, window,resources,theme)
 
         binding.backImage.setOnClickListener{
             finish()

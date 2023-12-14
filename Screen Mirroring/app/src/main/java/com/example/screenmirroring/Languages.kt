@@ -11,6 +11,7 @@ class Languages : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLanguagesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        changeStatusBarColor(R.color.black, window,resources,theme)
 
         binding.backImage.setOnClickListener{
             finish()

@@ -5,13 +5,18 @@ import android.content.ContentResolver
 import android.content.ContentUris
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
+import android.content.res.Resources.Theme
 import android.database.Cursor
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -29,6 +34,7 @@ class Audios : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAudiosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        changeStatusBarColor(R.color.black, window,resources,theme)
 
         binding.backImage.setOnClickListener {
             finish()

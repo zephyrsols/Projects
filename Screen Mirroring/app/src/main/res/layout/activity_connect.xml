@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_connect"
             android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,16 +133,15 @@
         android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="#3BA3ED"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/custom_button"
+        android:backgroundTint="#3BA3ED"
         android:text="@string/start_btn"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="9dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
