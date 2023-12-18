@@ -58,5 +58,10 @@
     <string name="screen_mirroring">Screen Mirroring</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="_1_make_sure_your_phone_and_tv_are_connected_to_the_same_wifi_network">1. Make sure your phone and TV are connected to the same WIFI network</string>
+    <string name="_2_click_to_select_screen_mirroring_feature">2. Click to select Screen Mirroring feature.</string>
+    <string name="_3_here_you_can_select_how_to_you_to_see_details_of_how_to_connect">3. Here you can select How to you to see details of how to connect.</string>
+    <string name="_4_click_the_start_button_to_start_using_the_feature">4. Click the START button to start using the feature.</string>
+    <string name="_5_connection_successful_now_your_phone_screen_is_displayed_on_the_tv">5. Connection successful. Now your phone screen is displayed on the TV</string>
 
 </resources>

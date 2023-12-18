@@ -120,7 +120,7 @@ class Dashboard : AppCompatActivity() {
                     false
                 }
                 R.id.navHowToUse -> {
-                    Toast.makeText(this," How to Use",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this,HowToUse::class.java))
                     false
                 }
                 R.id.navRatUs -> {
