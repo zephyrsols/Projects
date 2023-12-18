@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/backImage"
-            android:layout_width="@dimen/_24sdp"
-            android:layout_height="@dimen/_32sdp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:layout_marginStart="16dp"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,11 +51,11 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/english_flag" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,11 +79,11 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/hidi_flag" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,11 +107,11 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/spanish_flag" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,16 +135,16 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/urdu_flag" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/german"
+            android:text="@string/urdu"
             android:textColor="@color/white"
             android:textSize="@dimen/_18sdp" />
     </LinearLayout>
@@ -163,11 +163,11 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/arabic_flag" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -191,16 +191,16 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/russain_flag" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/russian"
+            android:text="@string/russain"
             android:textColor="@color/white"
             android:textSize="@dimen/_18sdp" />
     </LinearLayout>
@@ -219,16 +219,43 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/language" />
+            android:src="@drawable/japanese_flag" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/japanees"
+            android:text="@string/japanese"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/chineseLayout"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/custom_rectangle"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/japaneesLayout"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/chinese_flag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chinese"
             android:textColor="@color/white"
             android:textSize="@dimen/_18sdp" />
     </LinearLayout>

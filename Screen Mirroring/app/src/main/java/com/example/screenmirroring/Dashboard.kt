@@ -3,7 +3,6 @@ package com.example.screenmirroring
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.ComponentName
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -27,8 +26,8 @@ import com.google.android.material.navigation.NavigationView
 class Dashboard : AppCompatActivity() {
     //declaring  binding
     private lateinit var binding: ActivityDashboardBinding
-    lateinit var drawerLayout: DrawerLayout
-    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
     private lateinit var navigationView: NavigationView
 
@@ -36,7 +35,6 @@ class Dashboard : AppCompatActivity() {
         private const val REQUEST_READ_STORAGE_PERMISSION = 100
         private const val READ_MEDIA_VIDEO = 100
         private const val READ_MEDIA_AUDIO = 100
-
     }
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -195,30 +193,30 @@ class Dashboard : AppCompatActivity() {
     }
 
 
-    private fun openWirelessDisplaySettings() {
-        val intent = Intent()
-
-        // For Samsung devices with SmartView settings
-        if (Build.MANUFACTURER.equals("samsung", ignoreCase = true)) {
-            // Use the package and class name for SmartView settings activity
-            intent.action = android.provider.Settings.ACTION_CAST_SETTINGS
-            Toast.makeText(this, "a", Toast.LENGTH_SHORT).show()
-        } else {
-            // For other devices, you may try using the standard action for wireless display
-            intent.action = Settings.ACTION_WIRELESS_SETTINGS
-
-        }
-
-        try {
-            startActivity(intent)
-        } catch (e: Exception) {
-            intent.action = Settings.ACTION_WIRELESS_SETTINGS
-            startActivity(intent)
-            Toast.makeText(this, e.message.toString(), Toast.LENGTH_SHORT).show()
-            // Handle the exception if the SmartView settings activity is not found
-            // or if there is an issue launching the activity
-        }
-    }
+//    private fun openWirelessDisplaySettings() {
+//        val intent = Intent()
+//
+//        // For Samsung devices with SmartView settings
+//        if (Build.MANUFACTURER.equals("samsung", ignoreCase = true)) {
+//            // Use the package and class name for SmartView settings activity
+//            intent.action = android.provider.Settings.ACTION_CAST_SETTINGS
+//            Toast.makeText(this, "a", Toast.LENGTH_SHORT).show()
+//        } else {
+//            // For other devices, you may try using the standard action for wireless display
+//            intent.action = Settings.ACTION_WIRELESS_SETTINGS
+//
+//        }
+//
+//        try {
+//            startActivity(intent)
+//        } catch (e: Exception) {
+//            intent.action = Settings.ACTION_WIRELESS_SETTINGS
+//            startActivity(intent)
+//            Toast.makeText(this, e.message.toString(), Toast.LENGTH_SHORT).show()
+//            // Handle the exception if the SmartView settings activity is not found
+//            // or if there is an issue launching the activity
+//        }
+//    }
 
     @Deprecated("Deprecated in Java")
     @SuppressLint("MissingSuperCall")
@@ -228,7 +226,6 @@ class Dashboard : AppCompatActivity() {
         } else {
             showExitDialog()
         }
-
     }
 
     @SuppressLint("MissingInflatedId", "SetTextI18n")
@@ -243,14 +240,13 @@ class Dashboard : AppCompatActivity() {
 
         builder.setView(view)
 
-        builder.setPositiveButton("Yes") { dialog, which ->
+        builder.setPositiveButton("Yes") { _, _ ->
             finish()
         }
-        builder.setNegativeButton("No") { dialog, which ->
+        builder.setNegativeButton("No") { dialog, _ ->
             dialog.dismiss()
         }
         builder.setCancelable(false)
         builder.show()
     }
-
 }

@@ -28,12 +28,6 @@
     <string name="submit_button">SUBMIT</string>
     <string name="title_videos">Videos</string>
     <string name="title_images">Images</string>
-    <string name="japanees">Japanese</string>
-    <string name="russian">Russian</string>
-    <string name="arabic">Arabic</string>
-    <string name="german">German</string>
-    <string name="spanish">Spanish</string>
-    <string name="hindi">Hindi</string>
     <string name="english">English</string>
     <string name="title_change_language">Change Language</string>
     <string name="title_audios">Audios</string>
@@ -63,5 +57,12 @@
     <string name="_3_here_you_can_select_how_to_you_to_see_details_of_how_to_connect">3. Here you can select How to you to see details of how to connect.</string>
     <string name="_4_click_the_start_button_to_start_using_the_feature">4. Click the START button to start using the feature.</string>
     <string name="_5_connection_successful_now_your_phone_screen_is_displayed_on_the_tv">5. Connection successful. Now your phone screen is displayed on the TV</string>
+    <string name="chinese">日本語</string>
+    <string name="japanese">日本語</string>
+    <string name="russain">Русский</string>
+    <string name="arabic">لعربية</string>
+    <string name="urdu">اُردو</string>
+    <string name="spanish">Español</string>
+    <string name="hindi">ہندی</string>
 
 </resources>
