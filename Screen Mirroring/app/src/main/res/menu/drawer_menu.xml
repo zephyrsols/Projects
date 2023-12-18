@@ -8,7 +8,8 @@
         <item
             android:id="@+id/navLanguage"
             android:icon="@drawable/language"
-            android:title="@string/change_language"/>
+            android:title="@string/change_language"
+            />
         <item
             android:id="@+id/navHowToUse"
             android:icon="@drawable/question"

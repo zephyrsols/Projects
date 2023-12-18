@@ -10,19 +10,28 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
-import androidx.core.app.DialogCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.screenmirroring.databinding.ActivityDashboardBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.navigation.NavigationView
 
 class Dashboard : AppCompatActivity() {
     //declaring  binding
     private lateinit var binding: ActivityDashboardBinding
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var toolbar: Toolbar
+    private lateinit var navigationView: NavigationView
+
     companion object {
         private const val REQUEST_READ_STORAGE_PERMISSION = 100
         private const val READ_MEDIA_VIDEO = 100
@@ -35,11 +44,11 @@ class Dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
 
         //permission check
-        if(Build.VERSION.SDK_INT >= 32){
+        if (Build.VERSION.SDK_INT >= 32) {
             if (ContextCompat.checkSelfPermission(
                     this,
                     android.Manifest.permission.READ_MEDIA_VIDEO
@@ -62,7 +71,7 @@ class Dashboard : AppCompatActivity() {
                     READ_MEDIA_AUDIO
                 )
             }
-        }else{
+        } else {
             if (ContextCompat.checkSelfPermission(
                     this,
                     android.Manifest.permission.READ_EXTERNAL_STORAGE
@@ -76,6 +85,67 @@ class Dashboard : AppCompatActivity() {
             }
         }
 
+
+        drawerLayout = findViewById(R.id.drawerLayout)
+        toolbar = findViewById(R.id.toolbar)
+        navigationView = binding.navView
+
+        setSupportActionBar(toolbar)
+
+        val toggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.open,
+            R.string.close
+        )
+        toggle.isDrawerIndicatorEnabled = false
+        toolbar.setNavigationIcon(R.drawable.drawer)
+        toolbar.setNavigationOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
+            }
+        }
+
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        navigationView.setNavigationItemSelectedListener {
+            // Handle item click events here
+            when (it.itemId) {
+                R.id.navLanguage -> {
+                    startActivity(Intent(this,Languages::class.java))
+                    false
+                }
+                R.id.navHowToUse -> {
+                    Toast.makeText(this," How to Use",Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.navRatUs -> {
+                    Toast.makeText(this,"Rate Us",Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.navFeedback -> {
+                    startActivity(Intent(this,Feedback::class.java))
+                    false
+                }
+                R.id.navMoreApps -> {
+                    Toast.makeText(this,"More Apps",Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.navShareApp -> {
+                    Toast.makeText(this,"Share App",Toast.LENGTH_SHORT).show()
+                    false
+                }
+                R.id.navPrivacyPolicy -> {
+                    Toast.makeText(this,"Privacy",Toast.LENGTH_SHORT).show()
+                    false
+                }
+                else -> false
+            }
+        }
 
 
         //video card layout with onclick listener
@@ -106,16 +176,24 @@ class Dashboard : AppCompatActivity() {
 
         }
 
-        //wifi image at top bar
-        binding.screenWifiImg.setOnClickListener {
-            startActivity(Intent(Settings.ACTION_CAST_SETTINGS))
-        }
-
-        //drawer
-        binding.drawerImg.setOnClickListener {
-            startActivity(Intent(this@Dashboard, Setting::class.java))
-        }
+//        //wifi image at top bar
+//        binding.screenWifiImg.setOnClickListener {
+//            startActivity(Intent(Settings.ACTION_CAST_SETTINGS))
+//        }
+//
+//        //drawer
+//        binding.drawerImg.setOnClickListener {
+//            startActivity(Intent(this@Dashboard, Setting::class.java))
+//        }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
     private fun openWirelessDisplaySettings() {
         val intent = Intent()
@@ -145,8 +223,14 @@ class Dashboard : AppCompatActivity() {
     @Deprecated("Deprecated in Java")
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
-        showExitDialog()
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            showExitDialog()
+        }
+
     }
+
     @SuppressLint("MissingInflatedId", "SetTextI18n")
     private fun showExitDialog() {
         val builder = AlertDialog.Builder(this, R.style.BlackDialog)
