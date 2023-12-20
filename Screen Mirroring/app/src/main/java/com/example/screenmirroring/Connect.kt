@@ -13,7 +13,7 @@ class Connect : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityConnectBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
         //Go back image at top bar
         binding.backImage.setOnClickListener {

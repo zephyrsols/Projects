@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(this@MainActivity,Dashboard::class.java))
+                startActivity(Intent(this@MainActivity,onBoarding::class.java))
                 finish()
             }
         }
