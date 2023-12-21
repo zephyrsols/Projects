@@ -93,6 +93,8 @@
     <string name="open">खोलें</string>
     <string name="close">बंद करें</string>
 
+    //audio items
+    <string name="audio_title">audio title</string>
 
     //Languages
     <string name="chinese">日本語</string>

@@ -107,7 +107,7 @@ class Audios : AppCompatActivity() {
                 val selectedFolderInfo = folderInfoList[position]
                 val audioList = getAudioFilesForFolder(selectedFolderInfo.first)
 
-                audioAdapter = AudioAdapter(audioList)
+                audioAdapter = AudioAdapter(this@Audios,audioList)
                 audioAdapter?.onItemClickListener = object : AudioAdapter.OnItemClickListener {
                     override fun onItemClick(audio: AudioModel) {
                         // Handle click on the audio item (open externally)

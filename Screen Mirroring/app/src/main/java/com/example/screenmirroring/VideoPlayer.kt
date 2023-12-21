@@ -24,7 +24,7 @@ class VideoPlayer : AppCompatActivity() {
             finish()
         }
 
-        var path = intent.getStringExtra("path")
+        val path = intent.getStringExtra("path")
         Toast.makeText(this, path, Toast.LENGTH_SHORT).show()
         videoView = binding.videoView
 
