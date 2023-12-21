@@ -10,7 +10,7 @@ import android.view.Window
 import android.view.WindowManager
 import com.example.screenmirroring.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

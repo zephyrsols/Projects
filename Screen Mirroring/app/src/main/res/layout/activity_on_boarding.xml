@@ -20,7 +20,8 @@
             android:src="@drawable/science"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/mirroring" />
 
         <TextView
             android:id="@+id/textContent"
@@ -116,7 +117,7 @@
             android:textColor="@color/white"
             android:layout_marginEnd="@dimen/_40sdp"
             android:layout_marginStart="@dimen/_40sdp"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -129,7 +130,7 @@
             android:gravity="center"
             android:text="@string/skip"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 />

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -35,7 +36,9 @@ class VideoAdapter(private val context: Context, private val originalVideoList: 
             // Handle click event, e.g., open video in a player
             // You can use an Intent to open the video in the default player or a custom player
             // Example: Open in default player
-            val intent = Intent(Intent.ACTION_VIEW, video.contentUri)
+
+            val intent = Intent(context, VideoPlayer::class.java)
+            intent.putExtra("path", video.contentUri.toString())
             context.startActivity(intent)
         }
     }

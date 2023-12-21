@@ -23,7 +23,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.example.screenmirroring.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
 
-class Dashboard : AppCompatActivity() {
+class Dashboard : BaseActivity() {
     //declaring  binding
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var drawerLayout: DrawerLayout

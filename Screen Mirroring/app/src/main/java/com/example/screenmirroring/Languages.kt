@@ -2,9 +2,10 @@ package com.example.screenmirroring
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.screenmirroring.databinding.ActivityLanguagesBinding
 
-class Languages : AppCompatActivity() {
+class Languages : BaseActivity() {
     //binding variable
     private lateinit var binding: ActivityLanguagesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,16 +19,38 @@ class Languages : AppCompatActivity() {
         }
 
         //languages layout listeners
-        binding.englishLayout.setOnClickListener { }
-        binding.hindiLayout.setOnClickListener { }
-        binding.spanishLayout.setOnClickListener {
-
+        binding.englishLayout.setOnClickListener {
+            changeLanguage("en")
         }
-        binding.germanLayout.setOnClickListener { }
-        binding.arabicLayout.setOnClickListener { }
-        binding.russianLayout.setOnClickListener { }
-        binding.japaneesLayout.setOnClickListener { }
-
+        binding.hindiLayout.setOnClickListener {
+            changeLanguage("hi")
+            Toast.makeText(this,"hindi",Toast.LENGTH_SHORT).show()
+        }
+        binding.spanishLayout.setOnClickListener {
+            changeLanguage("es")
+        }
+        binding.urduLayout.setOnClickListener {
+            changeLanguage("ur")
+        }
+        binding.arabicLayout.setOnClickListener {
+            changeLanguage("ar")
+        }
+        binding.russianLayout.setOnClickListener {
+            changeLanguage("ru")
+        }
+        binding.japaneesLayout.setOnClickListener {
+            changeLanguage("ja")
+        }
+        binding.chineseLayout.setOnClickListener {
+            changeLanguage("ch")
+        }
 
     }
+    private fun changeLanguage(languageCode: String) {
+
+        saveSelectedLanguage(languageCode)
+        updateLocale()
+        recreate()
+    }
+
 }

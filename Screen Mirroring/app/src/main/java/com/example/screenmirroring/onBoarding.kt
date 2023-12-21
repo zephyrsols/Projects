@@ -42,6 +42,7 @@ class onBoarding : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        changeStatusBarColor(R.color.black, window,resources,theme)
 
         textContent = binding.textContent
         onBoardingImg = binding.onBoardingImg
