@@ -1,11 +1,10 @@
 package com.example.screenmirroring
 
-import android.R.id
-import android.net.Uri
 import android.os.Bundle
-import android.widget.MediaController
+import android.widget.ImageButton
+import android.widget.SeekBar
 import android.widget.TextView
-import android.widget.Toast
+import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.screenmirroring.databinding.ActivityVideoPlayerBinding
@@ -14,46 +13,93 @@ import com.example.screenmirroring.databinding.ActivityVideoPlayerBinding
 class VideoPlayer : AppCompatActivity() {
     lateinit var binding: ActivityVideoPlayerBinding
     lateinit var videoView: VideoView
-    var mediaController: MediaController? = null
     lateinit var fileNameText: TextView
+    lateinit var pauseBtn: ImageButton
+    lateinit var playPauseBtn: ImageButton
+    lateinit var seekBar: SeekBar
+    private lateinit var videoRunnable: Runnable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVideoPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
         //Go back image at top bar
         binding.backImage.setOnClickListener {
+            videoView.stopPlayback()
+            seekBar.removeCallbacks(videoRunnable)
             finish()
         }
 
-        val uriPath = ("android.resource://"
-                + packageName + "/" + 214)
-        Toast.makeText(this,uriPath.toString(),Toast.LENGTH_SHORT).show()
+        //Play & Pause Butotn Start
+        playPauseBtn = binding.playPauseBtn
+        playPauseBtn.setOnClickListener {
+            if (videoView.isPlaying) {
+                playPauseBtn.setImageResource(R.drawable.play)
+                videoView.pause()
+            } else {
+                playPauseBtn.setImageResource(R.drawable.pause)
+                videoView.start()
+            }
+        }
+        //Play & Pause Butotn End
+
+
+
+
+        //Video Player Start
         val path = intent.getStringExtra("path")
-        Toast.makeText(this, path, Toast.LENGTH_SHORT).show()
         videoView = binding.videoView
-
-        if (mediaController == null) {
-            mediaController = MediaController(this)
-
+        videoView.setVideoPath(path)
+        videoView.setOnPreparedListener { mediaPlayer ->
+            val duration = mediaPlayer.duration
+            seekBar.max = 100
+            // Update SeekBar every second
+            val updateInterval = 1000
+            videoRunnable = object : Runnable {
+                override fun run() {
+                    val currentPosition = mediaPlayer.currentPosition
+                    val progress = currentPosition * 100 / duration
+                    seekBar.progress = progress
+                    // Schedule the next update
+                    seekBar.postDelayed(this, updateInterval.toLong())
+                }
+            }
+            seekBar.postDelayed(videoRunnable, updateInterval.toLong())
         }
-
-        videoView.setMediaController(mediaController)
-
-        val uri = Uri.parse(uriPath)
-        videoView.setVideoURI(uri)
         videoView.start()
-
         videoView.setOnCompletionListener {
-            Toast.makeText(this, "Video End!", Toast.LENGTH_SHORT).show()
-            finish()
+            playPauseBtn.setImageResource(R.drawable.play)
         }
+        //Video Player End
 
-        videoView.setOnErrorListener { mp, what, extra ->
-            Toast.makeText(this, "An Error Occured While Playing Video", Toast.LENGTH_SHORT).show()
-            false
-        }
+        // SeekBar Listener Start
+        seekBar = binding.seekBar
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                if (fromUser) {
+                    // Seek the video to the selected position
+                    val newPosition = progress * videoView.duration / 100
+                    videoView.seekTo(newPosition)
+                }
+            }
 
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                // Not needed for this example
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                // Not needed for this example
+            }
+        })
+        // SeekBar Listener End
+    }
+
+    override fun onBackPressed() {
+        // Stop the video playback and remove callbacks
+        videoView.stopPlayback()
+        seekBar.removeCallbacks(videoRunnable)
+        super.onBackPressed()
     }
 }
