@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 
 // FolderAdapter.kt
-// FolderAdapter.kt
+
 class FolderAdapter(context: Context, private val folderInfoList: List<Pair<String, Int>>) :
     ArrayAdapter<Pair<String, Int>>(context, R.layout.spinner_item_layout, folderInfoList) {
 

@@ -58,7 +58,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/_1_make_sure_your_phone_and_tv_are_connected_to_the_same_wifi_network"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +80,7 @@
             android:layout_marginStart="@dimen/_13sdp"
             android:text="@string/_2_click_to_select_screen_mirroring_feature"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +102,7 @@
             android:layout_marginStart="@dimen/_13sdp"
             android:text="@string/_3_here_you_can_select_how_to_you_to_see_details_of_how_to_connect"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -124,7 +124,7 @@
             android:layout_marginStart="@dimen/_13sdp"
             android:text="@string/_4_click_the_start_button_to_start_using_the_feature"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -147,7 +147,7 @@
             android:layout_marginStart="@dimen/_13sdp"
             android:text="@string/_5_connection_successful_now_your_phone_screen_is_displayed_on_the_tv"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
 

@@ -25,7 +25,7 @@ class Videos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityVideosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
         //Go back image at top bar
         binding.backImage.setOnClickListener {
@@ -44,33 +44,43 @@ class Videos : AppCompatActivity() {
         videoAdapter = VideoAdapter(this, videoList)
         recyclerView.adapter = videoAdapter
 
+        val folderSpinner = findViewById<Spinner>(R.id.videosSpinner)
         val folderCounts = videoList.groupBy { it.folderName }
             .map { "${it.key} (${it.value.size})" }
 
-        val spinnerAdapter = ArrayAdapter(this, R.layout.spinner_item_layout, folderCounts)
+        val spinnerAdapter = CustomArrayAdapter(this, android.R.layout.simple_spinner_item, folderCounts)
+        spinnerAdapter.setDropDownViewResource(R.layout.spinner_item_layout)
 
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        val folderSpinner = findViewById<Spinner>(R.id.videosSpinner)
         folderSpinner.adapter = spinnerAdapter
 
         folderSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View?, position: Int, id: Long) {
-                val selectedFolder = videoList[position].folderName
-                val filteredVideoList = videoList.filter { it.folderName == selectedFolder }
+            override fun onItemSelected(
+                parentView: AdapterView<*>,
+                selectedItemView: View?,
+                position: Int,
+                id: Long
+            ) {
+                // Handle item selection
+                val selectedFolder = folderSpinner.selectedItem.toString()
+                val folderName = selectedFolder.substringBefore(" (").trim()
+                val filteredVideoList = videoList.filter { it.folderName == folderName }
                 videoAdapter.updateList(filteredVideoList)
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>) {
-                // Do nothing
+                // Provide your implementation for onNothingSelected here
+                // This method is called when no item is selected in the spinner
             }
         }
+
     }
 
     private fun getVideoList(): List<VideoModel> {
         val videoList = mutableListOf<VideoModel>()
         val projection = arrayOf(
-            MediaStore.Video.Media._ID, MediaStore.Video.Media.DISPLAY_NAME, MediaStore.Video.Media.DATA
+            MediaStore.Video.Media._ID,
+            MediaStore.Video.Media.DISPLAY_NAME,
+            MediaStore.Video.Media.DATA
         )
 
         val cursor = contentResolver.query(
@@ -79,7 +89,8 @@ class Videos : AppCompatActivity() {
 
         cursor?.use {
             val idColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media._ID)
-            val displayNameColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media.DISPLAY_NAME)
+            val displayNameColumn =
+                it.getColumnIndexOrThrow(MediaStore.Video.Media.DISPLAY_NAME)
             val dataColumn = it.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
 
             while (it.moveToNext()) {

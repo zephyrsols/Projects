@@ -2,6 +2,7 @@ package com.example.screenmirroring
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.screenmirroring.databinding.ActivityOnBoardingBinding
 
-class onBoarding : AppCompatActivity() {
+class onBoarding : BaseActivity() {
 
     lateinit var binding: ActivityOnBoardingBinding
     lateinit var textContent: TextView
@@ -54,6 +55,7 @@ class onBoarding : AppCompatActivity() {
         card6 = binding.card6
         mainCard = binding.mainCard
         button = binding.nextBtn
+
 
         card1.visibility = View.GONE
         card2.visibility = View.GONE

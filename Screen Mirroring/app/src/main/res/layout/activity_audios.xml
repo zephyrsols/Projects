@@ -38,22 +38,12 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TextSizeCheck" />
 
-        <ImageView
-            android:id="@+id/shareScreenAudio"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="@dimen/_9sdp"
-            android:src="@drawable/outline_screen_share_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/cast"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <Spinner
         android:id="@+id/audioSpinner"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/_50sdp"
         android:popupBackground="@color/black"
         android:layout_margin="@dimen/_10sdp"

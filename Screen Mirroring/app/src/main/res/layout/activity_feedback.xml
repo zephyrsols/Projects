@@ -18,11 +18,11 @@
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginStart="16dp"
+            android:contentDescription="@string/back"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/back" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -34,8 +34,10 @@
             android:textSize="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.486"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -43,42 +45,51 @@
         android:id="@+id/writeFeedbackText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/write_feedback"
-        android:textSize="@dimen/_20sdp"
-        android:textColor="@color/white"
         android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/write_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topBar" />
 
-    <EditText
-        android:id="@+id/feedbackEditText"
-        android:layout_width="@dimen/_290sdp"
+    <LinearLayout
+        android:id="@+id/feedbackEditTextLayout"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/custom_rectangle"
-        android:hint="@string/write_your_feedback"
-        android:textColorHint="#505050"
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
         android:padding="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintTop_toBottomOf="@id/writeFeedbackText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:inputType="text"
-        android:autofillHints="Feedback" />
+        app:layout_constraintTop_toBottomOf="@id/writeFeedbackText">
+
+        <EditText
+            android:id="@+id/feedbackEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Feedback"
+            android:background="@android:color/transparent"
+            android:gravity="start"
+            android:hint="@string/write_your_feedback"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="#505050" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/uploadSSText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/upload_screenshot"
-        android:textSize="@dimen/_20sdp"
-        android:textColor="@color/white"
         android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/upload_screenshot"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feedbackEditText" />
+        app:layout_constraintTop_toBottomOf="@id/feedbackEditTextLayout" />
 
     <RelativeLayout
         android:id="@+id/uploadImage"
@@ -91,9 +102,9 @@
         app:layout_constraintTop_toBottomOf="@id/uploadSSText">
 
         <TextView
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@string/plus"
             android:textColor="@color/white"
             android:textSize="@dimen/_25sdp" />
@@ -104,13 +115,11 @@
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/custom_button"
         android:text="@string/submit_button"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 

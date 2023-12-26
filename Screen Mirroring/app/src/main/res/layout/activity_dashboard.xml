@@ -77,14 +77,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/connect_your_device"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tap_to_connect"
                     android:textColor="#808080"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/_10sdp"
                     tools:ignore="SmallSp" />
             </LinearLayout>
 
@@ -119,14 +119,14 @@
                         android:layout_height="wrap_content"
                         android:text="@string/tv_screen_mirroring"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_14sdp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/mirror_phone_screen_to_tv"
                         android:textColor="#808080"
-                        android:textSize="10sp"
+                        android:textSize="@dimen/_10sdp"
                         tools:ignore="SmallSp" />
                 </LinearLayout>
 
@@ -183,7 +183,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/videos"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_14sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -210,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/images"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_14sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/audios"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/_14sdp" />
                 </LinearLayout>
             </LinearLayout>
 

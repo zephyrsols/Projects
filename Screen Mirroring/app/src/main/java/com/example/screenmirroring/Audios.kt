@@ -34,7 +34,7 @@ class Audios : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAudiosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
         binding.backImage.setOnClickListener {
             finish()
@@ -50,12 +50,6 @@ class Audios : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         loadFoldersAndFiles()
     }
-
-
-
-
-
-
 
 
     private fun getAudioFolders(): List<Pair<String, Int>> {
@@ -107,7 +101,7 @@ class Audios : AppCompatActivity() {
                 val selectedFolderInfo = folderInfoList[position]
                 val audioList = getAudioFilesForFolder(selectedFolderInfo.first)
 
-                audioAdapter = AudioAdapter(this@Audios,audioList)
+                audioAdapter = AudioAdapter(this@Audios, audioList)
                 audioAdapter?.onItemClickListener = object : AudioAdapter.OnItemClickListener {
                     override fun onItemClick(audio: AudioModel) {
                         // Handle click on the audio item (open externally)
@@ -123,11 +117,13 @@ class Audios : AppCompatActivity() {
             }
         }
     }
+
     private fun openAudioExternally(audioPath: String) {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.setDataAndType(Uri.parse(audioPath), "audio/*")
         startActivity(intent)
     }
+
     private fun getAudioFilesForFolder(folderName: String): List<AudioModel> {
         val audioList = mutableListOf<AudioModel>()
         val contentResolver: ContentResolver = contentResolver

@@ -1,8 +1,11 @@
 package com.example.screenmirroring
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.view.GravityCompat
 import com.example.screenmirroring.databinding.ActivityLanguagesBinding
 
 class Languages : BaseActivity() {
@@ -12,9 +15,10 @@ class Languages : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLanguagesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        changeStatusBarColor(R.color.black, window,resources,theme)
+        changeStatusBarColor(R.color.black, window, resources, theme)
 
-        binding.backImage.setOnClickListener{
+        binding.backImage.setOnClickListener {
+            startActivity(Intent(this@Languages, Dashboard::class.java))
             finish()
         }
 
@@ -24,7 +28,7 @@ class Languages : BaseActivity() {
         }
         binding.hindiLayout.setOnClickListener {
             changeLanguage("hi")
-            Toast.makeText(this,"hindi",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "hindi", Toast.LENGTH_SHORT).show()
         }
         binding.spanishLayout.setOnClickListener {
             changeLanguage("es")
@@ -46,6 +50,14 @@ class Languages : BaseActivity() {
         }
 
     }
+
+    @Deprecated("Deprecated in Java")
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        startActivity(Intent(this@Languages, Dashboard::class.java))
+        finish()
+    }
+
     private fun changeLanguage(languageCode: String) {
 
         saveSelectedLanguage(languageCode)

@@ -4,7 +4,9 @@ package com.example.screenmirroring
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -18,10 +20,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.screenmirroring.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
+import java.io.File
 
 class Dashboard : BaseActivity() {
     //declaring  binding
@@ -30,6 +34,9 @@ class Dashboard : BaseActivity() {
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
     private lateinit var navigationView: NavigationView
+    lateinit var sharedPreferences: SharedPreferences
+    lateinit var editor: SharedPreferences.Editor
+
 
     companion object {
         private const val REQUEST_READ_STORAGE_PERMISSION = 100
@@ -43,6 +50,12 @@ class Dashboard : BaseActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
         changeStatusBarColor(R.color.black, window, resources, theme)
+
+        sharedPreferences = getSharedPreferences("onBoarding", MODE_PRIVATE)
+        editor = sharedPreferences.edit()
+        editor.putInt("oneTime", 1)
+        editor.apply()
+
 
 
         //permission check
@@ -115,6 +128,7 @@ class Dashboard : BaseActivity() {
             when (it.itemId) {
                 R.id.navLanguage -> {
                     startActivity(Intent(this,Languages::class.java))
+                    finish()
                     false
                 }
                 R.id.navHowToUse -> {
@@ -134,11 +148,32 @@ class Dashboard : BaseActivity() {
                     false
                 }
                 R.id.navShareApp -> {
+                    // Assuming the APK file is located in the external cache directory
+                    val apkFilePath = File(getExternalCacheDir(), "your_app_name.apk")
+
+                    // Create a content URI using FileProvider
+                    val apkUri: Uri =
+                        FileProvider.getUriForFile(
+                            this,
+                            "com.example.yourapp.fileprovider",  // Replace with your app's package name
+                            apkFilePath
+                        )
+
+                    // Create an Intent to share the APK
+                    val intent = Intent(Intent.ACTION_SEND)
+                    intent.type = "application/vnd.android.package-archive"
+                    intent.putExtra(Intent.EXTRA_STREAM, apkUri)
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+                    // Check if there's an activity that can handle this intent before starting it
+                    if (intent.resolveActivity(packageManager) != null) {
+                        startActivity(Intent.createChooser(intent, "Share APK using"))
+                    }
                     Toast.makeText(this,"Share App",Toast.LENGTH_SHORT).show()
                     false
                 }
                 R.id.navPrivacyPolicy -> {
-                    Toast.makeText(this,"Privacy",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://google.com/")))
                     false
                 }
                 else -> false
@@ -184,6 +219,8 @@ class Dashboard : BaseActivity() {
 //            startActivity(Intent(this@Dashboard, Setting::class.java))
 //        }
     }
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toggle.onOptionsItemSelected(item)) {
