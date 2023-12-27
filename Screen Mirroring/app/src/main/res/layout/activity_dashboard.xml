@@ -7,7 +7,7 @@
     android:background="@color/black"
     android:id="@+id/drawerLayout"
     tools:openDrawer="start"
-    tools:context=".Dashboard">
+    tools:context=".UI.DashboardActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

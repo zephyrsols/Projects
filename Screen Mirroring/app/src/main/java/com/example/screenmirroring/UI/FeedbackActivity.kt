@@ -1,12 +1,13 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityFeedbackBinding
 
-class Feedback : AppCompatActivity() {
+class FeedbackActivity : AppCompatActivity() {
     //declaring  variables
     private lateinit var binding: ActivityFeedbackBinding
 
@@ -29,7 +30,7 @@ class Feedback : AppCompatActivity() {
 
         //submission button
         binding.submitButton.setOnClickListener {
-            Toast.makeText(this@Feedback, "Submitting...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@FeedbackActivity, "Submitting...", Toast.LENGTH_SHORT).show()
         }
 
     }

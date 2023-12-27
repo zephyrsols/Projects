@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.screenmirroring.model.AudioModel
+import com.example.screenmirroring.UI.AudioPlayerActivity
+import com.example.screenmirroring.R
 
 // AudioAdapter.kt
 // Inside your AudioAdapter
@@ -34,7 +36,7 @@ class AudioAdapter(private val context: Context, private val audioList: List<Aud
         holder.audioNameTextView.text = audio.name
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, AudioPlayer::class.java)
+            val intent = Intent(context, AudioPlayerActivity::class.java)
             intent.putExtra("name",audio.name)
             intent.putExtra("path", audio.path)
             context.startActivity(intent)

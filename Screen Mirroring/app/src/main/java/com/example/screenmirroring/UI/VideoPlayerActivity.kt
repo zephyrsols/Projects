@@ -1,20 +1,19 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.SeekBar
 import android.widget.TextView
-import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityVideoPlayerBinding
 
 
-class VideoPlayer : AppCompatActivity() {
+class VideoPlayerActivity : AppCompatActivity() {
     lateinit var binding: ActivityVideoPlayerBinding
     lateinit var videoView: VideoView
     lateinit var fileNameText: TextView
-    lateinit var pauseBtn: ImageButton
     lateinit var playPauseBtn: ImageButton
     lateinit var seekBar: SeekBar
     private lateinit var videoRunnable: Runnable
@@ -72,6 +71,8 @@ class VideoPlayer : AppCompatActivity() {
         videoView.setOnCompletionListener {
             playPauseBtn.setImageResource(R.drawable.play)
         }
+
+
         //Video Player End
 
         // SeekBar Listener Start

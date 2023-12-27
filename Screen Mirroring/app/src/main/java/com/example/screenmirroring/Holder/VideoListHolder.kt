@@ -1,4 +1,6 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.Holder
+
+import com.example.screenmirroring.model.VideoModel
 
 // VideoListHolder.kt
 object VideoListHolder {

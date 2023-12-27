@@ -1,10 +1,11 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityHowToUseBinding
 
-class HowToUse : AppCompatActivity() {
+class HowToUseActivity : AppCompatActivity() {
     lateinit var binding: ActivityHowToUseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

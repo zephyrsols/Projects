@@ -10,6 +10,7 @@
     <string name="cast">कास्ट</string>
 
     <!-- डैशबोर्ड एक्टिविटी -->
+    <string name="the_action_can_contain_ads">//Main Activity     The action can contain ads</string>
     <string name="title_screen_mirroring">स्क्रीन मिररिंग</string>
     <string name="connect_your_device">अपने डिवाइस को कनेक्ट करें</string>
     <string name="drawer">ड्रॉयर</string>

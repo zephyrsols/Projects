@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 
 import android.annotation.SuppressLint
@@ -16,18 +16,19 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.screenmirroring.Holder.BaseActivity
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityDashboardBinding
 import com.google.android.material.navigation.NavigationView
 import java.io.File
 
-class Dashboard : BaseActivity() {
+class DashboardActivity : BaseActivity() {
     //declaring  binding
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var drawerLayout: DrawerLayout
@@ -127,12 +128,12 @@ class Dashboard : BaseActivity() {
             // Handle item click events here
             when (it.itemId) {
                 R.id.navLanguage -> {
-                    startActivity(Intent(this,Languages::class.java))
+                    startActivity(Intent(this, LanguagesActivity::class.java))
                     finish()
                     false
                 }
                 R.id.navHowToUse -> {
-                    startActivity(Intent(this,HowToUse::class.java))
+                    startActivity(Intent(this, HowToUseActivity::class.java))
                     false
                 }
                 R.id.navRatUs -> {
@@ -140,7 +141,7 @@ class Dashboard : BaseActivity() {
                     false
                 }
                 R.id.navFeedback -> {
-                    startActivity(Intent(this,Feedback::class.java))
+                    startActivity(Intent(this, FeedbackActivity::class.java))
                     false
                 }
                 R.id.navMoreApps -> {
@@ -183,18 +184,18 @@ class Dashboard : BaseActivity() {
 
         //video card layout with onclick listener
         binding.videoLayout.setOnClickListener {
-            startActivity(Intent(this@Dashboard, Videos::class.java))
+            startActivity(Intent(this@DashboardActivity, VideosActivity::class.java))
         }
 
         //image card layout with onclick listener
         binding.imageLayout.setOnClickListener {
-            startActivity(Intent(this@Dashboard, Images::class.java))
+            startActivity(Intent(this@DashboardActivity, ImagesActivity::class.java))
         }
 
 
         //audio card layout with onclick listener
         binding.audioLayout.setOnClickListener {
-            startActivity(Intent(this@Dashboard, Audios::class.java))
+            startActivity(Intent(this@DashboardActivity, AudiosActivity::class.java))
 
         }
 
@@ -205,7 +206,7 @@ class Dashboard : BaseActivity() {
 
         //connect card layout with onclick listener
         binding.connectLayout.setOnClickListener {
-            startActivity(Intent(this@Dashboard, Connect::class.java))
+            startActivity(Intent(this@DashboardActivity, ConnectActivity::class.java))
 
         }
 

@@ -1,31 +1,26 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 
 import android.content.ContentResolver
-import android.content.ContentUris
-import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
-import android.content.res.Resources.Theme
 import android.database.Cursor
 import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
 import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.screenmirroring.adapter.FolderAdapter
+import com.example.screenmirroring.R
+import com.example.screenmirroring.adapter.AudioAdapter
 import com.example.screenmirroring.databinding.ActivityAudiosBinding
+import com.example.screenmirroring.model.AudioModel
 import java.io.File
 
-class Audios : AppCompatActivity() {
+class AudiosActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAudiosBinding
     private lateinit var folderSpinner: Spinner
     private lateinit var recyclerView: RecyclerView
@@ -101,7 +96,7 @@ class Audios : AppCompatActivity() {
                 val selectedFolderInfo = folderInfoList[position]
                 val audioList = getAudioFilesForFolder(selectedFolderInfo.first)
 
-                audioAdapter = AudioAdapter(this@Audios, audioList)
+                audioAdapter = AudioAdapter(this@AudiosActivity, audioList)
                 audioAdapter?.onItemClickListener = object : AudioAdapter.OnItemClickListener {
                     override fun onItemClick(audio: AudioModel) {
                         // Handle click on the audio item (open externally)

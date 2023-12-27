@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.ContentUris
 import androidx.appcompat.app.AppCompatActivity
@@ -6,15 +6,18 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.screenmirroring.adapter.CustomArrayAdapter
+import com.example.screenmirroring.R
+import com.example.screenmirroring.adapter.VideoAdapter
 import com.example.screenmirroring.databinding.ActivityVideosBinding
+import com.example.screenmirroring.model.VideoModel
 import java.io.File
 
 
-class Videos : AppCompatActivity() {
+class VideosActivity : AppCompatActivity() {
 
     //declaring  variables
     private lateinit var binding: ActivityVideosBinding
@@ -32,7 +35,7 @@ class Videos : AppCompatActivity() {
             finish()
         }
         recyclerView = binding.recyclerView
-        recyclerView.layoutManager = GridLayoutManager(this@Videos, 4)
+        recyclerView.layoutManager = GridLayoutManager(this@VideosActivity, 4)
         initializeRecyclerView()
 
     }
@@ -48,7 +51,8 @@ class Videos : AppCompatActivity() {
         val folderCounts = videoList.groupBy { it.folderName }
             .map { "${it.key} (${it.value.size})" }
 
-        val spinnerAdapter = CustomArrayAdapter(this, android.R.layout.simple_spinner_item, folderCounts)
+        val spinnerAdapter =
+            CustomArrayAdapter(this, android.R.layout.simple_spinner_item, folderCounts)
         spinnerAdapter.setDropDownViewResource(R.layout.spinner_item_layout)
 
         folderSpinner.adapter = spinnerAdapter
@@ -60,13 +64,12 @@ class Videos : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                // Handle item selection
+                //Handle item selection
                 val selectedFolder = folderSpinner.selectedItem.toString()
                 val folderName = selectedFolder.substringBefore(" (").trim()
                 val filteredVideoList = videoList.filter { it.folderName == folderName }
                 videoAdapter.updateList(filteredVideoList)
             }
-
             override fun onNothingSelected(parentView: AdapterView<*>) {
                 // Provide your implementation for onNothingSelected here
                 // This method is called when no item is selected in the spinner

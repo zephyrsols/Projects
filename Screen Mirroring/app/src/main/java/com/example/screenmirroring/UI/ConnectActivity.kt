@@ -1,11 +1,12 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityConnectBinding
 
-class Connect : AppCompatActivity() {
+class ConnectActivity : AppCompatActivity() {
     //declaring  variables
     private lateinit var binding: ActivityConnectBinding
 
@@ -21,7 +22,7 @@ class Connect : AppCompatActivity() {
         }
 
         binding.startButton.setOnClickListener {
-            startActivity(Intent(this@Connect, SearchDevices::class.java))
+            startActivity(Intent(this@ConnectActivity, SearchDevicesActivity::class.java))
         }
 
     }

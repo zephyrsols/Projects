@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.model
 
 import android.net.Uri
 

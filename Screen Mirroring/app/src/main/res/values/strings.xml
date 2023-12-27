@@ -8,6 +8,10 @@
     //Cast Button
     <string name="cast">cast</string>
 
+    //Main Activity
+    <string name="the_action_can_contain_ads">The action can contain ads</string>
+
+
     //Dashboard Activity
     <string name="title_screen_mirroring">Screen Mirroring</string>
     <string name="connect_your_device">Connect your device</string>

@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.Holder
 
 import android.content.Context
 import android.content.SharedPreferences

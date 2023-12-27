@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.annotation.SuppressLint
 import android.media.AudioManager
@@ -8,10 +8,9 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.GravityCompat
 import com.example.screenmirroring.databinding.ActivityAudioPlayerBinding
 
-class AudioPlayer : AppCompatActivity() {
+class AudioPlayerActivity : AppCompatActivity() {
     lateinit var binding: ActivityAudioPlayerBinding
     lateinit var playBtn: ImageButton
     lateinit var pauseBtn: ImageButton

@@ -1,10 +1,11 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivitySettingBinding
 
 import java.io.File
@@ -14,7 +15,7 @@ import java.io.IOException
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
-class Setting : AppCompatActivity() {
+class SettingActivity : AppCompatActivity() {
     //declaring  variables
     private lateinit var binding: ActivitySettingBinding
 
@@ -31,27 +32,27 @@ class Setting : AppCompatActivity() {
 
         //Language Layout
         binding.languageLayout.setOnClickListener {
-            startActivity(Intent(this@Setting, Languages::class.java))
+            startActivity(Intent(this@SettingActivity, LanguagesActivity::class.java))
         }
 
         //How to use Layout
         binding.howToUseLayout.setOnClickListener {
-            Toast.makeText(this@Setting, "How to use", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SettingActivity, "How to use", Toast.LENGTH_SHORT).show()
         }
 
         //Rate Us Layout
         binding.rateUsLayout.setOnClickListener {
-            Toast.makeText(this@Setting, "Rate Us", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SettingActivity, "Rate Us", Toast.LENGTH_SHORT).show()
         }
 
         //Feedback Layout
         binding.feedbackLayout.setOnClickListener {
-            Toast.makeText(this@Setting, "Feedback", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SettingActivity, "Feedback", Toast.LENGTH_SHORT).show()
         }
 
         //More Apps Layout
         binding.moreAppsLayout.setOnClickListener {
-            Toast.makeText(this@Setting, "More Apps", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SettingActivity, "More Apps", Toast.LENGTH_SHORT).show()
         }
 
         //Share App Layout

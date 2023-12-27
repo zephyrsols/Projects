@@ -1,15 +1,15 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Resources
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
+import com.example.screenmirroring.Holder.BaseActivity
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
@@ -32,10 +32,10 @@ class MainActivity : BaseActivity() {
 
             override fun onFinish() {
                 if (sharedPreferences.getInt("oneTime", 0) == 0) {
-                    startActivity(Intent(this@MainActivity, onBoarding::class.java))
+                    startActivity(Intent(this@MainActivity, OnBoardingActivity::class.java))
                     finish()
                 } else {
-                    startActivity(Intent(this@MainActivity, Dashboard::class.java))
+                    startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
                     finish()
                 }
 

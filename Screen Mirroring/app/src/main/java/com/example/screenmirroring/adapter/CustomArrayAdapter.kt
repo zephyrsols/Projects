@@ -1,4 +1,4 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.adapter
 
 
 import android.content.Context
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.example.screenmirroring.R
 
 class CustomArrayAdapter(context: Context, resource: Int, objects: List<String>) :
     ArrayAdapter<String>(context, resource, objects) {

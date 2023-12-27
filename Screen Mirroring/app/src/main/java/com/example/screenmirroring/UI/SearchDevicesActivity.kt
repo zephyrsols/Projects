@@ -1,12 +1,13 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivitySearchDevicesBinding
 
-class SearchDevices : AppCompatActivity() {
+class SearchDevicesActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySearchDevicesBinding
     override fun onCreate(savedInstanceState: Bundle?) {

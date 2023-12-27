@@ -1,14 +1,14 @@
-package com.example.screenmirroring
+package com.example.screenmirroring.UI
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.view.GravityCompat
+import com.example.screenmirroring.Holder.BaseActivity
+import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityLanguagesBinding
 
-class Languages : BaseActivity() {
+class LanguagesActivity : BaseActivity() {
     //binding variable
     private lateinit var binding: ActivityLanguagesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,7 @@ class Languages : BaseActivity() {
         changeStatusBarColor(R.color.black, window, resources, theme)
 
         binding.backImage.setOnClickListener {
-            startActivity(Intent(this@Languages, Dashboard::class.java))
+            startActivity(Intent(this@LanguagesActivity, DashboardActivity::class.java))
             finish()
         }
 
@@ -54,7 +54,7 @@ class Languages : BaseActivity() {
     @Deprecated("Deprecated in Java")
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
-        startActivity(Intent(this@Languages, Dashboard::class.java))
+        startActivity(Intent(this@LanguagesActivity, DashboardActivity::class.java))
         finish()
     }
 

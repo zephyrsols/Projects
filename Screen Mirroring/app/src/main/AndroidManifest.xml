@@ -22,69 +22,69 @@
         android:theme="@style/Theme.Material3.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".AudioPlayer"
+            android:name=".UI.AudioPlayerActivity"
             android:exported="false" />
         <activity
-            android:name=".VideoPlayer"
+            android:name=".UI.VideoPlayerActivity"
             android:exported="false" />
         <activity
-            android:name=".HowToUse"
+            android:name=".UI.HowToUseActivity"
             android:exported="false" />
         <activity
-            android:name=".onBoarding"
+            android:name=".UI.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name=".Videos"
+            android:name=".UI.VideosActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Languages"
+            android:name=".UI.LanguagesActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Setting"
+            android:name=".UI.SettingActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".SearchDevices"
+            android:name=".UI.SearchDevicesActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Images"
+            android:name=".UI.ImagesActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ImageAdapter"
+            android:name=".adapter.ImageAdapter"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Feedback"
+            android:name=".UI.FeedbackActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Dashboard"
+            android:name=".UI.DashboardActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Connect"
+            android:name=".UI.ConnectActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Audios"
+            android:name=".UI.AudiosActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
