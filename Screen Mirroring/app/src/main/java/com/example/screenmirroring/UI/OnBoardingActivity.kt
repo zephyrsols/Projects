@@ -196,7 +196,6 @@ class OnBoardingActivity : BaseActivity() {
                             ) != PackageManager.PERMISSION_GRANTED
                         ) {
                             permissionSwitch.isChecked = false
-                            textChange = 2
                             Toast.makeText(
                                 this, "First grant all permissions", Toast.LENGTH_SHORT
                             ).show()
@@ -210,7 +209,6 @@ class OnBoardingActivity : BaseActivity() {
                             ) != PackageManager.PERMISSION_GRANTED
                         ) {
                             permissionSwitch.isChecked = false
-                            textChange = 2
                             Toast.makeText(this, "First grant all permissions", Toast.LENGTH_SHORT)
                                 .show()
                         } else {
