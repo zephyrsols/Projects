@@ -35,8 +35,8 @@ class DashboardActivity : BaseActivity() {
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
     private lateinit var navigationView: NavigationView
-    lateinit var sharedPreferences: SharedPreferences
-    lateinit var editor: SharedPreferences.Editor
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
 
     companion object {
@@ -54,7 +54,7 @@ class DashboardActivity : BaseActivity() {
 
         sharedPreferences = getSharedPreferences("onBoarding", MODE_PRIVATE)
         editor = sharedPreferences.edit()
-        editor.putInt("oneTime", 1)
+        editor.putInt("onBoarding", 1)
         editor.apply()
 
 

@@ -6,7 +6,7 @@ import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityHowToUseBinding
 
 class HowToUseActivity : AppCompatActivity() {
-    lateinit var binding: ActivityHowToUseBinding
+    private lateinit var binding: ActivityHowToUseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHowToUseBinding.inflate(layoutInflater)

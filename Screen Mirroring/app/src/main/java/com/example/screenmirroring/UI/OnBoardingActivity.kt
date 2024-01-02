@@ -3,6 +3,7 @@ package com.example.screenmirroring.UI
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -23,19 +24,21 @@ import com.google.android.material.switchmaterial.SwitchMaterial
 
 class OnBoardingActivity : BaseActivity() {
 
-    lateinit var binding: ActivityOnBoardingBinding
-    lateinit var textContent: TextView
-    lateinit var onBoardingImg: ImageView
-    lateinit var card1: CardView
-    lateinit var card2: CardView
-    lateinit var card3: CardView
-    lateinit var card4: CardView
-    lateinit var card5: CardView
-    lateinit var card6: CardView
-    lateinit var mainCard: CardView
-    lateinit var button: Button
-    lateinit var permissionSwitch: SwitchMaterial
-    var textChange = 0
+    private lateinit var binding: ActivityOnBoardingBinding
+    private lateinit var textContent: TextView
+    private lateinit var onBoardingImg: ImageView
+    private lateinit var card1: CardView
+    private lateinit var card2: CardView
+    private lateinit var card3: CardView
+    private lateinit var card4: CardView
+    private lateinit var card5: CardView
+    private lateinit var card6: CardView
+    private lateinit var mainCard: CardView
+    private lateinit var button: Button
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
+    private lateinit var permissionSwitch: SwitchMaterial
+    private var textChange = 0
 
     companion object {
         private const val REQUEST_READ_STORAGE_PERMISSION = 100
@@ -50,6 +53,11 @@ class OnBoardingActivity : BaseActivity() {
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         changeStatusBarColor(R.color.black, window, resources, theme)
+
+        sharedPreferences = getSharedPreferences("onBoarding", MODE_PRIVATE)
+        editor = sharedPreferences.edit()
+        editor.putInt("languages", 1)
+        editor.apply()
 
         textContent = binding.textContent
         onBoardingImg = binding.onBoardingImg

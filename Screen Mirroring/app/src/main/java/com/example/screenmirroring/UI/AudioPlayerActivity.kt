@@ -11,11 +11,11 @@ import android.widget.Toast
 import com.example.screenmirroring.databinding.ActivityAudioPlayerBinding
 
 class AudioPlayerActivity : AppCompatActivity() {
-    lateinit var binding: ActivityAudioPlayerBinding
-    lateinit var playBtn: ImageButton
-    lateinit var pauseBtn: ImageButton
-    lateinit var mediaPlayer: MediaPlayer
-    lateinit var fileNameText: TextView
+    private lateinit var binding: ActivityAudioPlayerBinding
+    private lateinit var playBtn: ImageButton
+    private lateinit var pauseBtn: ImageButton
+    private lateinit var mediaPlayer: MediaPlayer
+    private lateinit var fileNameText: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAudioPlayerBinding.inflate(layoutInflater)
@@ -53,6 +53,7 @@ class AudioPlayerActivity : AppCompatActivity() {
             }
         }
     }
+
     @Deprecated("Deprecated in Java", ReplaceWith("finish()"))
     @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {

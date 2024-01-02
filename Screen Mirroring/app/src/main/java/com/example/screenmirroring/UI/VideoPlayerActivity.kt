@@ -11,11 +11,11 @@ import com.example.screenmirroring.databinding.ActivityVideoPlayerBinding
 
 
 class VideoPlayerActivity : AppCompatActivity() {
-    lateinit var binding: ActivityVideoPlayerBinding
-    lateinit var videoView: VideoView
-    lateinit var fileNameText: TextView
-    lateinit var playPauseBtn: ImageButton
-    lateinit var seekBar: SeekBar
+    private lateinit var binding: ActivityVideoPlayerBinding
+    private lateinit var videoView: VideoView
+    private lateinit var fileNameText: TextView
+    private lateinit var playPauseBtn: ImageButton
+    private lateinit var seekBar: SeekBar
     private lateinit var videoRunnable: Runnable
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +43,6 @@ class VideoPlayerActivity : AppCompatActivity() {
             }
         }
         //Play & Pause Butotn End
-
-
 
 
         //Video Player Start

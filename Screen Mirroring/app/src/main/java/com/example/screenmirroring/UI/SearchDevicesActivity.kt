@@ -9,7 +9,7 @@ import com.example.screenmirroring.databinding.ActivitySearchDevicesBinding
 
 class SearchDevicesActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivitySearchDevicesBinding
+    private lateinit var binding: ActivitySearchDevicesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchDevicesBinding.inflate(layoutInflater)

@@ -13,8 +13,8 @@ import com.example.screenmirroring.R
 import com.example.screenmirroring.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {
-    lateinit var binding: ActivityMainBinding
-    lateinit var sharedPreferences: SharedPreferences
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var sharedPreferences: SharedPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,10 @@ class MainActivity : BaseActivity() {
             }
 
             override fun onFinish() {
-                if (sharedPreferences.getInt("oneTime", 0) == 0) {
+                if (sharedPreferences.getInt("languages", 0) == 0) {
+                    startActivity(Intent(this@MainActivity, LanguagesActivity::class.java))
+                    finish()
+                } else if (sharedPreferences.getInt("onBoarding", 0) == 0) {
                     startActivity(Intent(this@MainActivity, OnBoardingActivity::class.java))
                     finish()
                 } else {
