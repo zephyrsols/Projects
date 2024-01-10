@@ -33,10 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_50sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/hello_there"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
@@ -45,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
+        android:fontFamily="@font/outfit_regular"
         android:text="@string/sign_up_text"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
@@ -57,10 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/email"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeText2" />
 
@@ -80,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:fontFamily="@font/outfit_regular"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:paddingStart="0dp"
@@ -95,10 +97,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/password"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailLayout" />
 
@@ -121,6 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:fontFamily="@font/outfit_regular"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:paddingStart="0dp"
@@ -135,6 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
+        android:fontFamily="@font/outfit_regular"
         android:text="@string/i_agree_to_term_amp_privacy_policy"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
@@ -154,20 +158,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/don_t_have_an_account"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
 
         <TextView
             android:id="@+id/signInBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/sign_in"
             android:textColor="@color/dark_blue"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 
@@ -192,6 +196,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_regular"
             android:text="@string/or_continue_with"
             android:textColor="@color/white"
             android:textSize="@dimen/_12sdp" />
@@ -264,23 +269,25 @@
 
     <RelativeLayout
         android:id="@+id/signUpBtn"
-        android:layout_width="@dimen/_150sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
         android:background="@drawable/custom_round_background"
         android:backgroundTint="@color/dark_blue"
         android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherSignUoLayout">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/sign_up"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_14sdp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

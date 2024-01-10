@@ -19,6 +19,10 @@ class SigninActivity : AppCompatActivity() {
             startActivity(Intent(this@SigninActivity, SignInWithPasswordActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
+        binding.signUpBtn.setOnClickListener {
+            startActivity(Intent(this@SigninActivity, SignUpActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
     }
 
     override fun finish() {

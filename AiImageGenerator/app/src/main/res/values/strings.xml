@@ -26,7 +26,7 @@
     <string name="otp_code_verification">OTP code verification</string>
     <string name="otp_detail_text">We have send an otp code to your email\nand*****@gmail.com Enter the otp code below to verify</string>
     <string name="don_t_receive_email">Don\'t receive Email?</string>
-    <string name="you_can_resend_code_in">You can resend code in</string>
+    <string name="you_can_resend_code_in">You can resend code in </string>
     <string name="s">s</string>
     <string name="_timer">00</string>
 
@@ -74,6 +74,28 @@
     <string name="dd_mm_yyyy">DD/MM/YYYY</string>
     <string name="gender">Gender</string>
     <string name="finish">Finish</string>
+    <string name="personal_info_text_detail">please enter your profile don’t worry only\nyou can see your personal data no one else\nwill be able to see it. or you can skip it for\nnow</string>
+    <string name="enter_personal_info">Enter personal info</string>
+    <string-array name="gender_name">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!--Main Activity-->
+    <string name="logo">logo</string>
+    <string name="create_a_visions_with_ai">create a visions with AI</string>
+    <string name="what_visions_are_you_bringing_to_life_today">What visions are you bringing to life today!</string>
+    <string name="aspect_ratio">Aspect Ratio</string>
+    <string name="square">Square</string>
+    <string name="portrait">Portrait</string>
+    <string name="landsacpe">Landsacpe</string>
+    <string name="select_style">Select Style</string>
+    <string name="no_style">No style</string>
+    <string name="euphoric">Euphoric</string>
+    <string name="tattoo">Tattoo</string>
+    <string name="_3d_game">3D Game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

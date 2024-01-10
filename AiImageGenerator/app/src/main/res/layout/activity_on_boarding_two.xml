@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/onboarding_img2"
     tools:context=".ui.OnBoardingActivityTwo">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_300sdp"
         android:layout_marginTop="@dimen/_50sdp"
         android:contentDescription="@string/artimage"
-        android:src="@drawable/onboarding_art_img"
+        android:src="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,11 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/onboarding_text2"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/onBoardingImg" />
@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_50sdp"
             android:background="@drawable/custom_round_background"
+            android:fontFamily="@font/outfit_regular"
             android:text="@string/skip"
             android:textColor="@color/dark_blue" />
 
@@ -58,6 +59,7 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:background="@drawable/custom_round_background"
             android:backgroundTint="@color/dark_blue"
+            android:fontFamily="@font/outfit_regular"
             android:text="@string/next"
             android:textColor="@color/white" />
     </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/onboarding_img3"
     tools:context=".ui.OnBoardingActivityThree">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_300sdp"
         android:layout_marginTop="@dimen/_50sdp"
         android:contentDescription="@string/bearimage"
-        android:src="@drawable/onboarding_bear_img"
+        android:src="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        android:textStyle="bold"
+        android:fontFamily="@font/outfit_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/onBoardingImg" />
@@ -49,6 +49,7 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:background="@drawable/custom_round_background"
             android:backgroundTint="@color/dark_blue"
+            android:fontFamily="@font/outfit_regular"
             android:text="@string/get_started"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />

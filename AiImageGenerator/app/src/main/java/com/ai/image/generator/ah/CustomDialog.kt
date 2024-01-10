@@ -21,6 +21,7 @@ object CustomDialog {
             }
 
             override fun onFinish() {
+
                 dialog.cancel()
             }
         }

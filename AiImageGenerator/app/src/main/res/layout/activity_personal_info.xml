@@ -32,10 +32,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_50sdp"
-        android:text="@string/hello_there"
+        android:fontFamily="@font/outfit_bold"
+        android:text="@string/enter_personal_info"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
@@ -44,7 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
-        android:text="@string/sign_up_text"
+        android:fontFamily="@font/outfit_light"
+        android:text="@string/personal_info_text_detail"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/full_name"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeText2" />
 
@@ -79,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:fontFamily="@font/outfit_regular"
             android:hint="@string/full_name"
             android:inputType="text"
             android:paddingStart="0dp"
@@ -94,10 +96,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/phone_number"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fNameLayout" />
 
@@ -117,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:fontFamily="@font/outfit_regular"
             android:hint="@string/_92_3000000000"
             android:inputType="number"
             android:paddingStart="0dp"
@@ -132,10 +135,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/date_of_birth"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phoneNoLayout" />
 
@@ -155,6 +158,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
+            android:fontFamily="@font/outfit_regular"
             android:hint="@string/dd_mm_yyyy"
             android:inputType="number"
             android:paddingStart="0dp"
@@ -170,10 +174,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/outfit_bold"
         android:text="@string/gender"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dobLayout" />
 
@@ -189,23 +193,25 @@
 
     <RelativeLayout
         android:id="@+id/finishBtn"
-        android:layout_width="@dimen/_150sdp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
         android:background="@drawable/custom_round_background"
         android:backgroundTint="@color/dark_blue"
         android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderSpinner">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/finish"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_14sdp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

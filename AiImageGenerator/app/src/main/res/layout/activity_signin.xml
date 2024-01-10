@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_60sdp"
+        android:fontFamily="@font/outfit_bold"
         android:gravity="center"
         android:text="@string/welcome_let_s_dive_in_into_your_account"
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,10 +46,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/continue_with_google"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,10 +78,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/continue_with_apple"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,10 +109,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/continue_with_facebook"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <LinearLayout
@@ -140,10 +140,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/continue_with_twitter"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 
     <RelativeLayout
@@ -163,10 +163,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/sign_in_with_password"
             android:textColor="@color/white"
-            android:textSize="@dimen/_14sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_14sdp" />
     </RelativeLayout>
 
     <LinearLayout
@@ -181,20 +181,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/don_t_have_an_account"
             android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
 
         <TextView
             android:id="@+id/signUpBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/outfit_bold"
             android:text="@string/sign_up"
             android:textColor="@color/dark_blue"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 
