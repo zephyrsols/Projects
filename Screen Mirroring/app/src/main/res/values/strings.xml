@@ -1,18 +1,18 @@
 <resources>
-    //App Name
+    <!--    App Name-->
     <string name="app_name">Screen Mirroring</string>
 
-    //Back Button
+    <!--    Back Button-->
     <string name="back">Back</string>
 
-    //Cast Button
+    <!--    Cast Button-->
     <string name="cast">cast</string>
 
-    //Main Activity
+    <!--    Main Activity-->
     <string name="the_action_can_contain_ads">The action can contain ads</string>
 
 
-    //Dashboard Activity
+    Dashboard Activity
     <string name="title_screen_mirroring">Screen Mirroring</string>
     <string name="connect_your_device">Connect your device</string>
     <string name="drawer">Drawer</string>

@@ -1,3 +1,79 @@
 <resources>
     <string name="app_name">Ai Image Generator</string>
+
+    <!--New Password Activity-->
+    <string name="backbtn">backBtn</string>
+    <string name="create_new_password">Create new password</string>
+    <string name="pwd_detail_text">Create your new password if you forget it.</string>
+    <string name="new_password">New Password</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="continue_btn">Continue</string>
+
+
+    <!--OnBoarding Activity One, Two, Three-->
+    <string name="girlimage">girlImage</string>
+    <string name="onboading_text1">Turn your words into\nartwork instantly</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="bearimage">bearImage</string>
+    <string name="onboarding_text3">Unleash your creative\nideas with saved art</string>
+    <string name="get_started">Get Started</string>
+    <string name="artimage">artImage</string>
+    <string name="onboarding_text2">Create and share your\nartwork with ease</string>
+
+    <!--Otp Code Verification Activity-->
+    <string name="otp_code_verification">OTP code verification</string>
+    <string name="otp_detail_text">We have send an otp code to your email\nand*****@gmail.com Enter the otp code below to verify</string>
+    <string name="don_t_receive_email">Don\'t receive Email?</string>
+    <string name="you_can_resend_code_in">You can resend code in</string>
+    <string name="s">s</string>
+    <string name="_timer">00</string>
+
+    <!--Reset Password Activity-->
+    <string name="sign_in_with_password">Sign in with password</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="please_enter_your_email_to_get_otp">please enter your email to get OTP</string>
+    <string name="email">Email</string>
+
+    <!--Sign In With Password Activity-->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_detail_text"><![CDATA[please enter your email & password to sign in]]></string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="googlebtn">googleBtn</string>
+    <string name="facebookbtn">facebookBtn</string>
+    <string name="twitterbtn">twitterBtn</string>
+    <string name="applebtn">appleBtn</string>
+    <string name="sign_in">Sign in</string>
+
+    <!--Sign In Activity-->
+    <string name="welcome_let_s_dive_in_into_your_account">Welcome let’s dive in into your account!</string>
+    <string name="continue_with_google">continue with Google</string>
+    <string name="continue_with_apple">continue with Apple</string>
+    <string name="continue_with_facebook">continue with Facebook</string>
+    <string name="continue_with_twitter">continue with Twitter</string>
+
+    <!--Dialog-->
+    <string name="dialog_text">please wait....\nyou will be directed to the homepage</string>
+
+    <!--Sign Up Activity-->
+    <string name="hello_there">Hello there</string>
+    <string name="sign_up_text"><![CDATA[Please enter your email & password\nto create an account.]]></string>
+    <string name="i_agree_to_term_amp_privacy_policy"><![CDATA[I agree to Term & Privacy Policy]]></string>
+
+    <!--Personal Info Activity-->
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="_92_3000000000">+92 3000000000</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="gender">Gender</string>
+    <string name="finish">Finish</string>
+
+
 </resources>

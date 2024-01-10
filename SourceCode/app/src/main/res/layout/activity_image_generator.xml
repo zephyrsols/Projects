@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.ImageGeneratorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:id="@+id/proLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_btn_black"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/diamond"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Pro"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/bold"
+            android:text="Enter a prompt"
+            android:textColor="#86000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_stroke_prompt"
+            android:fontFamily="@font/med"
+            android:gravity="start"
+            android:hint="A realistic and vibrant beach sunset scene..."
+            android:minHeight="150dp"
+            android:padding="10dp"
+            android:textColor="#CC676767"
+            android:textColorHint="#CC676767"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/lite"
+                android:text="Select"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/med"
+                android:text=" Styles"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollIndicators="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnArt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/aiart" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedArt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Ai Art"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnCreatures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cure_creatures" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedCreatures"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Creatures"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnFantasyWorld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/fantasy_world" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedFantasyWorld"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Fantasy"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/btnArchitecture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/architecture" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedArchitecture"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Architecture"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_logo" />
+
+                            <TextView
+                                android:id="@+id/tvSelectedLogo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Logo"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnCyberpunk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cyberpunk" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedCyberpunk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Cyberpunk"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnAnime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/anime" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedAnime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Anime"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnOldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/retro" />
+
+                            <TextView
+                                android:id="@+id/tvSelectedOldStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Old Style"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnPainting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/painting" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedPainting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Painting"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnAbstract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/abstract_painting" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedAbstract"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Abstract"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnImpressionism"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/painting_two" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedImpressionism"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Impressionism"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnSurreal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/surreal" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedSurreal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Surreal"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/threed" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelected3d"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="3D"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnOrigami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/origami_3d" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedOrigami"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Origami"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnHologram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/hologram" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedHologram"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Hologram"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnWatercolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        app:cardBackgroundColor="#0000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/water_painting" />
+
+
+                            <TextView
+                                android:id="@+id/tvSelectedWatercolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/black"
+                                android:gravity="center"
+                                android:text="Selected"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/med"
+                        android:gravity="center"
+                        android:text="Watercolor"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/btnGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_btn_black">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/bold"
+                    android:text="Generate"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/native_small_shimmer" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_stroke_prompt">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/btn_collage" />
+
+
+            <LinearLayout
+                android:id="@+id/btnCollage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Photo"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Collage Maker"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gr_collage"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="8dp"
+                        android:text="Try it now"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnEditor"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_stroke_prompt">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/btn_editor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Photo"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Editor Pro"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gr_editor"
+                        android:fontFamily="@font/bold"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="8dp"
+                        android:text="Try it now"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
