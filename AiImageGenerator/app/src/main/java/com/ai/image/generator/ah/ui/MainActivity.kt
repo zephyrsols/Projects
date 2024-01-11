@@ -1,15 +1,10 @@
 package com.ai.image.generator.ah.ui
 
-import android.content.Intent
-import android.content.res.Resources
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
 import androidx.fragment.app.Fragment
-import com.ai.image.generator.ah.ExploreFragment
-import com.ai.image.generator.ah.HomeFragment
+import com.ai.image.generator.ah.fragment.ExploreFragment
+import com.ai.image.generator.ah.fragment.HomeFragment
 import com.ai.image.generator.ah.ProfileFragment
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.SavedFragment

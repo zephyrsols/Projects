@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/onboarding_img3"
-    tools:context=".ui.OnBoardingActivityThree">
+    android:background="@color/black"
+    tools:context=".ui.PermissionsActivity">
 
     <ImageView
         android:id="@+id/onBoardingImg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_300sdp"
+        android:layout_height="@dimen/_200sdp"
         android:layout_marginTop="@dimen/_50sdp"
-        android:contentDescription="@string/bearimage"
-        android:src="@android:color/transparent"
+        android:contentDescription="@string/artimage"
+        android:src="@drawable/permissions_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,25 +22,42 @@
         android:id="@+id/onBoardingText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:text="@string/onboarding_text3"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/outfit_bold"
+        android:text="@string/gtand_permissions_to_start_app"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_16sdp"
-        android:fontFamily="@font/outfit_bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/onBoardingImg" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/permissionSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:buttonTint="@color/white"
+        android:buttonTintMode="screen"
+        android:foregroundTint="@color/white"
+        android:foregroundTintMode="screen"
+        android:text="@string/storage_permission"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onBoardingText" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="@dimen/_20sdp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onBoardingText">
+        app:layout_constraintTop_toBottomOf="@+id/permissionSwitch">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/startBtn"
@@ -50,7 +67,7 @@
             android:background="@drawable/custom_round_background"
             android:backgroundTint="@color/dark_blue"
             android:fontFamily="@font/outfit_regular"
-            android:text="@string/start"
+            android:text="@string/get_started"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />
     </LinearLayout>

@@ -14,7 +14,7 @@ class OnBoardingActivityThree : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startBtn.setOnClickListener {
-            startActivity(Intent(this@OnBoardingActivityThree, SigninActivity::class.java))
+            startActivity(Intent(this@OnBoardingActivityThree, PermissionsActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
         }

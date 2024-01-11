@@ -3,6 +3,7 @@
     <style name="Base.Theme.AiImageGenerator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/dark_blue</item>
+         <item name="colorAccent">@color/sky_blue</item>
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
