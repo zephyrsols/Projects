@@ -29,8 +29,8 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         binding = FragmentHomeBinding.inflate(layoutInflater)
         arguments?.let {
-            param1 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM1)
-            param2 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM2)
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
 
 
         }
@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         recyclerView = binding.recyclerView
@@ -105,8 +105,8 @@ class HomeFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
                 arguments = Bundle().apply {
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM1, param1)
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM2, param2)
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
             }
     }

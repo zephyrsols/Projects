@@ -115,8 +115,41 @@
     <!--Profile Fragment-->
     <string name="save">Save</string>
     <string name="personal_info">Personal Info</string>
+
+    <!--Language Activity-->
     <string name="language">Language</string>
     <string name="english">English</string>
+
+    <!--Setting Activity-->
+    <string name="settings">Settings</string>
+    <string name="general">General</string>
+    <string name="next_arrow"><![CDATA[>]]></string>
+    <string name="notification">Notification</string>
+    <string name="security">Security</string>
+    <string name="follow_us_on_social_media">Follow us on social media</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="about">About</string>
+
+
+    <!--Security Activity-->
+    <string name="biometric_id">Biometric ID</string>
+    <string name="face_id">Face ID</string>
+    <string name="sms_authenticator">SMS Authenticator</string>
+    <string name="google_authenticator">Google Authenticator</string>
+    <string name="device_management">Device Management</string>
+
+    <!--Follow Us Activity-->
+    <string name="discord">Discord</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="telegram">Telegram</string>
+
+    <!--Logout Dialog-->
+    <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out?</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>

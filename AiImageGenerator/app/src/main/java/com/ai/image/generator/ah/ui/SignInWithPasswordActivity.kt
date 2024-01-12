@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
 import android.widget.TextView
-import com.ai.image.generator.ah.CustomDialog
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.databinding.ActivitySignInWithPasswordBinding
 

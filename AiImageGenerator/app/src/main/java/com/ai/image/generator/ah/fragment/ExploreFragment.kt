@@ -14,6 +14,7 @@ import com.ai.image.generator.ah.R
  */
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 class ExploreFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null

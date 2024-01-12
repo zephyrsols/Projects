@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ai.image.generator.ah.R
 
 // Adapter class
-class homeFragmentAdapter(private val data: List<String>) : RecyclerView.Adapter<homeFragmentAdapter.MyViewHolder>() {
+class homeFragmentAdapter(private val data: List<String>) :
+    RecyclerView.Adapter<homeFragmentAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)

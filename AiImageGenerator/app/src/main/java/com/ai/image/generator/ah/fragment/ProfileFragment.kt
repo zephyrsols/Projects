@@ -1,11 +1,14 @@
 package com.ai.image.generator.ah.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ai.image.generator.ah.R
+import com.ai.image.generator.ah.databinding.FragmentProfileBinding
+import com.ai.image.generator.ah.ui.SettingActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -14,16 +17,18 @@ import com.ai.image.generator.ah.R
  */
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var binding: FragmentProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM1)
-            param2 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM2)
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -32,7 +37,11 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        binding.saveBtn.setOnClickListener {
+            startActivity(Intent(requireContext(), SettingActivity::class.java))
+        }
+        return binding.root
     }
 
     companion object {
@@ -49,8 +58,8 @@ class ProfileFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             ProfileFragment().apply {
                 arguments = Bundle().apply {
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM1, param1)
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM2, param2)
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
             }
     }

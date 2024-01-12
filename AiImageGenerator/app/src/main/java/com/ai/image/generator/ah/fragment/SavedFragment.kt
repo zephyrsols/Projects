@@ -18,6 +18,7 @@ import com.ai.image.generator.ah.databinding.FragmentSavedBinding
  */
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 class SavedFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -29,17 +30,17 @@ class SavedFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM1)
-            param2 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM2)
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
         }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        binding = FragmentSavedBinding.inflate(inflater,container,false)
+        binding = FragmentSavedBinding.inflate(inflater, container, false)
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 4)
         val styleNameList = listOf(
@@ -103,8 +104,8 @@ class SavedFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             SavedFragment().apply {
                 arguments = Bundle().apply {
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM1, param1)
-                    putString(com.ai.image.generator.ah.fragment.ARG_PARAM2, param2)
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
             }
     }
