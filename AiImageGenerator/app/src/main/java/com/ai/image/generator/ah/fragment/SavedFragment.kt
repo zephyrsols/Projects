@@ -7,32 +7,30 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.adapter.homeFragmentAdapter
-import com.ai.image.generator.ah.databinding.FragmentHomeBinding
+import com.ai.image.generator.ah.databinding.FragmentSavedBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
+ * Use the [SavedFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
-class HomeFragment : Fragment() {
+class SavedFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentSavedBinding
     private lateinit var recyclerView: RecyclerView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = FragmentHomeBinding.inflate(layoutInflater)
         arguments?.let {
             param1 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM1)
             param2 = it.getString(com.ai.image.generator.ah.fragment.ARG_PARAM2)
-
-
         }
     }
 
@@ -41,7 +39,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentSavedBinding.inflate(inflater,container,false)
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 4)
         val styleNameList = listOf(
@@ -98,12 +96,12 @@ class HomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
+         * @return A new instance of fragment SavedFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            SavedFragment().apply {
                 arguments = Bundle().apply {
                     putString(com.ai.image.generator.ah.fragment.ARG_PARAM1, param1)
                     putString(com.ai.image.generator.ah.fragment.ARG_PARAM2, param2)

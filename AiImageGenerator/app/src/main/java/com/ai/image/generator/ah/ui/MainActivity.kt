@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.ai.image.generator.ah.fragment.ExploreFragment
 import com.ai.image.generator.ah.fragment.HomeFragment
-import com.ai.image.generator.ah.ProfileFragment
+import com.ai.image.generator.ah.fragment.ProfileFragment
 import com.ai.image.generator.ah.R
-import com.ai.image.generator.ah.SavedFragment
+import com.ai.image.generator.ah.fragment.SavedFragment
 import com.ai.image.generator.ah.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

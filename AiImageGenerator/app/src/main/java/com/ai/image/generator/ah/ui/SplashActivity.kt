@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(this@SplashActivity, OnBoardingActivityOne::class.java))
+                startActivity(Intent(this@SplashActivity, LanguageActivity::class.java))
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                 finish()
             }
