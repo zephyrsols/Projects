@@ -22,18 +22,22 @@ class SettingActivity : AppCompatActivity() {
         binding.personalInfoBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, PersonalInfoActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            finish()
         }
         binding.securityBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, SecurityActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            finish()
         }
         binding.languageBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, LanguageActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            finish()
         }
         binding.followUsBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, FollowUsActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+            finish()
         }
 
         binding.logoutBtn.setOnClickListener {
@@ -47,7 +51,7 @@ class SettingActivity : AppCompatActivity() {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.setCancelable(false)
-        
+
         dialog.setContentView(R.layout.logout_dialog)
         dialog.show()
         val timer = object : CountDownTimer(2000, 100) {

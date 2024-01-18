@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai Image Generator</string>
+
+    <!--New Password Activity-->
+    <string name="backbtn">वापस</string>
+    <string name="create_new_password">नया पासवर्ड बनाएं</string>
+    <string name="pwd_detail_text">यदि आप इसे भूल जाएं तो अपना नया पासवर्ड बनाएं।</string>
+    <string name="new_password">नया पासवर्ड</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_new_password">नए पासवर्ड की पुष्टि करें</string>
+    <string name="continue_btn">जारी रखें</string>
+
+    <!--OnBoarding Activity One, Two, Three-->
+    <string name="girlimage">लड़की छवि</string>
+    <string name="onboading_text1">अपने शब्दों को \nत्वरित रूप में कला में बदलें</string>
+    <string name="skip">छोड़ें</string>
+    <string name="next">आगे</string>
+    <string name="bearimage">भालू छवि</string>
+    <string name="onboarding_text3">अपने बचाए गए कला के साथ \nअपने रचनात्मक विचारों को मुक्त करें</string>
+    <string name="get_started">शुरू हो जाओ</string>
+    <string name="artimage">कला छवि</string>
+    <string name="onboarding_text2">अपनी कला बनाएं और साझा करें \nआसानी से</string>
+
+    <!--Otp Code Verification Activity-->
+    <string name="otp_code_verification">OTP कोड सत्यापन</string>
+    <string name="otp_detail_text">हमने एक OTP कोड आपके ईमेल पर भेजा है\n और *****@gmail.com इसे सत्यापित करने के लिए नीचे दिए गए कोड को दर्ज करें</string>
+    <string name="don_t_receive_email">ईमेल प्राप्त नहीं हुआ?</string>
+    <string name="you_can_resend_code_in">आप कोड को पुनः भेज सकते हैं </string>
+    <string name="s">सेकंड</string>
+    <string name="_timer">00</string>
+
+    <!--Reset Password Activity-->
+    <string name="sign_in_with_password">पासवर्ड के साथ साइन इन करें</string>
+    <string name="reset_your_password">अपना पासवर्ड रीसेट करें</string>
+    <string name="please_enter_your_email_to_get_otp">कृपया OTP प्राप्त करने के लिए अपना ईमेल दर्ज करें</string>
+    <string name="email">ईमेल</string>
+
+    <!--Sign In With Password Activity-->
+    <string name="welcome_back">वापसी पर स्वागत</string>
+    <string name="login_detail_text"><![CDATA[कृपया साइन इन करने के लिए अपना ईमेल और पासवर्ड दर्ज करें]]></string>
+    <string name="password">पासवर्ड</string>
+    <string name="remember_me">मुझे याद रखें</string>
+    <string name="forget_password">पासवर्ड भूल गए?</string>
+    <string name="don_t_have_an_account">खाता नहीं है?</string>
+    <string name="sign_up">साइन अप</string>
+    <string name="or_continue_with">या जारी रखें</string>
+    <string name="googlebtn">गूगल बटन</string>
+    <string name="facebookbtn">फेसबुक बटन</string>
+    <string name="twitterbtn">ट्विटर बटन</string>
+    <string name="applebtn">ऐपल बटन</string>
+    <string name="sign_in">साइन इन</string>
+
+    <!--Sign In Activity-->
+    <string name="welcome_let_s_dive_in_into_your_account">स्वागत है, आइए आपके खाते में समाहित हों!</string>
+    <string name="continue_with_google">गूगल के साथ जारी रखें</string>
+    <string name="continue_with_apple">एप्पल के साथ जारी रखें</string>
+    <string name="continue_with_facebook">फेसबुक के साथ जारी रखें</string>
+    <string name="continue_with_twitter">ट्विटर के साथ जारी रखें</string>
+
+    <!--Dialog-->
+    <string name="dialog_text">कृपया प्रतीक्षा करें....\nआपको होमपेज पर पुनर्निर्देशित किया जाएगा</string>
+
+    <!--Sign Up Activity-->
+    <string name="hello_there">नमस्ते</string>
+    <string name="sign_up_text"><![CDATA[कृपया अपना ईमेल और पासवर्ड दर्ज करें\nएक खाता बनाने के लिए।]]></string>
+    <string name="i_agree_to_term_amp_privacy_policy"><![CDATA[मैं सहमत हूं सरकारी और गोपनीयता नीति के साथ]]></string>
+
+    <!--Personal Info Activity-->
+    <string name="full_name">पूरा नाम</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="_92_3000000000">+९२ ३०००००००००</string>
+    <string name="date_of_birth">जन्म की तारीख</string>
+    <string name="dd_mm_yyyy">दिन/महीना/वर्ष</string>
+    <string name="gender">लिंग</string>
+    <string name="finish">समाप्त</string>
+    <string name="personal_info_text_detail">कृपया अपना प्रोफ़ाइल दर्ज करें, चिंता ना करें कि केवल\nआप ही अपने व्यक्तिगत डेटा को देख सकते हैं, और और\nकोई भी इसे नहीं देख सकता है। या आप इसे अब छोड़ सकते हैं।</string>
+    <string name="enter_personal_info">व्यक्तिगत जानकारी दर्ज करें</string>
+    <string-array name="gender_name">
+        <item>पुरुष</item>
+        <item>महिला</item>
+    </string-array>
+
+    <!--Home fragment-->
+    <string name="logo">लोगो</string>
+    <string name="create_a_visions_with_ai">AI के साथ एक दृष्टि बनाएं</string>
+    <string name="what_visions_are_you_bringing_to_life_today">आज आप किसे जीवन में लाने वाले हैं!</string>
+    <string name="aspect_ratio">आस्पेक्ट रेशियो</string>
+    <string name="square">वर्ग</string>
+    <string name="portrait">पोर्ट्रेट</string>
+    <string name="landsacpe">लैंडस्केप</string>
+    <string name="select_style">स्टाइल चुनें</string>
+    <string name="no_style">कोई स्टाइल नहीं</string>
+    <string name="euphoric">उत्साही</string>
+    <string name="tattoo">टैटू</string>
+    <string name="_3d_game">3D गेम</string>
+    <string name="generate">उत्पन्न करें</string>
+    <string name="watch_an_ad">एक विज्ञापन देखें</string>
+
+    <!--Saved fragment-->
+    <string name="anime_v2">एनीमे V2</string>
+    <string name="saved">सहेजा गया</string>
+
+    <!--Permission Activity-->
+    <string name="gtand_permissions_to_start_app">ऐप शुरू करने के लिए अनुमतियां दें</string>
+    <string name="storage_permission">स्टोरेज अनुमति</string>
+    <string name="start">शुरू करें</string>
+    <string name="title_activity_language">LanguageActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">पहला फ़्रैगमेंट</string>
+    <string name="second_fragment_label">दूसरा फ़्रैगमेंट</string>
+    <string name="previous">पिछला</string>
+
+    <!--Profile Fragment-->
+    <string name="save">सहेजें</string>
+    <string name="personal_info">व्यक्तिगत जानकारी</string>
+
+    <!--Language Activity-->
+    <string name="language">भाषा</string>
+    <string name="english">अंग्रेज़ी</string>
+
+    <!--Setting Activity-->
+    <string name="settings">सेटिंग्स</string>
+    <string name="general">सामान्य</string>
+    <string name="next_arrow"><![CDATA[>]]></string>
+    <string name="notification">सूचना</string>
+    <string name="security">सुरक्षा</string>
+    <string name="follow_us_on_social_media">हमें सोशल मीडिया पर फ़ॉलो करें</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="about">बारे में</string>
+
+    <!--Security Activity-->
+    <string name="biometric_id">बायोमेट्रिक आईडी</string>
+    <string name="face_id">फेस आईडी</string>
+    <string name="sms_authenticator">एसएमएस प्रमाणपत्र</string>
+    <string name="google_authenticator">गूगल प्रमाणपत्र</string>
+    <string name="device_management">डिवाइस प्रबंधन</string>
+
+    <!--Follow Us Activity-->
+    <string name="discord">डिस्कॉर्ड</string>
+    <string name="instagram">इंस्टाग्राम</string>
+    <string name="twitter">ट्विटर</string>
+    <string name="facebook">फेसबुक</string>
+    <string name="telegram">टेलीग्राम</string>
+
+    <!-- लॉगआउट डायलॉग -->
+    <string name="are_you_sure_you_want_to_log_out">क्या आप निश्चित हैं कि आप लॉग आउट करना चाहते हैं?</string>
+    <string name="cancel">रद्द करें</string>
+
+</resources>
