@@ -142,31 +142,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/phoneNoLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dobLayout"
+    <TextView
+        android:id="@+id/dob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_25sdp"
-        android:focusable="false"
-        app:boxBackgroundMode="filled"
-        app:hintEnabled="false"
-        app:layout_constraintTop_toBottomOf="@id/dobText">
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/dd_mm_yyyy"
+        app:layout_constraintTop_toBottomOf="@id/dobText" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dob"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:fontFamily="@font/outfit_regular"
-            android:hint="@string/dd_mm_yyyy"
-            android:inputType="number"
-            android:paddingStart="0dp"
-            android:textColorHint="@color/dark_gray"
-            android:textSize="@dimen/_12sdp"
-            tools:ignore="RtlSymmetry" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/genderText"
@@ -179,7 +165,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_12sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dobLayout" />
+        app:layout_constraintTop_toBottomOf="@id/dob" />
 
     <Spinner
         android:id="@+id/genderSpinner"

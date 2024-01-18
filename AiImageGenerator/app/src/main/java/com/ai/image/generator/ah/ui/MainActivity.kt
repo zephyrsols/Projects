@@ -6,10 +6,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.ai.image.generator.ah.fragment.ExploreFragment
 import com.ai.image.generator.ah.fragment.HomeFragment
-import com.ai.image.generator.ah.fragment.ProfileFragment
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.fragment.SavedFragment
 import com.ai.image.generator.ah.databinding.ActivityMainBinding
+import com.ai.image.generator.ah.fragment.SettingFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.explore -> replaceFragment(ExploreFragment())
                 R.id.saved -> replaceFragment(SavedFragment())
-                R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.profile -> replaceFragment(SettingFragment())
             }
             true
 

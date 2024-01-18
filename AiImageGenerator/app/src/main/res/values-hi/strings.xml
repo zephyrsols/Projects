@@ -69,7 +69,7 @@
     <!--Personal Info Activity-->
     <string name="full_name">पूरा नाम</string>
     <string name="phone_number">फ़ोन नंबर</string>
-    <string name="_92_3000000000">+९२ ३०००००००००</string>
+    <string name="_92_3000000000">९२ ३०००००००००</string>
     <string name="date_of_birth">जन्म की तारीख</string>
     <string name="dd_mm_yyyy">दिन/महीना/वर्ष</string>
     <string name="gender">लिंग</string>
@@ -149,5 +149,9 @@
     <!-- लॉगआउट डायलॉग -->
     <string name="are_you_sure_you_want_to_log_out">क्या आप निश्चित हैं कि आप लॉग आउट करना चाहते हैं?</string>
     <string name="cancel">रद्द करें</string>
+
+    <!--navigation menu options-->
+    <string name="home">होम</string>
+    <string name="explore">अन्वेषण करें</string>
 
 </resources>

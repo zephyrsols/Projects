@@ -1,41 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".fragment.ProfileFragment">
+    tools:context=".ui.ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_20sdp">
+        android:layout_height="@dimen/_40sdp"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:contentDescription="@string/backbtn"
+            android:src="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/welcomeText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/outfit_bold"
             android:text="@string/personal_info"
             android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_80sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
 
         <TextView
             android:id="@+id/fNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="@font/outfit_bold"
             android:text="@string/full_name"
             android:textColor="@color/white"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeText1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fNameLayout"
@@ -49,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@id/fNameText">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fName"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/black"
@@ -154,15 +178,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dobLayout" />
 
-        <Spinner
-            android:id="@+id/genderSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/genderLayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_25sdp"
-            android:foregroundTint="@color/dark_gray"
-            app:layout_constraintTop_toBottomOf="@id/genderText" />
+            android:focusable="false"
+            app:boxBackgroundMode="filled"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/genderText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:fontFamily="@font/outfit_regular"
+                android:hint="@string/gender"
+                android:inputType="number"
+                android:paddingStart="0dp"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <RelativeLayout
             android:id="@+id/saveBtn"
@@ -189,4 +229,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

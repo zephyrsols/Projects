@@ -7,12 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
+import android.widget.Button
 import android.widget.TextView
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.databinding.ActivitySettingBinding
+import com.google.firebase.Firebase
+import com.google.firebase.app
+import com.google.firebase.auth.auth
 
 class SettingActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingBinding
+    private lateinit var dialog: Dialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingBinding.inflate(layoutInflater)
@@ -22,38 +27,49 @@ class SettingActivity : AppCompatActivity() {
         binding.personalInfoBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, PersonalInfoActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-            finish()
+
         }
         binding.securityBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, SecurityActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-            finish()
+
         }
         binding.languageBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, LanguageActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-            finish()
+
         }
         binding.followUsBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, FollowUsActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-            finish()
         }
 
         binding.logoutBtn.setOnClickListener {
-            showDialog()
+            dialog = Dialog(this)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.setCancelable(false)
+            dialog.setContentView(R.layout.logout_dialog)
+            val cancelButton = dialog.findViewById<Button>(R.id.cancelBtn)
+            cancelButton.setOnClickListener {
+                dialog.cancel()
+            }
+            val logoutButton = dialog.findViewById<Button>(R.id.logoutBtn)
+            logoutButton.setOnClickListener {
+                Firebase.auth.signOut()
+                startActivity(Intent(this, SigninActivity::class.java))
+                finish()
+            }
+            dialog.show()
         }
 
     }
 
+
+
     private fun showDialog() {
         val dialog = Dialog(this@SettingActivity)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        dialog.setCancelable(false)
 
-        dialog.setContentView(R.layout.logout_dialog)
-        dialog.show()
         val timer = object : CountDownTimer(2000, 100) {
             override fun onTick(millisUntilFinished: Long) {
             }

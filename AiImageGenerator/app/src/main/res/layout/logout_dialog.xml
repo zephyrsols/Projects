@@ -52,7 +52,7 @@
             tools:ignore="MissingConstraints">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/skippBtn"
+                android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_round_background"
@@ -62,7 +62,7 @@
                 android:textColor="@color/dark_blue" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/nextBtn"
+                android:id="@+id/logoutBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
