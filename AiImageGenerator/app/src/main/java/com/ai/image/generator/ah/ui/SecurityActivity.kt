@@ -10,5 +10,9 @@ class SecurityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecurityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.backBtn.setOnClickListener{
+            finish()
+        }
     }
 }

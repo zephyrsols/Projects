@@ -34,14 +34,13 @@ class LanguageActivity : AppCompatActivity() {
     @SuppressLint("UnsafeOptInUsageError")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val lang = intent.getBooleanExtra("setting", false)
-
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         loadLocale()
         setContentView(binding.root)
         //Log.d("TAG12121", "onCreate: $lang")
-
+        binding.backBtn.setOnClickListener{
+            finish()
+        }
         initListeners()
         if (BuildCompat.isAtLeastT()) {
             onBackInvokedDispatcher.registerOnBackInvokedCallback(
@@ -114,17 +113,6 @@ class LanguageActivity : AppCompatActivity() {
 
                 }
 
-                "Afrikaans" -> {
-                    baseConfig.appLanguage = "af"
-                    next()
-
-                }
-
-                "Vietnamese" -> {
-                    baseConfig.appLanguage = "vi"
-                    next()
-
-                }
 
                 "Chinese" -> {
                     baseConfig.appLanguage = "zh"
@@ -144,23 +132,6 @@ class LanguageActivity : AppCompatActivity() {
 
                 }
 
-                "Korean" -> {
-                    baseConfig.appLanguage = "ko"
-                    next()
-
-                }
-
-                "Thai" -> {
-                    baseConfig.appLanguage = "th"
-                    next()
-
-                }
-
-                "Portuguese" -> {
-                    baseConfig.appLanguage = "pt"
-                    next()
-
-                }
 
             }
         }
@@ -174,14 +145,9 @@ class LanguageActivity : AppCompatActivity() {
             binding.urdu,
             binding.indonesia,
             binding.russia,
-            binding.african,
-            binding.vietnamese,
             binding.china,
             binding.german,
             binding.japanese,
-            binding.korean,
-            binding.thailand,
-            binding.portuguese
         )
 
         buttonsIds.forEachIndexed { index, mRadioButton ->
@@ -207,14 +173,9 @@ class LanguageActivity : AppCompatActivity() {
             binding.clUrdu,
             binding.clIndonesia,
             binding.clRussia,
-            binding.clAfrican,
-            binding.clVietnamese,
             binding.clChina,
             binding.clGermany,
             binding.clJapanese,
-            binding.clKorean,
-            binding.clThailand,
-            binding.clPortuguese
         ).forEachIndexed { index, constraintLayout ->
             constraintLayout.setOnClickListener {
                 handleRadioButton(buttonsIds[index])
@@ -328,13 +289,6 @@ class LanguageActivity : AppCompatActivity() {
                     binding.russia.isChecked = true
                 }
 
-                "af" -> {
-                    binding.african.isChecked = true
-                }
-
-                "vi" -> {
-                    binding.vietnamese.isChecked = true
-                }
 
                 "zh" -> {
                     binding.china.isChecked = true
@@ -348,17 +302,6 @@ class LanguageActivity : AppCompatActivity() {
                     binding.japanese.isChecked = true
                 }
 
-                "ko" -> {
-                    binding.korean.isChecked = true
-                }
-
-                "th" -> {
-                    binding.thailand.isChecked = true
-                }
-
-                "pt" -> {
-                    binding.portuguese.isChecked = true
-                }
             }
         }
     }

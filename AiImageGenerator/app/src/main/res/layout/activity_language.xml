@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
         android:padding="@dimen/_12sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,6 +22,9 @@
             android:layout_height="@dimen/_15sdp"
             android:contentDescription="@string/backbtn"
             android:src="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -39,8 +42,8 @@
 
         <ImageView
             android:id="@+id/tickBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:src="@drawable/tickimg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -342,72 +345,6 @@
                         app:layout_constraintBottom_toBottomOf="parent" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_african"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:text="Afrikaans"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <View
-                        android:id="@+id/view10"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.2dp"
-                        android:layout_marginHorizontal="@dimen/_20sdp"
-                        android:background="@color/transparent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_vietnamese"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:text="Vietnamese"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <View
-                        android:id="@+id/view11"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.2dp"
-                        android:layout_marginHorizontal="@dimen/_20sdp"
-                        android:background="@color/transparent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cl_china"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
@@ -506,96 +443,7 @@
                         android:background="@color/transparent"
                         app:layout_constraintBottom_toBottomOf="parent" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_korean"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
 
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:text="Korean"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <View
-                        android:id="@+id/view15"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.2dp"
-                        android:layout_marginHorizontal="@dimen/_20sdp"
-                        android:background="@color/transparent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_thailand"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:text="Thai"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <View
-                        android:id="@+id/view16"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.2dp"
-                        android:layout_marginHorizontal="@dimen/_20sdp"
-                        android:background="@color/transparent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cl_portuguese"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="0dp">
-
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:text="Portuguese"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
 
@@ -705,29 +553,6 @@
                         android:textAlignment="textStart"
                         android:textColor="@android:color/transparent" />
 
-                    <RadioButton
-                        android:id="@+id/african"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="start"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:buttonTint="@color/white"
-                        android:onClick="radio_button_click"
-                        android:text="Afrikaans"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/transparent" />
-
-                    <RadioButton
-                        android:id="@+id/vietnamese"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="start"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:buttonTint="@color/white"
-                        android:onClick="radio_button_click"
-                        android:text="Vietnamese"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/transparent" />
 
                     <RadioButton
                         android:id="@+id/china"
@@ -762,42 +587,6 @@
                         android:buttonTint="@color/white"
                         android:onClick="radio_button_click"
                         android:text="Japanese"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/transparent" />
-
-                    <RadioButton
-                        android:id="@+id/korean"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="start"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:buttonTint="@color/white"
-                        android:onClick="radio_button_click"
-                        android:text="Korean"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/transparent" />
-
-                    <RadioButton
-                        android:id="@+id/thailand"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="start"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:buttonTint="@color/white"
-                        android:onClick="radio_button_click"
-                        android:text="Thai"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/transparent" />
-
-                    <RadioButton
-                        android:id="@+id/portuguese"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_gravity="start"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:buttonTint="@color/white"
-                        android:onClick="radio_button_click"
-                        android:text="Portuguese"
                         android:textAlignment="textStart"
                         android:textColor="@android:color/transparent" />
 

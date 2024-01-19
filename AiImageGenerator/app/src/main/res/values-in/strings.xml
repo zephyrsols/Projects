@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai Image Generator</string>
+
+    <!--New Password Activity-->
+    <string name="backbtn">backBtn</string>
+    <string name="create_new_password">Buat kata sandi baru</string>
+    <string name="pwd_detail_text">Buat kata sandi baru jika Anda lupa.</string>
+    <string name="new_password">Kata Sandi Baru</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_new_password">Konfirmasi Kata Sandi Baru</string>
+    <string name="continue_btn">Lanjutkan</string>
+
+    <!--OnBoarding Activity One, Two, Three-->
+    <string name="girlimage">girlImage</string>
+    <string name="onboading_text1">Ubah kata-kata Anda menjadi\nseni instan</string>
+    <string name="skip">Lewati</string>
+    <string name="next">Berikutnya</string>
+    <string name="bearimage">bearImage</string>
+    <string name="onboarding_text3">Lepaskan ide kreatif Anda\ndengan seni yang disimpan</string>
+    <string name="get_started">Mulai</string>
+    <string name="artimage">artImage</string>
+    <string name="onboarding_text2">Buat dan bagikan karya seni Anda\ndengan mudah</string>
+
+    <!--Otp Code Verification Activity-->
+    <string name="otp_code_verification">Verifikasi Kode OTP</string>
+    <string name="otp_detail_text">Kami telah mengirimkan kode OTP ke email Anda\nand*****@gmail.com Masukkan kode OTP di bawah ini untuk verifikasi</string>
+    <string name="don_t_receive_email">Tidak menerima Email?</string>
+    <string name="you_can_resend_code_in">Anda dapat mengirim ulang kode dalam </string>
+    <string name="s">d</string>
+    <string name="_timer">00</string>
+
+    <!--Reset Password Activity-->
+    <string name="sign_in_with_password">Masuk dengan kata sandi</string>
+    <string name="reset_your_password">Atur ulang kata sandi Anda</string>
+    <string name="please_enter_your_email_to_get_otp">silakan masukkan email Anda untuk mendapatkan OTP</string>
+    <string name="email">Email</string>
+
+    <!--Sign In With Password Activity-->
+    <string name="welcome_back">Selamat datang kembali</string>
+    <string name="login_detail_text"><![CDATA[Silakan masukkan email & kata sandi Anda untuk masuk]]></string>
+    <string name="password">Kata Sandi</string>
+    <string name="remember_me">Ingat saya</string>
+    <string name="forget_password">Lupa Kata Sandi?</string>
+    <string name="don_t_have_an_account">Belum punya akun?</string>
+    <string name="sign_up">Daftar</string>
+    <string name="or_continue_with">atau lanjutkan dengan</string>
+    <string name="googlebtn">googleBtn</string>
+    <string name="facebookbtn">facebookBtn</string>
+    <string name="twitterbtn">twitterBtn</string>
+    <string name="applebtn">appleBtn</string>
+    <string name="sign_in">Masuk</string>
+
+    <!--Sign In Activity-->
+    <string name="welcome_let_s_dive_in_into_your_account">Selamat datang, mari kita masuk ke akun Anda!</string>
+    <string name="continue_with_google">lanjutkan dengan Google</string>
+    <string name="continue_with_apple">lanjutkan dengan Apple</string>
+    <string name="continue_with_facebook">lanjutkan dengan Facebook</string>
+    <string name="continue_with_twitter">lanjutkan dengan Twitter</string>
+
+    <!--Dialog-->
+    <string name="dialog_text">Silakan tunggu....
+Anda akan diarahkan ke beranda</string>
+
+    <!--Sign Up Activity-->
+    <string name="hello_there">Halo</string>
+    <string name="sign_up_text"><![CDATA[Silakan masukkan email & kata sandi Anda\ndemi membuat akun.]]></string>
+    <string name="i_agree_to_term_amp_privacy_policy"><![CDATA[Saya menyetujui Persyaratan & Kebijakan Privasi]]></string>
+
+    <!--Personal Info Activity-->
+    <string name="full_name">Nama Lengkap</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="_92_3000000000">92 3000000000</string>
+    <string name="date_of_birth">Tanggal Lahir</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="finish">Selesai</string>
+    <string name="personal_info_text_detail">silakan masukkan profil Anda, jangan khawatir hanya\nAnda yang dapat melihat data pribadi Anda, tidak ada orang lain\nyang akan bisa melihatnya. Atau Anda dapat melewatkannya untuk\nsaat ini</string>
+    <string name="enter_personal_info">Masukkan informasi pribadi</string>
+    <string-array name="gender_name">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <!--Home fragment-->
+    <string name="logo">logo</string>
+    <string name="create_a_visions_with_ai">buat visi dengan AI</string>
+    <string name="what_visions_are_you_bringing_to_life_today">Apa visi yang ingin Anda hidupkan hari ini!</string>
+    <string name="aspect_ratio">Rasio Aspek</string>
+    <string name="square">Kotak</string>
+    <string name="portrait">Potret</string>
+    <string name="landsacpe">Lanskap</string>
+    <string name="select_style">Pilih Gaya</string>
+    <string name="no_style">Tanpa gaya</string>
+    <string name="euphoric">Euphoric</string>
+    <string name="tattoo">Tato</string>
+    <string name="_3d_game">Permainan 3D</string>
+    <string name="generate">Buat</string>
+    <string name="watch_an_ad">Tonton iklan</string>
+
+    <!--Saved fragment-->
+    <string name="anime_v2">Anime V2</string>
+    <string name="saved">Disimpan</string>
+
+    <!--Permission Activity-->
+    <string name="gtand_permissions_to_start_app">Beri izin untuk memulai aplikasi</string>
+    <string name="storage_permission">Izin Penyimpanan</string>
+    <string name="start">Mulai</string>
+    <string name="title_activity_language">LanguageActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Fragment Pertama</string>
+    <string name="second_fragment_label">Fragment Kedua</string>
+    <string name="previous">Sebelumnya</string>
+    <!--Profile Fragment-->
+    <string name="save">Simpan</string>
+    <string name="personal_info">Info Pribadi</string>
+
+    <!--Language Activity-->
+    <string name="language">Bahasa</string>
+    <string name="english">Inggris</string>
+
+    <!--Setting Activity-->
+    <string name="settings">Pengaturan</string>
+    <string name="general">Umum</string>
+    <string name="next_arrow"><![CDATA[>]]></string>
+    <string name="notification">Notifikasi</string>
+    <string name="security">Keamanan</string>
+    <string name="follow_us_on_social_media">Ikuti kami di media sosial</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="logout">Keluar</string>
+    <string name="about">Tentang</string>
+
+    <!--Security Activity-->
+    <string name="biometric_id">ID Biometrik</string>
+    <string name="face_id">ID Wajah</string>
+    <string name="sms_authenticator">Pengautentikasi SMS</string>
+    <string name="google_authenticator">Pengautentikasi Google</string>
+    <string name="device_management">Manajemen Perangkat</string>
+
+    <!--Follow Us Activity-->
+    <string name="discord">Discord</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="telegram">Telegram</string>
+
+    <!--Logout Dialog-->
+    <string name="are_you_sure_you_want_to_log_out">Apakah Anda yakin ingin keluar?</string>
+    <string name="cancel">Batal</string>
+
+    <!--Navigation Menu Options-->
+    <string name="home">Beranda</string>
+    <string name="explore">Jelajahi</string>
+
+</resources>

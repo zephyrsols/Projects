@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import com.ai.image.generator.ah.R
@@ -17,6 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var email: TextInputEditText
     private lateinit var password: TextInputEditText
+    private lateinit var termsCheckBox: CheckBox
     private var auth = Firebase.auth
     private lateinit var dialog: Dialog
 
@@ -33,6 +35,7 @@ class SignUpActivity : AppCompatActivity() {
         val title = dialog.findViewById(R.id.heading) as TextView
         title.text = "Signing Up"
 
+        termsCheckBox = binding.termsCheckBox
         email = binding.email
         password = binding.password
         binding.signInBtn.setOnClickListener {
@@ -40,27 +43,52 @@ class SignUpActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         binding.signUpBtn.setOnClickListener {
-            dialog.show()
-            auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString())
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
-                        val user = auth.currentUser
-                        Toast.makeText(this, auth.currentUser?.email.toString(), Toast.LENGTH_SHORT)
-                            .show()
-                        startActivity(Intent(this@SignUpActivity, PersonalInfoActivity::class.java))
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-                        finish()
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(
-                            baseContext,
-                            "Authentication failed.",
-                            Toast.LENGTH_SHORT,
-                        ).show()
-                        dialog.cancel()
-                    }
+            if (email.text.toString() != "" && password.text.toString() != "") {
+                if (termsCheckBox.isChecked) {
+                    dialog.show()
+                    auth.createUserWithEmailAndPassword(
+                        email.text.toString(),
+                        password.text.toString()
+                    )
+                        .addOnCompleteListener(this) { task ->
+                            if (task.isSuccessful) {
+                                // Sign in success, update UI with the signed-in user's information
+                                val user = auth.currentUser
+                                Toast.makeText(
+                                    this,
+                                    auth.currentUser?.email.toString(),
+                                    Toast.LENGTH_SHORT
+                                )
+                                    .show()
+                                startActivity(
+                                    Intent(
+                                        this@SignUpActivity,
+                                        PersonalInfoActivity::class.java
+                                    )
+                                )
+                                overridePendingTransition(
+                                    R.anim.slide_in_right,
+                                    R.anim.slide_out_left
+                                )
+                                finish()
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(
+                                    baseContext,
+                                    "Authentication failed." + task.exception!!.message.toString(),
+                                    Toast.LENGTH_SHORT,
+                                ).show()
+                                dialog.cancel()
+                            }
+                        }
+                }else{
+                    Toast.makeText(this, "Accept Term and Privacy Policy", Toast.LENGTH_SHORT).show()
                 }
+
+            } else {
+
+                Toast.makeText(this, "fill all fields!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

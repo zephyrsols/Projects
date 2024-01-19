@@ -25,7 +25,9 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        binding.backBtn.setOnClickListener{
+            finish()
+        }
 
         databse = Firebase.database.reference
         data = databse.child("users").child(Firebase.auth.currentUser!!.uid).get()

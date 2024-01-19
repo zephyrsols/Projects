@@ -22,7 +22,9 @@ class SettingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.backBtn.setOnClickListener{
+            finish()
+        }
 
         binding.personalInfoBtn.setOnClickListener {
             startActivity(Intent(this@SettingActivity, PersonalInfoActivity::class.java))

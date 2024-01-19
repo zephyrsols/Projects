@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
+import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import com.ai.image.generator.ah.R
@@ -19,8 +20,9 @@ class SignInWithPasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInWithPasswordBinding
     private lateinit var email: TextInputEditText
     private lateinit var password: TextInputEditText
+    private lateinit var rememberMeCheckBox: CheckBox
     private var auth = Firebase.auth
-    private lateinit var dialog:Dialog
+    private lateinit var dialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,31 +38,40 @@ class SignInWithPasswordActivity : AppCompatActivity() {
         title.text = "Signing In"
 
 
+        rememberMeCheckBox = binding.rememberMeCheckBox
         email = binding.email
         password = binding.password
         binding.signInBtn.setOnClickListener {
-            dialog.show()
-            auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Sign in Success!", Toast.LENGTH_SHORT).show()
-                        startActivity(
-                            Intent(
-                                this@SignInWithPasswordActivity,
-                                MainActivity::class.java
+            if (email.text.toString().trim() != "" && password.text.toString() != "") {
+                dialog.show()
+                auth.signInWithEmailAndPassword(
+                    email.text.toString().trim(),
+                    password.text.toString()
+                )
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "Sign in Success!", Toast.LENGTH_SHORT).show()
+                            startActivity(
+                                Intent(
+                                    this@SignInWithPasswordActivity,
+                                    MainActivity::class.java
+                                )
                             )
-                        )
-                        dialog.cancel()
-                        finish()
-                    } else {
-                        Toast.makeText(
-                            this,
-                            "Sign in failed!" + task.exception.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        dialog.cancel()
+                            dialog.cancel()
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Sign in failed!" + task.exception!!.message.toString(),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            dialog.cancel()
+                        }
                     }
-                }
+            } else {
+                Toast.makeText(this, "fill all fields!", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
         binding.forgetPassword.setOnClickListener {
@@ -84,19 +95,5 @@ class SignInWithPasswordActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
-    private fun showDialog() {
-
-        dialog.show()
-//        val timer = object : CountDownTimer(2000, 100) {
-//            override fun onTick(millisUntilFinished: Long) {
-//            }
-//
-//            override fun onFinish() {
-//                dialog.cancel()
-//
-//            }
-//        }
-//        timer.start()
-    }
 
 }
