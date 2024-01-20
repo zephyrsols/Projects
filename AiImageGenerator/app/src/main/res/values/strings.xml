@@ -157,4 +157,26 @@
     <string name="explore">Explore</string>
 
 
+    <!--Toast Strings-->
+    <string name="first_grant_all_permissions">First grant all permissions</string>
+    <string name="fail_to_save_details">Fail to save details!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Check your inbox\nPassword resetting email sent</string>
+    <string name="enter_your_email">Enter your email!</string>
+    <string name="fail_due_to">fail due to\n%1$s</string>
+    <string name="sign_in_successful">Sign in Successful</string>
+    <string name="sign_in_failed">Sign in failed</string>
+    <string name="fill_all_fields">Fill all fields!</string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="accept_term_and_privacy_policy">Accept Term and Privacy Policy</string>
+
+
+    <!--Dialog-->
+    <string name="updating_info">Updating Info</string>
+    <string name="signing_in">Signing In</string>
+    <string name="signing_up">Signing Up</string>
+
+
+
+
+
 </resources>

@@ -1,5 +1,6 @@
 package com.ai.image.generator.ah.ui
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,7 @@ class SignUpActivity : AppCompatActivity() {
     private var auth = Firebase.auth
     private lateinit var dialog: Dialog
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -33,7 +35,7 @@ class SignUpActivity : AppCompatActivity() {
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.custom_signin_dialog)
         val title = dialog.findViewById(R.id.heading) as TextView
-        title.text = "Signing Up"
+        title.text = getString(R.string.signing_up)
 
         termsCheckBox = binding.termsCheckBox
         email = binding.email
@@ -53,7 +55,6 @@ class SignUpActivity : AppCompatActivity() {
                         .addOnCompleteListener(this) { task ->
                             if (task.isSuccessful) {
                                 // Sign in success, update UI with the signed-in user's information
-                                val user = auth.currentUser
                                 Toast.makeText(
                                     this,
                                     auth.currentUser?.email.toString(),
@@ -75,19 +76,22 @@ class SignUpActivity : AppCompatActivity() {
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(
                                     baseContext,
-                                    "Authentication failed." + task.exception!!.message.toString(),
+                                    getString(R.string.authentication_failed) + task.exception!!.message.toString(),
                                     Toast.LENGTH_SHORT,
                                 ).show()
                                 dialog.cancel()
                             }
                         }
-                }else{
-                    Toast.makeText(this, "Accept Term and Privacy Policy", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        this,
+                        getString(R.string.accept_term_and_privacy_policy), Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             } else {
 
-                Toast.makeText(this, "fill all fields!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.fill_all_fields), Toast.LENGTH_SHORT).show()
             }
         }
     }

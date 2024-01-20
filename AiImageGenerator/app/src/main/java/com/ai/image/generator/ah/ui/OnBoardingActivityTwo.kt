@@ -19,7 +19,7 @@ class OnBoardingActivityTwo : AppCompatActivity() {
         }
 
         binding.skippBtn.setOnClickListener {
-            startActivity(Intent(this@OnBoardingActivityTwo, SigninActivity::class.java))
+            startActivity(Intent(this@OnBoardingActivityTwo, PermissionsActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
     }

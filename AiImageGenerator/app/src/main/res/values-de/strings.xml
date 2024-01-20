@@ -154,4 +154,21 @@
     <string name="home">Startseite</string>
     <string name="explore">Erkunden</string>
 
+    <!-- Toast-Strings -->
+    <string name="first_grant_all_permissions">Zuerst alle Berechtigungen gewähren</string>
+    <string name="fail_to_save_details">Fehler beim Speichern der Details!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Überprüfen Sie Ihren Posteingang\nE-Mail zur Zurücksetzung des Passworts wurde gesendet</string>
+    <string name="enter_your_email">Geben Sie Ihre E-Mail-Adresse ein!</string>
+    <string name="fail_due_to">Fehler aufgrund von\n%1$s</string>
+    <string name="sign_in_successful">Anmeldung erfolgreich</string>
+    <string name="sign_in_failed">Anmeldung fehlgeschlagen</string>
+    <string name="fill_all_fields">Füllen Sie alle Felder aus!</string>
+    <string name="authentication_failed">Authentifizierung fehlgeschlagen.</string>
+    <string name="accept_term_and_privacy_policy">Nutzungsbedingungen und Datenschutzrichtlinien akzeptieren</string>
+
+    <!-- Dialog -->
+    <string name="updating_info">Informationen werden aktualisiert</string>
+    <string name="signing_in">Anmeldung läuft</string>
+    <string name="signing_up">Registrierung läuft</string>
+
 </resources>

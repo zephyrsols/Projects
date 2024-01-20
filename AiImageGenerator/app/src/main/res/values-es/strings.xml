@@ -154,6 +154,23 @@
     <string name="home">Inicio</string>
     <string name="explore">Explorar</string>
 
+    <!-- Cadenas de Toast -->
+    <string name="first_grant_all_permissions">Conceda primero todos los permisos</string>
+    <string name="fail_to_save_details">¡Error al guardar los detalles!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Verifique su bandeja de entrada\nSe ha enviado un correo electrónico para restablecer la contraseña</string>
+    <string name="enter_your_email">¡Ingrese su correo electrónico!</string>
+    <string name="fail_due_to">Error debido a\n%1$s</string>
+    <string name="sign_in_successful">Inicio de sesión exitoso</string>
+    <string name="sign_in_failed">Inicio de sesión fallido</string>
+    <string name="fill_all_fields">¡Complete todos los campos!</string>
+    <string name="authentication_failed">Autenticación fallida.</string>
+    <string name="accept_term_and_privacy_policy">Aceptar Términos y Política de Privacidad</string>
+
+    <!-- Diálogo -->
+    <string name="updating_info">Actualizando información</string>
+    <string name="signing_in">Iniciando sesión</string>
+    <string name="signing_up">Registrándose</string>
+
 
 
 

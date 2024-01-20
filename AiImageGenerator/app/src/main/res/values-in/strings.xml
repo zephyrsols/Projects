@@ -153,5 +153,21 @@ Anda akan diarahkan ke beranda</string>
     <!--Navigation Menu Options-->
     <string name="home">Beranda</string>
     <string name="explore">Jelajahi</string>
+    <!-- String Toast -->
+    <string name="first_grant_all_permissions">Berikan semua izin terlebih dahulu</string>
+    <string name="fail_to_save_details">Gagal menyimpan detail!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Periksa kotak masuk Anda\nEmail pengaturan ulang kata sandi telah dikirim</string>
+    <string name="enter_your_email">Masukkan alamat email Anda!</string>
+    <string name="fail_due_to">Gagal karena\n%1$s</string>
+    <string name="sign_in_successful">Berhasil masuk</string>
+    <string name="sign_in_failed">Gagal masuk</string>
+    <string name="fill_all_fields">Isi semua kolom!</string>
+    <string name="authentication_failed">Autentikasi gagal.</string>
+    <string name="accept_term_and_privacy_policy">Terima Persyaratan dan Kebijakan Privasi</string>
+
+    <!-- Dialog -->
+    <string name="updating_info">Memperbarui Informasi</string>
+    <string name="signing_in">Masuk</string>
+    <string name="signing_up">Mendaftar</string>
 
 </resources>

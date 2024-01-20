@@ -159,5 +159,21 @@
     <!--نیویگیشن مینو کے اختیارات-->
     <string name="home">ہوم</string>
     <string name="explore">کھوجیں</string>
+    <!-- ٹوسٹ سٹرنگز -->
+    <string name="first_grant_all_permissions">پہلے تمام اجازتیں دیں</string>
+    <string name="fail_to_save_details">تفصیلات محفوظ کرنے میں ناکامی!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">اپنا ان باکس چیک کریں\nپاس ورڈ ری سیٹ کرنے کا ای میل بھیجا گیا ہے</string>
+    <string name="enter_your_email">اپنا ای میل درج کریں!</string>
+    <string name="fail_due_to">ناکامی کا باعث\n%1$s</string>
+    <string name="sign_in_successful">سائن ان کامیاب</string>
+    <string name="sign_in_failed">سائن ان میں ناکامی</string>
+    <string name="fill_all_fields">تمام خانے بھریں!</string>
+    <string name="authentication_failed">توثیق میں ناکامی۔</string>
+    <string name="accept_term_and_privacy_policy">شرائط اور رازداری کی پالیسی قبول کریں</string>
+
+    <!-- ڈائیلاگ -->
+    <string name="updating_info">معلومات کو اپ ڈیٹ کرنا</string>
+    <string name="signing_in">سائن ان کرنا</string>
+    <string name="signing_up">رجسٹریشن ہو رہا ہے</string>
 
 </resources>

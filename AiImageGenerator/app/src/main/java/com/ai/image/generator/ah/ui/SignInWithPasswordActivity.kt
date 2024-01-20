@@ -1,5 +1,6 @@
 package com.ai.image.generator.ah.ui
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
@@ -24,6 +25,7 @@ class SignInWithPasswordActivity : AppCompatActivity() {
     private var auth = Firebase.auth
     private lateinit var dialog: Dialog
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInWithPasswordBinding.inflate(layoutInflater)
@@ -35,7 +37,7 @@ class SignInWithPasswordActivity : AppCompatActivity() {
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.custom_signin_dialog)
         val title = dialog.findViewById(R.id.heading) as TextView
-        title.text = "Signing In"
+        title.text = getString(R.string.signing_in)
 
 
         rememberMeCheckBox = binding.rememberMeCheckBox
@@ -50,7 +52,8 @@ class SignInWithPasswordActivity : AppCompatActivity() {
                 )
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this, "Sign in Success!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,
+                                getString(R.string.sign_in_successful), Toast.LENGTH_SHORT).show()
                             startActivity(
                                 Intent(
                                     this@SignInWithPasswordActivity,
@@ -62,14 +65,14 @@ class SignInWithPasswordActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this,
-                                "Sign in failed!" + task.exception!!.message.toString(),
+                                getString(R.string.sign_in_failed) + task.exception!!.message.toString(),
                                 Toast.LENGTH_SHORT
                             ).show()
                             dialog.cancel()
                         }
                     }
             } else {
-                Toast.makeText(this, "fill all fields!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.fill_all_fields), Toast.LENGTH_SHORT).show()
 
             }
 

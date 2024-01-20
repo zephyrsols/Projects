@@ -154,6 +154,24 @@
     <string name="home">Accueil</string>
     <string name="explore">Explorer</string>
 
+    <!-- Chaînes de toast -->
+    <string name="first_grant_all_permissions">Accordez dabord toutes les autorisations</string>
+    <string name="fail_to_save_details">Échec de lenregistrement des détails !</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Vérifiez votre boîte de réception\nEmail de réinitialisation du mot de passe envoyé</string>
+    <string name="enter_your_email">Entrez votre adresse e-mail !</string>
+    <string name="fail_due_to">Échec en raison de\n%1$s</string>
+    <string name="sign_in_successful">Connexion réussie</string>
+    <string name="sign_in_failed">Échec de la connexion</string>
+    <string name="fill_all_fields">Remplissez tous les champs !</string>
+    <string name="authentication_failed">Échec de lauthentification.</string>
+    <string name="accept_term_and_privacy_policy">Accepter les conditions et la politique de confidentialité</string>
+
+    <!-- Dialogue -->
+    <string name="updating_info">Mise à jour des informations</string>
+    <string name="signing_in">Connexion en cours</string>
+    <string name="signing_up">Inscription en cours</string>
+
+
 
 
 </resources>

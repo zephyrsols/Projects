@@ -22,22 +22,32 @@ class ResetPasswordActivity : AppCompatActivity() {
 
         email = binding.email
         binding.continueBtn.setOnClickListener {
-            FirebaseAuth.getInstance().sendPasswordResetEmail(email.text.toString().trim())
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Password reset email sent", Toast.LENGTH_SHORT).show()
-                        startActivity(
-                            Intent(
-                                this@ResetPasswordActivity,
-                                SigninActivity::class.java
+            if (email.text.toString() != "") {
+                FirebaseAuth.getInstance().sendPasswordResetEmail(email.text.toString().trim())
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this,
+                                getString(R.string.check_your_inbox_password_resetting_email_sent), Toast.LENGTH_SHORT)
+                                .show()
+                            startActivity(
+                                Intent(
+                                    this@ResetPasswordActivity,
+                                    SigninActivity::class.java
+                                )
                             )
-                        )
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-                    } else {
-                        Toast.makeText(this, "fail due to\n${task.exception}", Toast.LENGTH_SHORT)
-                            .show()
+                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                        } else {
+                            Toast.makeText(
+                                this,
+                                getString(R.string.fail_due_to, task.exception!!.message.toString()),
+                                Toast.LENGTH_SHORT
+                            )
+                                .show()
+                        }
                     }
-                }
+            } else {
+                Toast.makeText(this, getString(R.string.enter_your_email), Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

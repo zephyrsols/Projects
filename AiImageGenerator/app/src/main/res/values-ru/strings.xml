@@ -154,5 +154,21 @@
     <!--navigation menu options-->
     <string name="home">Домой</string>
     <string name="explore">Исследовать</string>
+    <!-- Строки Toast -->
+    <string name="first_grant_all_permissions">Сначала предоставьте все разрешения</string>
+    <string name="fail_to_save_details">Не удалось сохранить детали!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">Проверьте свой почтовый ящик\nОтправлено письмо о сбросе пароля</string>
+    <string name="enter_your_email">Введите свой адрес электронной почты!</string>
+    <string name="fail_due_to">Сбой из-за\n%1$s</string>
+    <string name="sign_in_successful">Успешный вход</string>
+    <string name="sign_in_failed">Не удалось войти</string>
+    <string name="fill_all_fields">Заполните все поля!</string>
+    <string name="authentication_failed">Ошибка аутентификации.</string>
+    <string name="accept_term_and_privacy_policy">Принять Условия и Политику конфиденциальности</string>
+
+    <!-- Диалог -->
+    <string name="updating_info">Обновление информации</string>
+    <string name="signing_in">Вход в систему</string>
+    <string name="signing_up">Регистрация</string>
 
 </resources>

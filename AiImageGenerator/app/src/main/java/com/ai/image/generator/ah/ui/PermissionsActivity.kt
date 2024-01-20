@@ -27,10 +27,7 @@ class PermissionsActivity : AppCompatActivity() {
         permissionSwitch = binding.permissionSwitch
         permissionSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                Toast.makeText(this, "on", Toast.LENGTH_SHORT).show()
                 runtimePer()
-            } else {
-                Toast.makeText(this, "Off", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -46,7 +43,7 @@ class PermissionsActivity : AppCompatActivity() {
                 ) {
                     permissionSwitch.isChecked = false
                     Toast.makeText(
-                        this, "First grant all permissions", Toast.LENGTH_SHORT
+                        this, getString(R.string.first_grant_all_permissions), Toast.LENGTH_SHORT
                     ).show()
                 } else {
                     startActivity(Intent(this, SigninActivity::class.java))
@@ -58,7 +55,7 @@ class PermissionsActivity : AppCompatActivity() {
                     ) != PackageManager.PERMISSION_GRANTED
                 ) {
                     permissionSwitch.isChecked = false
-                    Toast.makeText(this, "First grant all permissions", Toast.LENGTH_SHORT)
+                    Toast.makeText(this, getString(R.string.first_grant_all_permissions), Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     startActivity(Intent(this, SigninActivity::class.java))

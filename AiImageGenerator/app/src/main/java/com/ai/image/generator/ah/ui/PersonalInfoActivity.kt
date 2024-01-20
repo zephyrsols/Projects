@@ -56,7 +56,7 @@ class PersonalInfoActivity : AppCompatActivity() {
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.custom_signin_dialog)
         val title = dialog.findViewById(R.id.heading) as TextView
-        title.text = "Updating Info"
+        title.text = getString(R.string.updating_info)
 
         dob.setOnClickListener {
             val calender = Calendar.getInstance()
@@ -88,7 +88,8 @@ class PersonalInfoActivity : AppCompatActivity() {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                     finish()
                 }.addOnCanceledListener {
-                    Toast.makeText(this, "fail to save details!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,
+                        getString(R.string.fail_to_save_details), Toast.LENGTH_SHORT).show()
                     dialog.cancel()
                 }
 

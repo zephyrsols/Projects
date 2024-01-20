@@ -150,6 +150,23 @@
     <string name="home">الرئيسية</string>
     <string name="explore">استكشاف</string>
 
+    <!-- سلاسل التوست -->
+    <string name="first_grant_all_permissions">منح الصلاحيات أولاً</string>
+    <string name="fail_to_save_details">فشل في حفظ التفاصيل!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">تحقق من صندوق الوارد الخاص بك\nتم إرسال رسالة إعادة تعيين كلمة المرور</string>
+    <string name="enter_your_email">أدخل بريدك الإلكتروني!</string>
+    <string name="fail_due_to">فشل بسبب\n%1$s</string>
+    <string name="sign_in_successful">تم تسجيل الدخول بنجاح</string>
+    <string name="sign_in_failed">فشل تسجيل الدخول</string>
+    <string name="fill_all_fields">املأ جميع الحقول!</string>
+    <string name="authentication_failed">فشل التوثيق.</string>
+    <string name="accept_term_and_privacy_policy">قبول الشروط وسياسة الخصوصية</string>
+
+    <!-- الحوار -->
+    <string name="updating_info">تحديث المعلومات</string>
+    <string name="signing_in">تسجيل الدخول</string>
+    <string name="signing_up">التسجيل</string>
+
 
 
 

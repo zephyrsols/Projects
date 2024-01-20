@@ -153,5 +153,21 @@
     <!--navigation menu options-->
     <string name="home">主页</string>
     <string name="explore">探索</string>
+    <!-- Toast 字符串 -->
+    <string name="first_grant_all_permissions">先授予所有权限</string>
+    <string name="fail_to_save_details">保存详细信息失败！</string>
+    <string name="check_your_inbox_password_resetting_email_sent">检查您的收件箱\n已发送密码重置电子邮件</string>
+    <string name="enter_your_email">输入您的电子邮件！</string>
+    <string name="fail_due_to">由于以下原因失败\n%1$s</string>
+    <string name="sign_in_successful">登录成功</string>
+    <string name="sign_in_failed">登录失败</string>
+    <string name="fill_all_fields">填写所有字段！</string>
+    <string name="authentication_failed">认证失败。</string>
+    <string name="accept_term_and_privacy_policy">接受条款和隐私政策</string>
+
+    <!-- 对话框 -->
+    <string name="updating_info">更新信息</string>
+    <string name="signing_in">登录中</string>
+    <string name="signing_up">注册中</string>
 
 </resources>

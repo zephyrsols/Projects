@@ -154,4 +154,21 @@
     <string name="home">होम</string>
     <string name="explore">अन्वेषण करें</string>
 
+    <!-- टोस्ट स्ट्रिंग्स -->
+    <string name="first_grant_all_permissions">सबसे पहले सभी अनुमतियाँ दें</string>
+    <string name="fail_to_save_details">विवरण सहेजने में विफल!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">अपने इनबॉक्स की जाँच करें\nपासवर्ड रीसेट करने के लिए ईमेल भेजा गया है</string>
+    <string name="enter_your_email">अपना ईमेल दर्ज करें!</string>
+    <string name="fail_due_to">विफलता कारण\n%1$s</string>
+    <string name="sign_in_successful">साइन इन सफल</string>
+    <string name="sign_in_failed">साइन इन विफल</string>
+    <string name="fill_all_fields">सभी क्षेत्रों को भरें!</string>
+    <string name="authentication_failed">प्रमाणीकरण विफल हुआ।</string>
+    <string name="accept_term_and_privacy_policy">शर्तें और गोपनीयता नीति स्वीकार करें</string>
+
+    <!-- डायलॉग -->
+    <string name="updating_info">जानकारी अपडेट हो रही है</string>
+    <string name="signing_in">साइन इन हो रहा है</string>
+    <string name="signing_up">साइन अप हो रहा है</string>
+
 </resources>
