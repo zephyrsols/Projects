@@ -170,8 +170,39 @@
     <string name="updating_info">Actualizando información</string>
     <string name="signing_in">Iniciando sesión</string>
     <string name="signing_up">Registrándose</string>
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
 
-
+    <!--Estilo para la imagen-->
+    <string name="ai_art">Arte AI</string>
+    <string name="selected">Seleccionado</string>
+    <string name="creatures">Criaturas</string>
+    <string name="architecture">Arquitectura</string>
+    <string name="cyberpunk">Ciberpunk</string>
+    <string name="anime">Anime</string>
+    <string name="old_style">Estilo Antiguo</string>
+    <string name="painting">Pintura</string>
+    <string name="_abstract">Abstracto</string>
+    <string name="impressionism">Impresionismo</string>
+    <string name="surreal">Surrealista</string>
+    <string name="_3d">3D</string>
+    <string name="origami">Origami</string>
+    <string name="hologram">Holograma</string>
 
 
 </resources>

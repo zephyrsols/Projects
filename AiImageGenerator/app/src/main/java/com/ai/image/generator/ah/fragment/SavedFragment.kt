@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ai.image.generator.ah.R
+import com.ai.image.generator.ah.adapter.MyItem
 import com.ai.image.generator.ah.adapter.homeFragmentAdapter
 import com.ai.image.generator.ah.databinding.FragmentSavedBinding
 
@@ -42,50 +43,9 @@ class SavedFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSavedBinding.inflate(inflater, container, false)
         recyclerView = binding.recyclerView
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 4)
-        val styleNameList = listOf(
-            "Euphoric",
-            "Tattoo",
-            "3D Game",
-            "Glitch",
-            "Minimalism",
-            "Fantasy",
-            "Crayon Art",
-            "Anime V2",
-            "Euphoric",
-            "Tattoo",
-            "3D Game",
-            "Glitch",
-            "Minimalism",
-            "Fantasy",
-            "Crayon Art",
-            "Anime V2",
-            "Euphoric",
-            "Tattoo",
-            "3D Game",
-            "Glitch",
-            "Minimalism",
-            "Fantasy",
-            "Crayon Art",
-            "Anime V2",
-
-            "Tattoo",
-            "3D Game",
-            "Glitch",
-            "Minimalism",
-            "Fantasy",
-            "Crayon Art",
-            "Anime V2",
-            "Euphoric",
-            "Tattoo",
-            "3D Game",
-            "Glitch",
-            "Minimalism",
-            "Fantasy",
-            "Crayon Art",
-            "Anime V2",
-        )
-        val adapter = homeFragmentAdapter(styleNameList)
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
+        val itemList: List<MyItem> = createItemListWithPlaceholders()
+        val adapter = homeFragmentAdapter(requireContext(), itemList)
         recyclerView.adapter = adapter
         return binding.root
     }
@@ -108,5 +68,17 @@ class SavedFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    //change according to firebase storage images
+    private fun createItemListWithPlaceholders(): List<MyItem> {
+        val itemList = mutableListOf<MyItem>()
+
+        for (i in 1..20) {
+            val imageUrl = "https://placekitten.com/200/200?image=$i"
+            val item = MyItem(imageUrl)
+            itemList.add(item)
+        }
+
+        return itemList
     }
 }

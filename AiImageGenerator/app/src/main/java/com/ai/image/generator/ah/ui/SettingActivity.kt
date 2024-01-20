@@ -68,21 +68,6 @@ class SettingActivity : AppCompatActivity() {
     }
 
 
-
-    private fun showDialog() {
-        val dialog = Dialog(this@SettingActivity)
-
-        val timer = object : CountDownTimer(2000, 100) {
-            override fun onTick(millisUntilFinished: Long) {
-            }
-
-            override fun onFinish() {
-                dialog.cancel()
-            }
-        }
-        timer.start()
-    }
-
     override fun finish() {
         super.finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)

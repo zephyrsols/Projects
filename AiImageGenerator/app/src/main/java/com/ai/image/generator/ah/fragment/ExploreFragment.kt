@@ -5,7 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ai.image.generator.ah.R
+import com.ai.image.generator.ah.adapter.MyItem
+import com.ai.image.generator.ah.adapter.homeFragmentAdapter
+import com.ai.image.generator.ah.databinding.FragmentExploreBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -19,6 +24,9 @@ class ExploreFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var binding: FragmentExploreBinding
+    private lateinit var recyclerView: RecyclerView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +41,14 @@ class ExploreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore, container, false)
+        binding = FragmentExploreBinding.inflate(inflater, container, false)
+        recyclerView = binding.recyclerView
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
+        val itemList: List<MyItem> = createItemListWithPlaceholders()
+        val adapter = homeFragmentAdapter(requireContext(), itemList)
+        recyclerView.adapter = adapter
+
+        return binding.root
     }
 
     companion object {
@@ -54,5 +69,18 @@ class ExploreFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    //change according to firebase storage images
+    private fun createItemListWithPlaceholders(): List<MyItem> {
+        val itemList = mutableListOf<MyItem>()
+
+        for (i in 1..20) {
+            val imageUrl = "https://placekitten.com/200/200?image=$i"
+            val item = MyItem(imageUrl)
+            itemList.add(item)
+        }
+
+        return itemList
     }
 }

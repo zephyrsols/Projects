@@ -167,8 +167,39 @@
     <string name="signing_in">تسجيل الدخول</string>
     <string name="signing_up">التسجيل</string>
 
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
 
-
+    <!--نمط الصورة-->
+    <string name="ai_art">فن الذكاء الاصطناعي</string>
+    <string name="selected">تم اختياره</string>
+    <string name="creatures">مخلوقات</string>
+    <string name="architecture">هندسة معمارية</string>
+    <string name="cyberpunk">سايبربانك</string>
+    <string name="anime">أنمي</string>
+    <string name="old_style">طراز قديم</string>
+    <string name="painting">رسم</string>
+    <string name="_abstract">تجريدي</string>
+    <string name="impressionism">الانطباعية</string>
+    <string name="surreal">سريالية</string>
+    <string name="_3d">ثلاثي الأبعاد</string>
+    <string name="origami">أوريغامي</string>
+    <string name="hologram">هولوغرام</string>
 
 
 

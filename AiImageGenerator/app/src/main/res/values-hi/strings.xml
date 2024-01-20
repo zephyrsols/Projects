@@ -170,5 +170,38 @@
     <string name="updating_info">जानकारी अपडेट हो रही है</string>
     <string name="signing_in">साइन इन हो रहा है</string>
     <string name="signing_up">साइन अप हो रहा है</string>
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
+
+    <!--छवि के लिए शैली-->
+    <string name="ai_art">ए.आई. कला</string>
+    <string name="selected">चयनित</string>
+    <string name="creatures">प्राणी</string>
+    <string name="architecture">स्थापत्यकला</string>
+    <string name="cyberpunk">साइबरपंक</string>
+    <string name="anime">एनीमे</string>
+    <string name="old_style">पुरानी शैली</string>
+    <string name="painting">पेंटिंग</string>
+    <string name="_abstract">अमूर्त</string>
+    <string name="impressionism">प्रभाववाद</string>
+    <string name="surreal">सर्याल</string>
+    <string name="_3d">3डी</string>
+    <string name="origami">ओरिगामी</string>
+    <string name="hologram">होलोग्राम</string>
 
 </resources>

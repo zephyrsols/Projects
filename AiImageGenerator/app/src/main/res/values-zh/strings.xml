@@ -169,5 +169,38 @@
     <string name="updating_info">更新信息</string>
     <string name="signing_in">登录中</string>
     <string name="signing_up">注册中</string>
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
+
+    <!--图片样式-->
+    <string name="ai_art">AI艺术</string>
+    <string name="selected">已选择</string>
+    <string name="creatures">生物</string>
+    <string name="architecture">建筑</string>
+    <string name="cyberpunk">赛博朋克</string>
+    <string name="anime">动漫</string>
+    <string name="old_style">古老风格</string>
+    <string name="painting">绘画</string>
+    <string name="_abstract">抽象</string>
+    <string name="impressionism">印象派</string>
+    <string name="surreal">超现实</string>
+    <string name="_3d">3D</string>
+    <string name="origami">折纸</string>
+    <string name="hologram">全息</string>
 
 </resources>

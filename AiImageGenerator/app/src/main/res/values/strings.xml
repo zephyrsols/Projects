@@ -82,7 +82,7 @@
     </string-array>
 
     <!--Home fragment-->
-    <string name="logo">logo</string>
+    <string name="logo">Logo</string>
     <string name="create_a_visions_with_ai">create a visions with AI</string>
     <string name="what_visions_are_you_bringing_to_life_today">What visions are you bringing to life today!</string>
     <string name="aspect_ratio">Aspect Ratio</string>
@@ -175,8 +175,40 @@
     <string name="signing_in">Signing In</string>
     <string name="signing_up">Signing Up</string>
 
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
 
 
+    <!--Style For Image-->
+    <string name="ai_art">Ai Art</string>
+    <string name="selected">Selected</string>
+    <string name="creatures">Creatures</string>
+    <string name="architecture">Architecture</string>
+    <string name="cyberpunk">Cyberpunk</string>
+    <string name="anime">Anime</string>
+    <string name="old_style">Old Style</string>
+    <string name="painting">Painting</string>
+    <string name="_abstract">Abstract</string>
+    <string name="impressionism">Impressionism</string>
+    <string name="surreal">Surreal</string>
+    <string name="_3d">3D</string>
+    <string name="origami">Origami</string>
+    <string name="hologram">Hologram</string>
 
 
 </resources>

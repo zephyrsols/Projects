@@ -11,6 +11,7 @@ import com.ai.image.generator.ah.fragment.SavedFragment
 import com.ai.image.generator.ah.databinding.ActivityMainBinding
 import com.ai.image.generator.ah.fragment.SettingFragment
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferences: SharedPreferences
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         replaceFragment(HomeFragment())
         sharedPreferences = getSharedPreferences("onBoarding", MODE_PRIVATE)
         editor = sharedPreferences.edit()
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.explore -> replaceFragment(ExploreFragment())
                 R.id.saved -> replaceFragment(SavedFragment())
-                R.id.profile -> replaceFragment(SettingFragment())
+                R.id.setting -> replaceFragment(SettingFragment())
             }
             true
 
@@ -53,4 +55,6 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
         finish()
     }
+
+
 }

@@ -2,18 +2,16 @@ package com.ai.image.generator.ah.ui
 
 import android.app.DatePickerDialog
 import android.app.Dialog
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.Window
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import com.ai.image.generator.ah.R
-import com.ai.image.generator.ah.User
+import com.ai.image.generator.ah.dataclass.User
 import com.ai.image.generator.ah.databinding.ActivityPersonalInfoBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.Firebase

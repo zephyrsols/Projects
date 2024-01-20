@@ -15,7 +15,7 @@ class FollowUsActivity : AppCompatActivity() {
         binding = ActivityFollowUsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.backBtn.setOnClickListener{
+        binding.backBtn.setOnClickListener {
             finish()
         }
         binding.discordBtn.setOnClickListener {

@@ -1,13 +1,11 @@
 package com.ai.image.generator.ah.ui
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import com.ai.image.generator.ah.BaseConfig
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.databinding.ActivitySplashBinding
 import com.google.firebase.Firebase

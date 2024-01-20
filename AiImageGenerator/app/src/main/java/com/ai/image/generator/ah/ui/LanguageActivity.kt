@@ -8,17 +8,12 @@ import android.content.SharedPreferences
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import android.widget.RadioButton
-import android.widget.TextView
-import android.widget.Toast
 import android.window.OnBackInvokedDispatcher
 import androidx.activity.OnBackPressedCallback
 import androidx.core.os.BuildCompat
-import com.ai.image.generator.ah.BaseConfig
+import com.ai.image.generator.ah.utils.BaseConfig
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.databinding.ActivityLanguageBinding
 import java.util.Locale
@@ -37,8 +32,7 @@ class LanguageActivity : AppCompatActivity() {
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         loadLocale()
         setContentView(binding.root)
-        //Log.d("TAG12121", "onCreate: $lang")
-        binding.backBtn.setOnClickListener{
+        binding.backBtn.setOnClickListener {
             finish()
         }
         initListeners()
@@ -50,7 +44,7 @@ class LanguageActivity : AppCompatActivity() {
             }
         } else {
             onBackPressedDispatcher.addCallback(
-                this, // lifecycle owner
+                this,
                 object : OnBackPressedCallback(true) {
                     override fun handleOnBackPressed() {
                         finish()
@@ -225,10 +219,6 @@ class LanguageActivity : AppCompatActivity() {
     }
 
     fun radio_button_click(view: View) {
-        // Get the clicked radio button instance
-//        val radio: RadioButton = findViewById(binding.radioGroup.checkedRadioButtonId)
-//        Toast.makeText(applicationContext,"On click : ${radio.text}",
-//            Toast.LENGTH_SHORT).show()
     }
 
     private fun setLocale(language: String) {

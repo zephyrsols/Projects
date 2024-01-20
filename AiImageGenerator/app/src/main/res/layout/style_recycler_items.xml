@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/_5sdp">
 
-    <RelativeLayout
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_60sdp"
-        android:background="@drawable/custom_round_background"
-        android:backgroundTint="@color/dark_gray"
-        tools:ignore="MissingConstraints">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/artimage" />
 
-
-        <TextView
-            android:id="@+id/styleName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:fontFamily="@font/outfit_regular"
-            android:text="@string/euphoric"
-            android:textColor="@color/white" />
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

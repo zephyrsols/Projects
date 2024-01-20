@@ -1,4 +1,4 @@
-package com.ai.image.generator.ah
+package com.ai.image.generator.ah.utils
 
 import android.content.Context
 import android.content.SharedPreferences

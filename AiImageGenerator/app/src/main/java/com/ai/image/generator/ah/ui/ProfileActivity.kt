@@ -2,6 +2,7 @@ package com.ai.image.generator.ah.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.ai.image.generator.ah.R
 import com.ai.image.generator.ah.databinding.ActivityProfileBinding
 import com.google.android.gms.tasks.Task
@@ -25,7 +26,7 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.backBtn.setOnClickListener{
+        binding.backBtn.setOnClickListener {
             finish()
         }
 
@@ -41,6 +42,9 @@ class ProfileActivity : AppCompatActivity() {
             phoneNo.setText(it.child("phoneNo").value.toString())
             dob.setText(it.child("dob").value.toString())
             gender.setText(it.child("gender").value.toString())
+        }
+        binding.saveBtn.setOnClickListener {
+            Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
         }
     }
 }

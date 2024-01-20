@@ -169,5 +169,38 @@
     <string name="updating_info">情報を更新しています</string>
     <string name="signing_in">サインイン中</string>
     <string name="signing_up">登録中</string>
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
+
+    <!--画像のスタイル-->
+    <string name="ai_art">AIアート</string>
+    <string name="selected">選択済み</string>
+    <string name="creatures">生物</string>
+    <string name="architecture">建築</string>
+    <string name="cyberpunk">サイバーパンク</string>
+    <string name="anime">アニメ</string>
+    <string name="old_style">旧式</string>
+    <string name="painting">絵画</string>
+    <string name="_abstract">抽象</string>
+    <string name="impressionism">印象派</string>
+    <string name="surreal">シュール</string>
+    <string name="_3d">3D</string>
+    <string name="origami">折り紙</string>
+    <string name="hologram">ホログラム</string>
 
 </resources>

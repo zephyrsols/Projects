@@ -2,6 +2,7 @@ package com.ai.image.generator.ah.fragment
 
 import android.app.Dialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -49,7 +50,6 @@ class SettingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentSettingBinding.inflate(inflater, container, false)
         binding.personalInfoBtn.setOnClickListener {
             startActivity(Intent(requireContext(), ProfileActivity::class.java))
@@ -62,6 +62,12 @@ class SettingFragment : Fragment() {
         }
         binding.followUsBtn.setOnClickListener {
             startActivity(Intent(requireContext(), FollowUsActivity::class.java))
+        }
+        binding.privacyBtn.setOnClickListener {
+            openUrl("https://www.google.com/")
+        }
+        binding.aboutUsBtn.setOnClickListener {
+            openUrl("https://www.google.com/")
         }
 
         binding.logoutBtn.setOnClickListener {
@@ -102,5 +108,11 @@ class SettingFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun openUrl(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
     }
 }
