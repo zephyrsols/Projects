@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "245004599522",
+    "firebase_url": "https://learn-flutter-bb789.firebaseio.com",
+    "project_id": "learn-flutter-bb789",
+    "storage_bucket": "learn-flutter-bb789.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245004599522:android:ebcd060b565de6200f5ebb",
+        "android_client_info": {
+          "package_name": "com.dizitaltrends.rrb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqUOgAp6lVCga1etV8cNIfdfy2-xcYEJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245004599522:android:bc3aaf2235bb12a80f5ebb",
+        "android_client_info": {
+          "package_name": "com.dizitaltrends.wordpress_api"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245004599522-1j100ii76t38qdeao63d47n23viv2foo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dizitaltrends.wordpress_api",
+            "certificate_hash": "420f1ecf22c0c9178066e03adc2a7405552d5df3"
+          }
+        },
+        {
+          "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqUOgAp6lVCga1etV8cNIfdfy2-xcYEJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245004599522:android:0fced25798cdd8780f5ebb",
+        "android_client_info": {
+          "package_name": "com.pkbhai.job_finder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqUOgAp6lVCga1etV8cNIfdfy2-xcYEJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245004599522-r0rljki5u3tdfndjajr03mb43tpv8bkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
