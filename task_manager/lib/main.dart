@@ -47,7 +47,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    var a = onBoarding();
     Timer(const Duration(seconds: 3), () {
       if (auth.currentUser != null) {
         if (onBoardingValue == "1") {
