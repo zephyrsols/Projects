@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shahi_kitchen/screens/PizzaScreen.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -13,18 +16,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Color dealsOutlineClr = Colors.white;
   Color extraOutlineClr = Colors.white;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: [
-          const Padding(
-            padding: EdgeInsets.all(25.0),
-            child: Icon(
-              Icons.account_circle,
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(right: 25),
+            child: SvgPicture.asset(
+              "assets/svg/user.svg",
+              height: 30,
+              width: 30,
             ),
           )
         ],
@@ -33,15 +36,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
         fit: StackFit.expand,
         children: [
           Padding(
-            padding: EdgeInsets.all(18.0),
+            padding: const EdgeInsets.all(18.0),
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
                     Text(
                       "I want to ",
                       style:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
                     ),
                     Text(
                       "Eat",
@@ -53,7 +56,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -65,21 +68,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             extraOutlineClr = Colors.white;
                           });
                         },
-                        child: Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                  width: 1, color: pizzaOutlineClr)),
-                          child: Icon(
-                            Icons.local_pizza,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: itemContainer(
+                            pizzaOutlineClr, "assets/svg/pizza.svg"),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
-                        onTap:(){
+                        onTap: () {
                           setState(() {
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.yellowAccent;
@@ -87,21 +81,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             extraOutlineClr = Colors.white;
                           });
                         },
-                        child: Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                  width: 1, color: burgerOutlineClr)),
-                          child: Icon(
-                            Icons.local_pizza,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: itemContainer(
+                            burgerOutlineClr, "assets/svg/burger.svg"),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           setState(() {
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.white;
@@ -109,21 +94,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             extraOutlineClr = Colors.white;
                           });
                         },
-                        child: Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                  width: 1, color: dealsOutlineClr)),
-                          child: Icon(
-                            Icons.local_pizza,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: itemContainer(
+                            dealsOutlineClr, "assets/svg/fries_burger.svg"),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           setState(() {
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.white;
@@ -131,26 +107,36 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             extraOutlineClr = Colors.yellowAccent;
                           });
                         },
-                        child: Container(
-                          padding: EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                  width: 1, color: extraOutlineClr)),
-                          child: Icon(
-                            Icons.local_pizza,
-                            color: Colors.white,
-                          ),
-                        ),
+                        child: itemContainer(
+                            extraOutlineClr, "assets/svg/nuggets.svg"),
                       ),
-
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                PizzaScreen(),
               ],
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget itemContainer(Color color, String svgPicture) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(width: 1, color: color)),
+      child: ZoomTapAnimation(
+        child: SvgPicture.asset(
+          svgPicture,
+          height: 50,
+          width: 50,
+        ),
       ),
     );
   }
