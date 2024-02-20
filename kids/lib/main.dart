@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kids/screens/MainScreen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kids/screens/mainScreens/MainScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => MainScreen()));
     });
@@ -33,10 +34,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark));
-    return const Scaffold(
-      body: Center(
-        child: Text("Kids"),
+        statusBarIconBrightness: Brightness.dark));
+    return Scaffold(
+      body: Container(
+        color: Color(0xFFFF8A42),
+        child: SvgPicture.asset("assets/svg/splash_screen.svg"),
       ),
     );
   }

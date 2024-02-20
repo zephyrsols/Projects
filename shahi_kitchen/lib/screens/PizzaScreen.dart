@@ -1,3 +1,4 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:shahi_kitchen/util/PizzaList.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
@@ -162,14 +163,15 @@ class _PizzaScreenState extends State<PizzaScreen> {
                               children: [
                                 GestureDetector(
                                   onTap: () {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(
-                                            content: Text(pizzaList.list[index]
-                                                    [0] +
-                                                " " +
-                                                pizzaList.list[index][2] +
-                                                " " +
-                                                pizzaList.list[index][3])));
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(SnackBar(
+                                            backgroundColor: Colors.transparent,
+                                            content: AwesomeSnackbarContent(
+                                              title: pizzaList.list[index][0],
+                                              message:
+                                                  "You are ordering ${pizzaList.list[index][0]} ${pizzaList.list[index][2]} with price of ${pizzaList.list[index][3]}",
+                                              contentType: ContentType.help,
+                                            )));
                                   },
                                   child: const ZoomTapAnimation(
                                     child: Icon(
