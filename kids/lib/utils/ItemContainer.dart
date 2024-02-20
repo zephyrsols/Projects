@@ -16,10 +16,10 @@ Widget itemContainer(String title, String picture, VoidCallback navigator) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(picture),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: const TextStyle(color: Colors.white, fontSize: 16),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shahi_kitchen/util/PizzaList.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class PizzaScreen extends StatefulWidget {
@@ -9,182 +10,188 @@ class PizzaScreen extends StatefulWidget {
 }
 
 class _PizzaScreenState extends State<PizzaScreen> {
-  String tikkaP = "Small";
-  String tikkaPPrice = "499 Rs";
-  Color smallP = Colors.redAccent;
-  Color mediumP = Colors.white;
-  Color largeP = Colors.white;
+  //title, picture, size, default price, small price, medium price, large price, small border color, medium border color, large border color
+  PizzaList pizzaList = PizzaList();
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          pizzaContainer("assets/png/pizza/pizza_1.png", "Tikka", "449",
-              "850", "1299"),
-          SizedBox(
-            height: 10,
-          ),
-          pizzaContainer("assets/png/pizza/pizza_2.png", "Fajita", "449",
-              "850", "1299"),
-        ],
-      ),
-    );
-  }
-
-  Widget pizzaContainer(String picture, String pName, String smallPrice,
-      String mediumPrice, String largePrice) {
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15), color: Colors.white),
-      padding: const EdgeInsets.all(5),
-      child: Row(
-        children: [
-          Image.asset(
-            picture,
-            height: 100,
-            width: 100,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  pName+" Pizza",
-                  style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tikkaP = "Small";
-                          tikkaPPrice = smallPrice + " Rs";
-                          smallP = Colors.redAccent;
-                          mediumP = Colors.white;
-                          largeP = Colors.white;
-                        });
-                      },
-                      child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: smallP),
-                          ),
-                          padding: const EdgeInsets.all(5),
-                          child: ZoomTapAnimation(
-                            child: ZoomTapAnimation(
-                              child: const Text(
-                                "Small",
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w200,
-                                    color: Colors.black),
-                              ),
-                            ),
-                          )),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tikkaP = "Medium";
-                          tikkaPPrice = mediumPrice + " Rs";
-                          smallP = Colors.white;
-                          mediumP = Colors.redAccent;
-                          largeP = Colors.white;
-                        });
-                      },
-                      child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: mediumP),
-                          ),
-                          padding: const EdgeInsets.all(5),
-                          child: ZoomTapAnimation(
-                            child: const Text(
-                              "Medium",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200,
-                                  color: Colors.black),
-                            ),
-                          )),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          tikkaP = "Large";
-                          tikkaPPrice = largePrice + " Rs";
-                          smallP = Colors.white;
-                          mediumP = Colors.white;
-                          largeP = Colors.redAccent;
-                        });
-                      },
-                      child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(width: 1, color: largeP),
-                          ),
-                          padding: const EdgeInsets.all(5),
-                          child: ZoomTapAnimation(
-                            child: const Text(
-                              "Large",
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w200,
-                                  color: Colors.black),
-                            ),
-                          )),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      tikkaPPrice,
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15), color: Colors.white),
+              padding: const EdgeInsets.all(5),
+              child: Row(
+                children: [
+                  Image.asset(
+                    pizzaList.list[index][1],
+                    height: 100,
+                    width: 100,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                content: Text(
-                                    pName +" " + tikkaP + " " + tikkaPPrice)));
-                          },
-                          child: ZoomTapAnimation(
-                            child: Icon(
-                              Icons.add_box,
+                        Text(
+                          pizzaList.list[index][0] + " Pizza",
+                          style: const TextStyle(
                               color: Colors.black,
-                              size: 35,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  pizzaList.list[index][2] = "Small";
+                                  pizzaList.list[index][3] =
+                                      pizzaList.list[index][4];
+                                  pizzaList.list[index][7] = Colors.redAccent;
+                                  pizzaList.list[index][8] = Colors.white;
+                                  pizzaList.list[index][9] = Colors.white;
+                                });
+                              },
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 1,
+                                        color: pizzaList.list[index][7]),
+                                  ),
+                                  padding: const EdgeInsets.all(5),
+                                  child: const ZoomTapAnimation(
+                                    child: ZoomTapAnimation(
+                                      child: Text(
+                                        "Small",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w200,
+                                            color: Colors.black),
+                                      ),
+                                    ),
+                                  )),
                             ),
-                          ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  pizzaList.list[index][2] = "Medium";
+                                  pizzaList.list[index][3] =
+                                      pizzaList.list[index][5];
+                                  pizzaList.list[index][7] = Colors.white;
+                                  pizzaList.list[index][8] = Colors.redAccent;
+                                  pizzaList.list[index][9] = Colors.white;
+                                });
+                              },
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 1,
+                                        color: pizzaList.list[index][8]),
+                                  ),
+                                  padding: const EdgeInsets.all(5),
+                                  child: const ZoomTapAnimation(
+                                    child: Text(
+                                      "Medium",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w200,
+                                          color: Colors.black),
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  pizzaList.list[index][2] = "Large";
+                                  pizzaList.list[index][3] =
+                                      pizzaList.list[index][6];
+                                  pizzaList.list[index][7] = Colors.white;
+                                  pizzaList.list[index][8] = Colors.white;
+                                  pizzaList.list[index][9] = Colors.redAccent;
+                                });
+                              },
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 1,
+                                        color: pizzaList.list[index][9]),
+                                  ),
+                                  padding: const EdgeInsets.all(5),
+                                  child: const ZoomTapAnimation(
+                                    child: Text(
+                                      "Large",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w200,
+                                          color: Colors.black),
+                                    ),
+                                  )),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              pizzaList.list[index][3] + " Rs",
+                              style: const TextStyle(
+                                  color: Colors.redAccent,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            const Spacer(),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                            content: Text(pizzaList.list[index]
+                                                    [0] +
+                                                " " +
+                                                pizzaList.list[index][2] +
+                                                " " +
+                                                pizzaList.list[index][3])));
+                                  },
+                                  child: const ZoomTapAnimation(
+                                    child: Icon(
+                                      Icons.add_box,
+                                      color: Colors.black,
+                                      size: 35,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
+                  ),
+                ],
+              ),
+            );
+          },
+          itemCount: pizzaList.list.length,
+        ),
       ),
     );
   }

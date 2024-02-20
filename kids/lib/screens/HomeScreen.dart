@@ -36,20 +36,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const Spacer(),
                   itemContainer(
-                      "Lets start learning", "assets/svg/start_learning.svg",
+                      "Lets start learning", "assets/svg/home_screen/start_learning.svg",
                       () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LearningContent()));
+                            builder: (context) => const LearningContent()));
                   }),
                   const Spacer(),
                   itemContainer(
-                      "Video learning", "assets/svg/video_learning.svg", () {
+                      "Video learning", "assets/svg/home_screen/video_learning.svg", () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LearningContent()));
+                            builder: (context) => const LearningContent()));
                   }),
                   const Spacer(),
                 ],
@@ -61,20 +61,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const Spacer(),
                   itemContainer(
-                      "Look and Choose", "assets/svg/look_and_choose.svg", () {
+                      "Look and Choose", "assets/svg/home_screen/look_and_choose.svg", () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LearningContent()));
+                            builder: (context) => const LearningContent()));
                   }),
                   const Spacer(),
                   itemContainer(
-                      "Listen and Guess", "assets/svg/listen_and_guess.svg",
+                      "Listen and Guess", "assets/svg/home_screen/listen_and_guess.svg",
                       () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LearningContent()));
+                            builder: (context) => const LearningContent()));
                   }),
                   const Spacer(),
                 ],

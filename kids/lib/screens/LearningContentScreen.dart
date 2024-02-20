@@ -21,21 +21,21 @@ class _LearningContentState extends State<LearningContent> {
             height: double.infinity,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/png/main_screen_bg.png"),
+                    image: AssetImage("assets/png/screens_bg.png"),
                     fit: BoxFit.cover)),
             child: Padding(
               padding: const EdgeInsets.all(18.0),
               child: ListView(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(18.0),
+                  const Padding(
+                    padding: EdgeInsets.all(18.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "PreSchool Kids Learning",
                           style: TextStyle(
-                              color: Color(0xffffffff),
+                              color: Color(0xffFBB23F),
                               fontFamily: "just_another_hand",
                               fontSize: 30),
                         ),
@@ -44,80 +44,80 @@ class _LearningContentState extends State<LearningContent> {
                   ),
                   itemRow(
                       "ALPHABETS",
-                      "assets/svg/alphabet.svg",
+                      "assets/svg//listen_and_guess/alphabet.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       },
                       "NUMBERS",
-                      "assets/svg/alphabet.svg",
+                      "assets/svg/listen_and_guess/alphabet.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       }),
                   const SizedBox(
                     height: 50,
                   ),
                   itemRow(
                       "COLORS",
-                      "assets/svg/colors.svg",
+                      "assets/svg/listen_and_guess/colors.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       },
                       "SHAPES",
-                      "assets/svg/shapes.svg",
+                      "assets/svg/listen_and_guess/shapes.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       }),
                   const SizedBox(
                     height: 50,
                   ),
                   itemRow(
                       "ANIMALS",
-                      "assets/svg/animals.svg",
+                      "assets/svg/listen_and_guess/animals.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       },
                       "BIRDS",
-                      "assets/svg/birds.svg",
+                      "assets/svg/listen_and_guess/birds.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       }),
                   const SizedBox(
                     height: 50,
                   ),
                   itemRow(
                       "FLOWERS",
-                      "assets/svg/flowers.svg",
+                      "assets/svg/listen_and_guess/flowers.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       },
                       "FRUITS",
-                      "assets/svg/fruits.svg",
+                      "assets/svg/listen_and_guess/fruits.svg",
                       () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainScreen()));
+                                builder: (context) => const MainScreen()));
                       }),
                 ],
               ),

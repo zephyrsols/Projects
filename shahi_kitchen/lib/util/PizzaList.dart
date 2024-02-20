@@ -1,0 +1,174 @@
+import 'package:flutter/material.dart';
+
+class PizzaList {
+  List list = [
+    [
+      "Tikka",
+      "assets/png/pizza/pizza_1.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Fajita",
+      "assets/png/pizza/pizza_2.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Fajita Sicilian",
+      "assets/png/pizza/pizza_3.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Tandori",
+      "assets/png/pizza/pizza_4.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Achari",
+      "assets/png/pizza/pizza_5.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Supreme",
+      "assets/png/pizza/pizza_6.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "B.B.Q",
+      "assets/png/pizza/pizza_7.png",
+      "Small",
+      "499",
+      "499",
+      "850",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Shahi Special",
+      "assets/png/pizza/pizza_8.png",
+      "Small",
+      "550",
+      "550",
+      "950",
+      "1450",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Special Star",
+      "assets/png/pizza/pizza_9.png",
+      "Small",
+      "Small n/a",
+      "Small n/a",
+      "1099",
+      "1599",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Stuff Crust",
+      "assets/png/pizza/pizza_10.png",
+      "Small",
+      "Small n/a",
+      "Small n/a",
+      "999",
+      "1550",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Kabab Crust",
+      "assets/png/pizza/pizza_11.png",
+      "Small",
+      "Small n/a",
+      "Small n/a",
+      "999",
+      "1550",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Kabab Flower",
+      "assets/png/pizza/pizza_12.png",
+      "Small",
+      "600",
+      "600",
+      "999",
+      "1550",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Nawabi",
+      "assets/png/pizza/pizza_13.png",
+      "Small",
+      "550",
+      "550",
+      "899",
+      "1299",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+    [
+      "Zinger",
+      "assets/png/pizza/pizza_14.png",
+      "Small",
+      "600",
+      "600",
+      "999",
+      "1499",
+      Colors.redAccent,
+      Colors.white,
+      Colors.white
+    ],
+  ];
+}

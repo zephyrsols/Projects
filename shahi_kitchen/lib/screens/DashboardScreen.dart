@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shahi_kitchen/screens/BurgerScreen.dart';
+import 'package:shahi_kitchen/screens/DealsScreen.dart';
+import 'package:shahi_kitchen/screens/ExtraFoodScreen.dart';
 import 'package:shahi_kitchen/screens/PizzaScreen.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -15,6 +18,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Color burgerOutlineClr = Colors.white;
   Color dealsOutlineClr = Colors.white;
   Color extraOutlineClr = Colors.white;
+
+  int index = 0;
+
+  List screens = [
+    PizzaScreen(),
+    BurgerScreen(),
+    DealsScreen(),
+    ExtraFoodScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +74,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       GestureDetector(
                         onTap: () {
                           setState(() {
+                            index = 0;
                             pizzaOutlineClr = Colors.yellowAccent;
                             burgerOutlineClr = Colors.white;
                             dealsOutlineClr = Colors.white;
@@ -75,6 +88,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       GestureDetector(
                         onTap: () {
                           setState(() {
+                            index = 1;
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.yellowAccent;
                             dealsOutlineClr = Colors.white;
@@ -88,6 +102,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       GestureDetector(
                         onTap: () {
                           setState(() {
+                            index = 2;
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.white;
                             dealsOutlineClr = Colors.yellowAccent;
@@ -101,6 +116,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       GestureDetector(
                         onTap: () {
                           setState(() {
+                            index = 3;
                             pizzaOutlineClr = Colors.white;
                             burgerOutlineClr = Colors.white;
                             dealsOutlineClr = Colors.white;
@@ -114,9 +130,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 5,
                 ),
-                PizzaScreen(),
+                Expanded(child: AnimatedSwitcher(
+                  duration: Duration(milliseconds: 500),
+                  transitionBuilder: (Widget child, Animation<double> animation) {
+                    return ScaleTransition(scale: animation, child: child);
+                  },
+                  child: screens[index],
+                ))
               ],
             ),
           )
