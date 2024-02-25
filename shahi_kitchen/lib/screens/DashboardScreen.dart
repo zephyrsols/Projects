@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shahi_kitchen/screens/BurgerScreen.dart';
+import 'package:shahi_kitchen/screens/CartScreen.dart';
 import 'package:shahi_kitchen/screens/DealsScreen.dart';
 import 'package:shahi_kitchen/screens/ExtraFoodScreen.dart';
+import 'package:shahi_kitchen/screens/HomeScreen.dart';
 import 'package:shahi_kitchen/screens/PizzaScreen.dart';
+import 'package:shahi_kitchen/screens/ProfileScreen.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -14,151 +18,111 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  Color pizzaOutlineClr = Colors.yellowAccent;
-  Color burgerOutlineClr = Colors.white;
-  Color dealsOutlineClr = Colors.white;
-  Color extraOutlineClr = Colors.white;
+
+  double homeHeight = 40;
+  double cartHeight = 30;
+  double userHeight = 30;
+
+  String homeSvg = "assets/svg/home_red.svg";
+  String cartSvg = "assets/svg/cart_black.svg";
+  String userSvg = "assets/svg/user_black.svg";
+
 
   int index = 0;
 
-  List screens = [
-    PizzaScreen(),
-    BurgerScreen(),
-    DealsScreen(),
-    ExtraFoodScreen()
+  List navigationScreens = [
+    HomeScreen(),
+    CartScreen(),
+    ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 25),
-            child: SvgPicture.asset(
-              "assets/svg/user.svg",
-              height: 30,
-              width: 30,
-            ),
-          )
-        ],
-      ),
       body: Stack(
-        fit: StackFit.expand,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Column(
-              children: [
-                const Row(
-                  children: [
-                    Text(
-                      "I want to ",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+          navigationScreens[index],
+          Positioned(
+            bottom: 18,
+            left: 18,
+            right: 18,
+            height: 70,
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1, color: Colors.white),
+                  borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(22),
+                      topLeft: Radius.circular(22),
+                      bottomLeft: Radius.circular(52),
+                      bottomRight: Radius.circular(52)),
+                  color: Colors.black.withOpacity(0.7)),
+              child: Row(
+
+                children: [
+                  Spacer(),
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        index = 0;
+                        homeHeight = 40;
+                        cartHeight = 30;
+                        userHeight = 30;
+                        homeSvg = "assets/svg/home_red.svg";
+                        cartSvg = "assets/svg/cart_black.svg";
+                        userSvg = "assets/svg/user_black.svg";
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: homeHeight,
+                      child: SvgPicture.asset(homeSvg,height: homeHeight,),
                     ),
-                    Text(
-                      "Eat",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          decoration: TextDecoration.underline),
-                    )
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            index = 0;
-                            pizzaOutlineClr = Colors.yellowAccent;
-                            burgerOutlineClr = Colors.white;
-                            dealsOutlineClr = Colors.white;
-                            extraOutlineClr = Colors.white;
-                          });
-                        },
-                        child: itemContainer(
-                            pizzaOutlineClr, "assets/svg/pizza.svg"),
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            index = 1;
-                            pizzaOutlineClr = Colors.white;
-                            burgerOutlineClr = Colors.yellowAccent;
-                            dealsOutlineClr = Colors.white;
-                            extraOutlineClr = Colors.white;
-                          });
-                        },
-                        child: itemContainer(
-                            burgerOutlineClr, "assets/svg/burger.svg"),
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            index = 2;
-                            pizzaOutlineClr = Colors.white;
-                            burgerOutlineClr = Colors.white;
-                            dealsOutlineClr = Colors.yellowAccent;
-                            extraOutlineClr = Colors.white;
-                          });
-                        },
-                        child: itemContainer(
-                            dealsOutlineClr, "assets/svg/fries_burger.svg"),
-                      ),
-                      const Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            index = 3;
-                            pizzaOutlineClr = Colors.white;
-                            burgerOutlineClr = Colors.white;
-                            dealsOutlineClr = Colors.white;
-                            extraOutlineClr = Colors.yellowAccent;
-                          });
-                        },
-                        child: itemContainer(
-                            extraOutlineClr, "assets/svg/nuggets.svg"),
-                      ),
-                    ],
                   ),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Expanded(child: AnimatedSwitcher(
-                  duration: Duration(milliseconds: 500),
-                  transitionBuilder: (Widget child, Animation<double> animation) {
-                    return ScaleTransition(scale: animation, child: child);
-                  },
-                  child: screens[index],
-                ))
-              ],
+                  Spacer(),
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        index = 1;
+                        homeHeight = 30;
+                        cartHeight = 40;
+                        userHeight = 30;
+                        homeSvg = "assets/svg/home_black.svg";
+                        cartSvg = "assets/svg/cart_red.svg";
+                        userSvg = "assets/svg/user_black.svg";
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: cartHeight,
+                      child: SvgPicture.asset(cartSvg,height: cartHeight,),
+                    ),
+                  ),
+                  Spacer(),
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        index = 2;
+                        homeHeight = 30;
+                        cartHeight = 30;
+                        userHeight = 40;
+                        homeSvg = "assets/svg/home_black.svg";
+                        cartSvg = "assets/svg/cart_black.svg";
+                        userSvg = "assets/svg/user_red.svg";
+
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 200),
+                      height: userHeight,
+                      child: SvgPicture.asset(userSvg,height: userHeight,),
+                    ),
+                  ),
+                  Spacer(),
+                ],
+              ),
             ),
           )
         ],
-      ),
-    );
-  }
-
-  Widget itemContainer(Color color, String svgPicture) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 1, color: color)),
-      child: ZoomTapAnimation(
-        child: SvgPicture.asset(
-          svgPicture,
-          height: 50,
-          width: 50,
-        ),
       ),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:shahi_kitchen/cartDatabase/CartDatabase.dart';
 import 'package:shahi_kitchen/util/PizzaList.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -13,12 +16,25 @@ class PizzaScreen extends StatefulWidget {
 class _PizzaScreenState extends State<PizzaScreen> {
   //title, picture, size, default price, small price, medium price, large price, small border color, medium border color, large border color
   PizzaList pizzaList = PizzaList();
+  CartDatabase cartDatabase = CartDatabase();
+  final _myBox = Hive.box("cart");
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    if (_myBox.get("ITEMS") != null) {
+      setState(() {
+        cartDatabase.loadData();
+      });
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
         child: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
@@ -163,6 +179,14 @@ class _PizzaScreenState extends State<PizzaScreen> {
                               children: [
                                 GestureDetector(
                                   onTap: () {
+                                    setState(() {
+                                      cartDatabase.items.add([
+                                        "${pizzaList.list[index][0]}",
+                                        "${pizzaList.list[index][3]}",
+                                        "${pizzaList.list[index][2]}"
+                                      ]);
+                                      cartDatabase.updateDatabase();
+                                    });
                                     ScaffoldMessenger.of(context)
                                         .showSnackBar(SnackBar(
                                             backgroundColor: Colors.transparent,
@@ -170,10 +194,10 @@ class _PizzaScreenState extends State<PizzaScreen> {
                                               title: pizzaList.list[index][0],
                                               message:
                                                   "You are ordering ${pizzaList.list[index][0]} ${pizzaList.list[index][2]} with price of ${pizzaList.list[index][3]}",
-                                              contentType: ContentType.help,
+                                              contentType: ContentType.success,
                                             )));
                                   },
-                                  child: const ZoomTapAnimation(
+                                  child: ZoomTapAnimation(
                                     child: Icon(
                                       Icons.add_box,
                                       color: Colors.black,

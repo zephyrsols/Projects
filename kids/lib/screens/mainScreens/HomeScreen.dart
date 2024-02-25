@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kids/screens/videoLearningScreens/VideoLearningScreen.dart';
 import '../../utils/ItemContainer.dart';
 import '../learningContentScreens/LearningContentScreen.dart';
 
@@ -49,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LearningContent()));
+                            builder: (context) => const VideoLearningScreen()));
                   }),
                   const Spacer(),
                 ],

@@ -2,17 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class GridViewsItems extends StatefulWidget {
+class VideoItemContainer extends StatefulWidget {
   String title;
   List contentList;
 
-  GridViewsItems({super.key, required this.contentList, required this.title});
+  VideoItemContainer(
+      {super.key, required this.contentList, required this.title});
 
   @override
-  State<GridViewsItems> createState() => _GridViewsItemsState();
+  State<VideoItemContainer> createState() => _VideoItemContainerState();
 }
 
-class _GridViewsItemsState extends State<GridViewsItems> {
+class _VideoItemContainerState extends State<VideoItemContainer> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -73,7 +74,13 @@ Widget itemContainer(String title, String picture, VoidCallback navigator) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(picture),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              SvgPicture.asset(picture),
+              SvgPicture.asset("assets/svg/play_icon.svg")
+            ],
+          ),
           const SizedBox(
             height: 10,
           ),

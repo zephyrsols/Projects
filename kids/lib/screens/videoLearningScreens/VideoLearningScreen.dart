@@ -9,22 +9,23 @@ import 'package:kids/screens/learningContentScreens/NumbersScreen.dart';
 import 'package:kids/screens/learningContentScreens/ShapesScreen.dart';
 
 import '../../utils/ItemContainer.dart';
+import '../../utils/VideoItemContainer.dart';
 
-class LearningContent extends StatefulWidget {
-  const LearningContent({super.key});
+class VideoLearningScreen extends StatefulWidget {
+  const VideoLearningScreen({super.key});
 
   @override
-  State<LearningContent> createState() => _LearningContentState();
+  State<VideoLearningScreen> createState() => _VideoLearningScreensState();
 }
 
-class _LearningContentState extends State<LearningContent> {
+class _VideoLearningScreensState extends State<VideoLearningScreen> {
   @override
   Widget build(BuildContext context) {
     List contentList = [
       [
         "ALPHABETS",
         "assets/svg/listen_and_guess/alphabet.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const AlphabetsScreen()));
         }
@@ -32,7 +33,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "NUMBERS",
         "assets/svg/listen_and_guess/animals.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const NumbersScreen()));
         }
@@ -40,7 +41,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "COLORS",
         "assets/svg/listen_and_guess/colors.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ColorsScreen()));
         }
@@ -48,7 +49,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "SHAPES",
         "assets/svg/listen_and_guess/shapes.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const ShapesScreen()));
         }
@@ -56,7 +57,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "ANIMALS",
         "assets/svg/listen_and_guess/animals.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const AnimalsScreen()));
         }
@@ -64,7 +65,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "BIRDS",
         "assets/svg/listen_and_guess/birds.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const BirdsScreen()));
         }
@@ -72,7 +73,7 @@ class _LearningContentState extends State<LearningContent> {
       [
         "FLOWERS",
         "assets/svg/listen_and_guess/flowers.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const FlowersScreen()));
         }
@@ -80,12 +81,12 @@ class _LearningContentState extends State<LearningContent> {
       [
         "FRUITS",
         "assets/svg/listen_and_guess/fruits.svg",
-        () {
+            () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const FruitsScreen()));
         }
       ]
     ];
-    return GridViewsItems(contentList: contentList,title: "PreSchool Kids Learning",);
+    return VideoItemContainer(contentList: contentList,title: "Video Learning",);
   }
 }

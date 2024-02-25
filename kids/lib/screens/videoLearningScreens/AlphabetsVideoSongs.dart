@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:kids/screens/itemViewScreens/ItemScreen.dart';
-import '../../utils/ItemContainer.dart';
 
-class AnimalsScreen extends StatefulWidget {
-  const AnimalsScreen({super.key});
+import '../../utils/ItemContainer.dart';
+import '../itemViewScreens/ItemScreen.dart';
+
+class AlphabetsVideoSongs extends StatefulWidget {
+  const AlphabetsVideoSongs({super.key});
 
   @override
-  State<AnimalsScreen> createState() => _AnimalsScreenState();
+  State<AlphabetsVideoSongs> createState() => _AlphabetVideoSongsState();
 }
 
-class _AnimalsScreenState extends State<AnimalsScreen> {
+class _AlphabetVideoSongsState extends State<AlphabetsVideoSongs> {
   @override
   Widget build(BuildContext context) {
     List contentList = [
       [
-        "DONKEY",
+        "Song Name 1",
         "assets/svg/animals/donkey.svg",
             () {
           Navigator.push(context,
@@ -24,7 +25,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "MONKEY",
+        "Song Name 2",
         "assets/svg/animals/monkey.svg",
             () {
           Navigator.push(context,
@@ -33,7 +34,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "COW",
+        "Song Name 3",
         "assets/svg/animals/cow.svg",
             () {
           Navigator.push(context,
@@ -42,7 +43,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "CHICK",
+        "Song Name 4",
         "assets/svg/animals/chick.svg",
             () {
           Navigator.push(context,
@@ -51,7 +52,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "MOUSE",
+        "Song Name 5",
         "assets/svg/animals/mouse.svg",
             () {
           Navigator.push(context,
@@ -60,7 +61,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "TURTLE",
+        "Song Name 6",
         "assets/svg/animals/turtle.svg",
             () {
           Navigator.push(context,
@@ -69,7 +70,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "SHEEP",
+        "Song Name 7",
         "assets/svg/animals/sheep.svg",
             () {
           Navigator.push(context,
@@ -78,7 +79,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "DUCK",
+        "Song Name 8",
         "assets/svg/animals/duck.svg",
             () {
           Navigator.push(context,
@@ -87,7 +88,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "PIG",
+        "Song Name 9",
         "assets/svg/animals/pig.svg",
             () {
           Navigator.push(context,
@@ -96,7 +97,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "ALPACA",
+        "Song Name 10",
         "assets/svg/animals/alpaca.svg",
             () {
           Navigator.push(context,
@@ -105,7 +106,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "HORSE",
+        "Song Name 11",
         "assets/svg/animals/horse.svg",
             () {
           Navigator.push(context,
@@ -114,7 +115,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "DOG",
+        "Song Name 12",
         "assets/svg/animals/dog.svg",
             () {
           Navigator.push(context,
@@ -123,7 +124,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "BAT",
+        "Song Name 13",
         "assets/svg/animals/bat.svg",
             () {
           Navigator.push(context,
@@ -132,7 +133,7 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
         }
       ],
       [
-        "RABBIT",
+        "Song Name 14",
         "assets/svg/animals/rabbit.svg",
             () {
           Navigator.push(context,
@@ -142,6 +143,6 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
       ],
 
     ];
-    return GridViewsItems(contentList: contentList, title: "Animals",);
+    return GridViewsItems(contentList: contentList, title: "ALPHABET VIDEO SONGS",);
   }
 }

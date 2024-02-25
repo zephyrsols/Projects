@@ -10,20 +10,20 @@ class BurgerScreen extends StatefulWidget {
 
 class _BurgerScreenState extends State<BurgerScreen> {
   List list = [
-    ["Zinger\nBurger", "299"],
-    ["BBQ\nBurger", "250"],
-    ["Tower\nBurger", "399"],
-    ["Shooter\nBurger", "180"],
-    ["Chicken\nPatty Burger", " 199"],
-    ["Double\nPatty Burger", "350"],
-    ["Double\nZ.Burger", "430"]
+    ["Zinger\nBurger", "299", "assets/png/burger/burger_1.png"],
+    ["BBQ\nBurger", "250", "assets/png/burger/burger_2.png"],
+    ["Tower\nBurger", "399", "assets/png/burger/burger_3.png"],
+    ["Shooter\nBurger", "180", "assets/png/burger/burger_4.png"],
+    ["Chicken\nPatty Burger", " 199", "assets/png/burger/burger_5.png"],
+    ["Double\nPatty Burger", "350", "assets/png/burger/burger_6.png"],
+    ["Double\nZ.Burger", "430", "assets/png/burger/burger_7.png"]
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 10),
+        padding: const EdgeInsets.only(left: 10,bottom: 70),
         child: GridView.builder(
           itemCount: list.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -31,7 +31,7 @@ class _BurgerScreenState extends State<BurgerScreen> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               childAspectRatio: .6),
-          itemBuilder: (context,index){
+          itemBuilder: (context, index) {
             return Expanded(
               child: Stack(
                 children: [
@@ -66,9 +66,10 @@ class _BurgerScreenState extends State<BurgerScreen> {
                             child: Text(
                               list[index][1],
                               style: const TextStyle(
-                                  color: Colors.redAccent,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,),
+                                color: Colors.redAccent,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -92,12 +93,12 @@ class _BurgerScreenState extends State<BurgerScreen> {
                     ),
                   ),
                   Positioned(
-                    left: 1.5,
+                    left: -2,
                     top: -10,
                     child: Image.asset(
-                      "assets/png/burger/burger_1.png",
-                      height: 150,
-                      width: 150,
+                      list[index][2],
+                      height: 140,
+                      width: 140,
                     ),
                   ),
                 ],
@@ -106,7 +107,6 @@ class _BurgerScreenState extends State<BurgerScreen> {
           },
         ),
       ),
-
     );
   }
 }

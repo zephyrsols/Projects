@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kids/screens/itemViewScreens/ItemScreen.dart';
-import '../../utils/ItemContainer.dart';
 
-class AnimalsScreen extends StatefulWidget {
-  const AnimalsScreen({super.key});
+import '../../utils/ItemContainer.dart';
+import '../itemViewScreens/ItemScreen.dart';
+
+class AnimalsVideoSongs extends StatefulWidget {
+  const AnimalsVideoSongs({super.key});
 
   @override
-  State<AnimalsScreen> createState() => _AnimalsScreenState();
+  State<AnimalsVideoSongs> createState() => _AnimalVideoSongsState();
 }
 
-class _AnimalsScreenState extends State<AnimalsScreen> {
+class _AnimalVideoSongsState extends State<AnimalsVideoSongs> {
   @override
   Widget build(BuildContext context) {
     List contentList = [
@@ -20,7 +21,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
                   ItemScreen(
-                      title: "DONKEY", svgPath: "assets/svg/animals/donkey.svg")));
+                      title: "DONKEY",
+                      svgPath: "assets/svg/animals/donkey.svg")));
         }
       ],
       [
@@ -29,7 +31,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "MONKEY",svgPath: "assets/svg/animals/monkey.svg")));
+                  ItemScreen(title: "MONKEY",
+                      svgPath: "assets/svg/animals/monkey.svg")));
         }
       ],
       [
@@ -38,7 +41,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title:"COW" ,svgPath: "assets/svg/animals/cow.svg")));
+                  ItemScreen(
+                      title: "COW", svgPath: "assets/svg/animals/cow.svg")));
         }
       ],
       [
@@ -47,7 +51,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "CHICK",svgPath: "assets/svg/animals/chick.svg")));
+                  ItemScreen(title: "CHICK",
+                      svgPath: "assets/svg/animals/chick.svg")));
         }
       ],
       [
@@ -56,7 +61,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "MOUSE",svgPath: "assets/svg/animals/mouse.svg")));
+                  ItemScreen(title: "MOUSE",
+                      svgPath: "assets/svg/animals/mouse.svg")));
         }
       ],
       [
@@ -65,7 +71,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "TURTLE",svgPath: "assets/svg/animals/turtle.svg")));
+                  ItemScreen(title: "TURTLE",
+                      svgPath: "assets/svg/animals/turtle.svg")));
         }
       ],
       [
@@ -74,7 +81,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "SHEEP",svgPath: "assets/svg/animals/sheep.svg")));
+                  ItemScreen(title: "SHEEP",
+                      svgPath: "assets/svg/animals/sheep.svg")));
         }
       ],
       [
@@ -83,7 +91,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "DUCK",svgPath: "assets/svg/animals/duck.svg")));
+                  ItemScreen(
+                      title: "DUCK", svgPath: "assets/svg/animals/duck.svg")));
         }
       ],
       [
@@ -92,7 +101,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "PIG",svgPath: "assets/svg/animals/pig.svg")));
+                  ItemScreen(
+                      title: "PIG", svgPath: "assets/svg/animals/pig.svg")));
         }
       ],
       [
@@ -101,7 +111,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "ALPACA",svgPath: "assets/svg/animals/alpaca.svg")));
+                  ItemScreen(title: "ALPACA",
+                      svgPath: "assets/svg/animals/alpaca.svg")));
         }
       ],
       [
@@ -110,7 +121,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title:  "HORSE",svgPath: "assets/svg/animals/horse.svg")));
+                  ItemScreen(title: "HORSE",
+                      svgPath: "assets/svg/animals/horse.svg")));
         }
       ],
       [
@@ -119,7 +131,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "DOG",svgPath: "assets/svg/animals/dog.svg")));
+                  ItemScreen(
+                      title: "DOG", svgPath: "assets/svg/animals/dog.svg")));
         }
       ],
       [
@@ -128,7 +141,8 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "BAT",svgPath: "assets/svg/animals/bat.svg")));
+                  ItemScreen(
+                      title: "BAT", svgPath: "assets/svg/animals/bat.svg")));
         }
       ],
       [
@@ -137,11 +151,13 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
             () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) =>
-                  ItemScreen( title: "RABBIT",svgPath: "assets/svg/animals/rabbit.svg")));
+                  ItemScreen(title: "RABBIT",
+                      svgPath: "assets/svg/animals/rabbit.svg")));
         }
       ],
 
     ];
-    return GridViewsItems(contentList: contentList, title: "Animals",);
+    return GridViewsItems(
+      contentList: contentList, title: "ANIMAL VIDEO SONGS",);
   }
 }

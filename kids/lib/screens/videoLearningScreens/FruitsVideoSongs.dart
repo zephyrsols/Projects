@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kids/screens/itemViewScreens/ItemScreen.dart';
-import '../../utils/ItemContainer.dart';
 
-class AnimalsScreen extends StatefulWidget {
-  const AnimalsScreen({super.key});
+import '../../utils/ItemContainer.dart';
+import '../itemViewScreens/ItemScreen.dart';
+
+class FruitsVideoSongs extends StatefulWidget {
+  const FruitsVideoSongs({super.key});
 
   @override
-  State<AnimalsScreen> createState() => _AnimalsScreenState();
+  State<FruitsVideoSongs> createState() => _FruitVideoSongsState();
 }
 
-class _AnimalsScreenState extends State<AnimalsScreen> {
+class _FruitVideoSongsState extends State<FruitsVideoSongs> {
   @override
   Widget build(BuildContext context) {
     List contentList = [
@@ -142,6 +143,6 @@ class _AnimalsScreenState extends State<AnimalsScreen> {
       ],
 
     ];
-    return GridViewsItems(contentList: contentList, title: "Animals",);
+    return GridViewsItems(contentList: contentList, title: "FRUIT VIDEO SONGS",);
   }
 }

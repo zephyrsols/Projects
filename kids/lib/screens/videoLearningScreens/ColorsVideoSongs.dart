@@ -1,178 +1,186 @@
 import 'package:flutter/material.dart';
-import 'package:kids/screens/itemViewScreens/ItemScreen.dart';
 
 import '../../utils/ItemContainer.dart';
-import '../mainScreens/MainScreen.dart';
+import '../itemViewScreens/ItemScreen.dart';
 
-class ShapesScreen extends StatefulWidget {
-  const ShapesScreen({super.key});
+class ColorsVideoSongs extends StatefulWidget {
+  const ColorsVideoSongs({super.key});
 
   @override
-  State<ShapesScreen> createState() => _ShapesScreenState();
+  State<ColorsVideoSongs> createState() => _ColorVideoSongsState();
 }
 
-class _ShapesScreenState extends State<ShapesScreen> {
+class _ColorVideoSongsState extends State<ColorsVideoSongs> {
   @override
   Widget build(BuildContext context) {
     List contentList = [
       [
-        "ARROW",
-        "assets/svg/shapes/arrow.svg",
+        "DONKEY",
+        "assets/svg/animals/donkey.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "ARROW", svgPath: "assets/svg/shapes/arrow.svg")));
+                      title: "DONKEY",
+                      svgPath: "assets/svg/animals/donkey.svg")));
         }
       ],
       [
-        "CIRCLE",
-        "assets/svg/shapes/circle.svg",
+        "MONKEY",
+        "assets/svg/animals/monkey.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "CIRCLE", svgPath: "assets/svg/shapes/circle.svg")));
+                      title: "MONKEY",
+                      svgPath: "assets/svg/animals/monkey.svg")));
         }
       ],
       [
-        "CRESCENT",
-        "assets/svg/shapes/crescent.svg",
+        "COW",
+        "assets/svg/animals/cow.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "CRESCENT", svgPath: "assets/svg/shapes/crescent.svg")));
+                      title: "COW", svgPath: "assets/svg/animals/cow.svg")));
         }
       ],
       [
-        "CROSS",
-        "assets/svg/shapes/cross.svg",
+        "CHICK",
+        "assets/svg/animals/chick.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "CROSS", svgPath: "assets/svg/shapes/cross.svg")));
+                      title: "CHICK",
+                      svgPath: "assets/svg/animals/chick.svg")));
         }
       ],
       [
-        "CUBE",
-        "assets/svg/shapes/cube.svg",
+        "MOUSE",
+        "assets/svg/animals/mouse.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "CUBE", svgPath: "assets/svg/shapes/cube.svg")));
+                      title: "MOUSE",
+                      svgPath: "assets/svg/animals/mouse.svg")));
         }
       ],
       [
-        "CYLINDER",
-        "assets/svg/shapes/cylinder.svg",
+        "TURTLE",
+        "assets/svg/animals/turtle.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "CYLINDER", svgPath: "assets/svg/shapes/cylinder.svg")));
+                      title: "TURTLE",
+                      svgPath: "assets/svg/animals/turtle.svg")));
         }
       ],
       [
-        "HEXAGON",
-        "assets/svg/shapes/hexagon.svg",
+        "SHEEP",
+        "assets/svg/animals/sheep.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "HEXAGON", svgPath: "assets/svg/shapes/hexagon.svg")));
+                      title: "SHEEP",
+                      svgPath: "assets/svg/animals/sheep.svg")));
         }
       ],
       [
-        "OVAL",
-        "assets/svg/shapes/oval.svg",
+        "DUCK",
+        "assets/svg/animals/duck.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "OVAL", svgPath: "assets/svg/shapes/oval.svg")));
+                      title: "DUCK", svgPath: "assets/svg/animals/duck.svg")));
         }
       ],
       [
-        "PARALLELOGRAM",
-        "assets/svg/shapes/parallelogram.svg",
+        "PIG",
+        "assets/svg/animals/pig.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "PARALLELOGRAM", svgPath: "assets/svg/shapes/parallelogram.svg")));
+                      title: "PIG", svgPath: "assets/svg/animals/pig.svg")));
         }
       ],
       [
-        "PENTAGON",
-        "assets/svg/shapes/pentagon.svg",
+        "ALPACA",
+        "assets/svg/animals/alpaca.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "PENTAGON", svgPath: "assets/svg/shapes/pentagon.svg")));
+                      title: "ALPACA",
+                      svgPath: "assets/svg/animals/alpaca.svg")));
         }
       ],
       [
-        "RHOMBUS",
-        "assets/svg/shapes/rhombus.svg",
+        "HORSE",
+        "assets/svg/animals/horse.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "RHOMBUS", svgPath: "assets/svg/shapes/rhombus.svg")));
+                      title: "HORSE",
+                      svgPath: "assets/svg/animals/horse.svg")));
         }
       ],
       [
-        "SQUARE",
-        "assets/svg/shapes/square.svg",
+        "DOG",
+        "assets/svg/animals/dog.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "SQUARE", svgPath: "assets/svg/shapes/square.svg")));
+                      title: "DOG", svgPath: "assets/svg/animals/dog.svg")));
         }
       ],
       [
-        "STAR",
-        "assets/svg/shapes/star.svg",
+        "BAT",
+        "assets/svg/animals/bat.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "STAR", svgPath: "assets/svg/shapes/star.svg")));
+                      title: "BAT", svgPath: "assets/svg/animals/bat.svg")));
         }
       ],
       [
-        "TRIANGLE",
-        "assets/svg/shapes/triangle.svg",
+        "RABBIT",
+        "assets/svg/animals/rabbit.svg",
         () {
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ItemScreen(
-                      title: "TRIANGLE", svgPath: "assets/svg/shapes/triangle.svg")));
+                      title: "RABBIT",
+                      svgPath: "assets/svg/animals/rabbit.svg")));
         }
       ],
     ];
     return GridViewsItems(
       contentList: contentList,
-      title: "Shapes",
+      title: "COLOR VIDEO SONGS",
     );
   }
 }
