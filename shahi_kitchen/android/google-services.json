@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813171807072",
+    "project_id": "shashikitchen-5bd72",
+    "storage_bucket": "shashikitchen-5bd72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813171807072:android:4ec0d0ca7d095c7d540405",
+        "android_client_info": {
+          "package_name": "com.shashi.kitchen.ah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjvLWsrB8TzqolzC18vfxY80JsrtnFzFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

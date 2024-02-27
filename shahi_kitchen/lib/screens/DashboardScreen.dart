@@ -18,7 +18,6 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-
   double homeHeight = 40;
   double cartHeight = 30;
   double userHeight = 30;
@@ -26,7 +25,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
   String homeSvg = "assets/svg/home_red.svg";
   String cartSvg = "assets/svg/cart_black.svg";
   String userSvg = "assets/svg/user_black.svg";
-
 
   int index = 0;
 
@@ -46,7 +44,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             bottom: 18,
             left: 18,
             right: 18,
-            height: 70,
+            height: 50,
             child: Container(
               decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.white),
@@ -55,13 +53,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       topLeft: Radius.circular(22),
                       bottomLeft: Radius.circular(52),
                       bottomRight: Radius.circular(52)),
-                  color: Colors.black.withOpacity(0.7)),
+                  color: Colors.black.withOpacity(0.5)),
               child: Row(
-
                 children: [
                   Spacer(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         index = 0;
                         homeHeight = 40;
@@ -75,12 +72,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
                       height: homeHeight,
-                      child: SvgPicture.asset(homeSvg,height: homeHeight,),
+                      child: SvgPicture.asset(
+                        homeSvg,
+                        height: homeHeight,
+                      ),
                     ),
                   ),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         index = 1;
                         homeHeight = 30;
@@ -94,12 +94,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
                       height: cartHeight,
-                      child: SvgPicture.asset(cartSvg,height: cartHeight,),
+                      child: SvgPicture.asset(
+                        cartSvg,
+                        height: cartHeight,
+                      ),
                     ),
                   ),
                   Spacer(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
                         index = 2;
                         homeHeight = 30;
@@ -108,13 +111,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         homeSvg = "assets/svg/home_black.svg";
                         cartSvg = "assets/svg/cart_black.svg";
                         userSvg = "assets/svg/user_red.svg";
-
                       });
                     },
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
                       height: userHeight,
-                      child: SvgPicture.asset(userSvg,height: userHeight,),
+                      child: SvgPicture.asset(
+                        userSvg,
+                        height: userHeight,
+                      ),
                     ),
                   ),
                   Spacer(),

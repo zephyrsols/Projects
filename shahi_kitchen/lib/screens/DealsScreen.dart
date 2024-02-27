@@ -1,7 +1,10 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
+import '../cartDatabase/CartDatabase.dart';
 import '../util/DealsList.dart';
 
 class DealsScreen extends StatefulWidget {
@@ -13,17 +16,31 @@ class DealsScreen extends StatefulWidget {
 
 class _DealsScreenState extends State<DealsScreen> {
   DealsList dealsList = DealsList();
+  CartDatabase cartDatabase = CartDatabase();
+  final _myBox = Hive.box("cart");
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    if (_myBox.get("ITEMS") != null) {
+      setState(() {
+        cartDatabase.loadData();
+      });
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 70),
-          child: ListView.builder(
-              itemCount: dealsList.list.length,
-              itemBuilder: (context, index) {
-                return Card(
+        child: ListView.builder(
+            padding: EdgeInsets.only(bottom: 55),
+            itemCount: dealsList.list.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Card(
                   color: Colors.white,
                   child: Column(
                     children: [
@@ -87,8 +104,24 @@ class _DealsScreenState extends State<DealsScreen> {
                             padding: const EdgeInsets.only(right: 10),
                             child: GestureDetector(
                               onTap: () {
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                    content: Text(dealsList.list[index][0])));
+                                setState(() {
+                                  cartDatabase.items.add([
+                                    "${dealsList.list[index][3]} Deal",
+                                    "${dealsList.list[index][2]}",
+                                    ""
+                                  ]);
+                                  cartDatabase.updateDatabase();
+                                });
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                        backgroundColor: Colors.transparent,
+                                        content: AwesomeSnackbarContent(
+                                          title: dealsList.list[index][3] +
+                                              " Deal",
+                                          message:
+                                              "You are ordering ${dealsList.list[index][3]} Deal with price of ${dealsList.list[index][2]}",
+                                          contentType: ContentType.success,
+                                        )));
                               },
                               child: const ZoomTapAnimation(
                                 child: Icon(
@@ -103,9 +136,9 @@ class _DealsScreenState extends State<DealsScreen> {
                       )
                     ],
                   ),
-                );
-              }),
-        ),
+                ),
+              );
+            }),
       ),
     );
   }

@@ -21,12 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Color dealsOutlineClr = Colors.white;
   Color extraOutlineClr = Colors.white;
 
-
-
   double homeHeight = 40;
   double cartHeight = 30;
   double userHeight = 30;
-
 
   int index = 0;
 
@@ -137,21 +134,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Expanded(
                     child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 500),
-                      transitionBuilder:
-                          (Widget child, Animation<double> animation) {
-                        return ScaleTransition(scale: animation, child: child);
-                      },
-                      child: screens[index],
-                    )),
+                  duration: const Duration(milliseconds: 500),
+                  transitionBuilder:
+                      (Widget child, Animation<double> animation) {
+                    return ScaleTransition(scale: animation, child: child);
+                  },
+                  child: screens[index],
+                )),
               ],
             ),
           ),
-
         ],
       ),
     );
   }
+
   Widget itemContainer(Color color, String svgPicture) {
     return Container(
       padding: const EdgeInsets.all(10),

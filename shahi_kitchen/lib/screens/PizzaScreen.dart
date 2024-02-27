@@ -34,8 +34,9 @@ class _PizzaScreenState extends State<PizzaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(8, 8, 8, 70),
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
         child: ListView.builder(
+          padding: EdgeInsets.only(bottom: 40),
           itemBuilder: (context, index) {
             return Container(
               margin: const EdgeInsets.only(bottom: 20),
@@ -181,9 +182,9 @@ class _PizzaScreenState extends State<PizzaScreen> {
                                   onTap: () {
                                     setState(() {
                                       cartDatabase.items.add([
-                                        "${pizzaList.list[index][0]}",
+                                        "${pizzaList.list[index][0]} Pizza",
                                         "${pizzaList.list[index][3]}",
-                                        "${pizzaList.list[index][2]}"
+                                        "(${pizzaList.list[index][2]})"
                                       ]);
                                       cartDatabase.updateDatabase();
                                     });
