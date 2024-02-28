@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="BlackDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="android:background">#323232</item>
-        <!-- You can customize other style attributes here -->
-    </style>
-</resources>
