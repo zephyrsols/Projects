@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navLanguage"
+            android:icon="@drawable/language"
+            android:title="@string/change_language"
+            />
+        <item
+            android:id="@+id/navHowToUse"
+            android:icon="@drawable/question"
+            android:title="@string/how_to_use"/>
+        <item
+            android:id="@+id/navRatUs"
+            android:icon="@drawable/ratestar"
+            android:title="@string/rate_us"/>
+        <item
+            android:id="@+id/navFeedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/feedback"/>
+        <item
+            android:id="@+id/navMoreApps"
+            android:icon="@drawable/moreapps"
+            android:title="@string/more_apps"/>
+        <item
+            android:id="@+id/navShareApp"
+            android:icon="@drawable/share"
+            android:title="@string/share_app"/>
+        <item
+            android:id="@+id/navPrivacyPolicy"
+            android:icon="@drawable/privacy"
+            android:title="@string/privacy_policy"/>
+
+    </group>
+
+</menu>

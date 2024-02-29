@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai Image Generator</string>
+
+    <!--New Password Activity-->
+    <string name="backbtn">返回</string>
+    <string name="create_new_password">创建新密码</string>
+    <string name="pwd_detail_text">如果您忘记密码，请创建新密码。</string>
+    <string name="new_password">新密码</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_new_password">确认新密码</string>
+    <string name="continue_btn">继续</string>
+
+    <!--OnBoarding Activity One, Two, Three-->
+    <string name="girlimage">女孩图片</string>
+    <string name="onboading_text1">立即将您的话语\n变成艺术品</string>
+    <string name="skip">跳过</string>
+    <string name="next">下一步</string>
+    <string name="bearimage">熊图片</string>
+    <string name="onboarding_text3">释放您的创造力\n通过保存的艺术品</string>
+    <string name="get_started">开始</string>
+    <string name="artimage">艺术图片</string>
+    <string name="onboarding_text2">轻松创建和分享您的\n艺术品</string>
+
+    <!--Otp Code Verification Activity-->
+    <string name="otp_code_verification">OTP代码验证</string>
+    <string name="otp_detail_text">我们已将OTP代码发送到您的电子邮件\n和*****@gmail.com 输入下面的OTP代码进行验证</string>
+    <string name="don_t_receive_email">没有收到电子邮件？</string>
+    <string name="you_can_resend_code_in">您可以在</string>
+    <string name="s">秒后重新发送代码</string>
+    <string name="_timer">00</string>
+
+    <!--Reset Password Activity-->
+    <string name="sign_in_with_password">使用密码登录</string>
+    <string name="reset_your_password">重设密码</string>
+    <string name="please_enter_your_email_to_get_otp">请输入您的电子邮件以获取OTP</string>
+    <string name="email">电子邮件</string>
+
+    <!--Sign In With Password Activity-->
+    <string name="welcome_back">欢迎回来</string>
+    <string name="login_detail_text"><![CDATA[请输入您的电子邮件和密码以登录]]></string>
+    <string name="password">密码</string>
+    <string name="remember_me">记住我</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="don_t_have_an_account">还没有账号？</string>
+    <string name="sign_up">注册</string>
+    <string name="or_continue_with">或使用以下方式继续</string>
+    <string name="googlebtn">使用Google</string>
+    <string name="facebookbtn">使用Facebook</string>
+    <string name="twitterbtn">使用Twitter</string>
+    <string name="applebtn">使用Apple</string>
+    <string name="sign_in">登录</string>
+
+    <!--Sign In Activity-->
+    <string name="welcome_let_s_dive_in_into_your_account">欢迎，让我们深入到您的帐户中！</string>
+    <string name="continue_with_google">继续使用Google</string>
+    <string name="continue_with_apple">继续使用Apple</string>
+    <string name="continue_with_facebook">继续使用Facebook</string>
+    <string name="continue_with_twitter">继续使用Twitter</string>
+
+    <!--Dialog-->
+    <string name="dialog_text">请稍等....\n您将被重定向到主页</string>
+
+    <!--Sign Up Activity-->
+    <string name="hello_there">你好</string>
+    <string name="sign_up_text"><![CDATA[请输入您的电子邮件和密码\n创建一个帐户。]]></string>
+    <string name="i_agree_to_term_amp_privacy_policy"><![CDATA[我同意条款和隐私政策]]></string>
+
+    <!--Personal Info Activity-->
+    <string name="full_name">全名</string>
+    <string name="phone_number">电话号码</string>
+    <string name="_92_3000000000">92 3000000000</string>
+    <string name="date_of_birth">出生日期</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="gender">性别</string>
+    <string name="finish">完成</string>
+    <string name="personal_info_text_detail">请填写您的个人资料，不用担心，只有您能看到您的个人数据，其他人将无法看到。或者您可以现在跳过它</string>
+    <string name="enter_personal_info">输入个人信息</string>
+    <string-array name="gender_name">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <!--Home fragment-->
+    <string name="logo">标志</string>
+    <string name="create_a_visions_with_ai">用人工智能创建愿景</string>
+    <string name="what_visions_are_you_bringing_to_life_today">你今天要实现哪些愿景！</string>
+    <string name="aspect_ratio">宽高比</string>
+    <string name="square">正方形</string>
+    <string name="portrait">纵向</string>
+    <string name="landsacpe">横向</string>
+    <string name="select_style">选择风格</string>
+    <string name="no_style">无风格</string>
+    <string name="euphoric">愉悦</string>
+    <string name="tattoo">纹身</string>
+    <string name="_3d_game">3D游戏</string>
+    <string name="generate">生成</string>
+    <string name="watch_an_ad">观看广告</string>
+
+    <!--Saved fragment-->
+    <string name="anime_v2">动漫 V2</string>
+    <string name="saved">已保存</string>
+
+    <!--Permission Activity-->
+    <string name="gtand_permissions_to_start_app">授予启动应用的权限</string>
+    <string name="storage_permission">存储权限</string>
+    <string name="start">开始</string>
+    <string name="title_activity_language">语言活动</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">第一个片段</string>
+    <string name="second_fragment_label">第二个片段</string>
+    <string name="previous">上一页</string>
+
+    <!--Profile Fragment-->
+    <string name="save">保存</string>
+    <string name="personal_info">个人信息</string>
+
+    <!--Language Activity-->
+    <string name="language">语言</string>
+    <string name="english">英语</string>
+
+    <!--Setting Activity-->
+    <string name="settings">设置</string>
+    <string name="general">常规</string>
+    <string name="next_arrow"><![CDATA[>]]></string>
+    <string name="notification">通知</string>
+    <string name="security">安全</string>
+    <string name="follow_us_on_social_media">关注我们在社交媒体上</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="about_us">关于我们</string>
+    <string name="logout">登出</string>
+    <string name="about">关于</string>
+
+    <!--Security Activity-->
+    <string name="biometric_id">生物识别ID</string>
+    <string name="face_id">面部识别</string>
+    <string name="sms_authenticator">短信认证器</string>
+    <string name="google_authenticator">Google认证器</string>
+    <string name="device_management">设备管理</string>
+
+    <!--Follow Us Activity-->
+    <string name="discord">Discord</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="telegram">Telegram</string>
+
+    <!--Logout Dialog-->
+    <string name="are_you_sure_you_want_to_log_out">您确定要注销吗？</string>
+    <string name="cancel">取消</string>
+
+    <!--navigation menu options-->
+    <string name="home">主页</string>
+    <string name="explore">探索</string>
+    <!-- Toast 字符串 -->
+    <string name="first_grant_all_permissions">先授予所有权限</string>
+    <string name="fail_to_save_details">保存详细信息失败！</string>
+    <string name="check_your_inbox_password_resetting_email_sent">检查您的收件箱\n已发送密码重置电子邮件</string>
+    <string name="enter_your_email">输入您的电子邮件！</string>
+    <string name="fail_due_to">由于以下原因失败\n%1$s</string>
+    <string name="sign_in_successful">登录成功</string>
+    <string name="sign_in_failed">登录失败</string>
+    <string name="fill_all_fields">填写所有字段！</string>
+    <string name="authentication_failed">认证失败。</string>
+    <string name="accept_term_and_privacy_policy">接受条款和隐私政策</string>
+
+    <!-- 对话框 -->
+    <string name="updating_info">更新信息</string>
+    <string name="signing_in">登录中</string>
+    <string name="signing_up">注册中</string>
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
+
+    <!--图片样式-->
+    <string name="ai_art">AI艺术</string>
+    <string name="selected">已选择</string>
+    <string name="creatures">生物</string>
+    <string name="architecture">建筑</string>
+    <string name="cyberpunk">赛博朋克</string>
+    <string name="anime">动漫</string>
+    <string name="old_style">古老风格</string>
+    <string name="painting">绘画</string>
+    <string name="_abstract">抽象</string>
+    <string name="impressionism">印象派</string>
+    <string name="surreal">超现实</string>
+    <string name="_3d">3D</string>
+    <string name="origami">折纸</string>
+    <string name="hologram">全息</string>
+
+</resources>

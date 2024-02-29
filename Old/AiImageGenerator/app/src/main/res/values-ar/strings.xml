@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai Image Generator</string>
+    <!--New Password Activity-->
+    <string name="backbtn">رجوع</string>
+    <string name="create_new_password">إنشاء كلمة مرور جديدة</string>
+    <string name="pwd_detail_text">أنشئ كلمة مرور جديدة إذا نسيتها.</string>
+    <string name="new_password">كلمة مرور جديدة</string>
+    <string name="password_hint">********</string>
+    <string name="confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+    <string name="continue_btn">متابعة</string>
+
+    <!--OnBoarding Activity One, Two, Three-->
+    <string name="girlimage">صورة الفتاة</string>
+    <string name="onboading_text1">حوّل كلماتك إلى فن فورًا</string>
+    <string name="skip">تخطي</string>
+    <string name="next">التالي</string>
+    <string name="bearimage">صورة الدب</string>
+    <string name="onboarding_text3">أطلق أفكارك الإبداعية مع الفن المحفوظ</string>
+    <string name="get_started">بدء الاستخدام</string>
+    <string name="artimage">صورة الفن</string>
+    <string name="onboarding_text2">أنشئ وشارك أعمالك الفنية بسهولة</string>
+
+    <!--Otp Code Verification Activity-->
+    <string name="otp_code_verification">تحقق من رمز OTP</string>
+    <string name="otp_detail_text">لقد قمنا بإرسال رمز OTP إلى بريدك الإلكتروني\nو*****@gmail.com أدخل رمز OTP أدناه للتحقق</string>
+    <string name="don_t_receive_email">لم تستلم البريد الإلكتروني؟</string>
+    <string name="you_can_resend_code_in">يمكنك إعادة إرسال الرمز في </string>
+    <string name="s">ثانية</string>
+    <string name="_timer">00</string>
+
+    <!--Reset Password Activity-->
+    <string name="sign_in_with_password">تسجيل الدخول بكلمة المرور</string>
+    <string name="reset_your_password">إعادة تعيين كلمة المرور</string>
+    <string name="please_enter_your_email_to_get_otp">الرجاء إدخال بريدك الإلكتروني للحصول على رمز OTP</string>
+    <string name="email">البريد الإلكتروني</string>
+
+    <!--Sign In With Password Activity-->
+    <string name="welcome_back">مرحبًا مرة أخرى</string>
+    <string name="login_detail_text"><![CDATA[الرجاء إدخال بريدك الإلكتروني وكلمة المرور لتسجيل الدخول]]></string>
+    <string name="password">كلمة المرور</string>
+    <string name="remember_me">تذكرني</string>
+    <string name="forget_password">نسيت كلمة المرور؟</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="sign_up">سجل الآن</string>
+    <string name="or_continue_with">أو تابع باستخدام</string>
+    <string name="googlebtn">زر Google</string>
+    <string name="facebookbtn">زر Facebook</string>
+    <string name="twitterbtn">زر Twitter</string>
+    <string name="applebtn">زر Apple</string>
+    <string name="sign_in">تسجيل الدخول</string>
+
+    <!--Sign In Activity-->
+    <string name="welcome_let_s_dive_in_into_your_account">مرحبًا دعنا نغوص في حسابك!</string>
+    <string name="continue_with_google">المتابعة باستخدام Google</string>
+    <string name="continue_with_apple">المتابعة باستخدام Apple</string>
+    <string name="continue_with_facebook">المتابعة باستخدام Facebook</string>
+    <string name="continue_with_twitter">المتابعة باستخدام Twitter</string>
+
+    <!--Dialog-->
+    <string name="dialog_text">الرجاء الانتظار....\nستتم إعادة توجيهك إلى الصفحة الرئيسية</string>
+
+    <!--Sign Up Activity-->
+    <string name="hello_there">مرحبًا</string>
+    <string name="sign_up_text">!الرجاء إدخال بريدك الإلكتروني وكلمة المرور\nلإنشاء حساب.</string>
+    <string name="i_agree_to_term_amp_privacy_policy">أوافق على الشروط وسياسة الخصوصية></string>
+    <!--Personal Info Activity-->
+    <string name="full_name">الاسم الكامل</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="_92_3000000000">92 3000000000</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="gender">الجنس</string>
+    <string name="finish">انتهاء</string>
+    <string name="personal_info_text_detail">الرجاء إدخال ملفك الشخصي، لا داعي للقلق، يمكن أن ترى بياناتك الشخصية فقط، لا يستطيع أحد آخر رؤيتها. أو يمكنك تخطيها الآن.</string>
+    <string name="enter_personal_info">أدخل المعلومات الشخصية</string>
+    <string-array name="gender_name">
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+
+    <!--Home fragment-->
+    <string name="logo">شعار</string>
+    <string name="create_a_visions_with_ai">إنشاء رؤى بواسطة الذكاء الاصطناعي</string>
+    <string name="what_visions_are_you_bringing_to_life_today">ما هي الرؤى التي تجلبها للحياة اليوم؟</string>
+    <string name="aspect_ratio">نسبة الارتفاع إلى العرض</string>
+    <string name="square">مربع</string>
+    <string name="portrait">عمودي</string>
+    <string name="landsacpe">أفقي</string>
+    <string name="select_style">اختر النمط</string>
+    <string name="no_style">بدون نمط</string>
+    <string name="euphoric">إيوفوريك</string>
+    <string name="tattoo">وشم</string>
+    <string name="_3d_game">لعبة ثلاثية الأبعاد</string>
+    <string name="generate">إنشاء</string>
+    <string name="watch_an_ad">مشاهدة إعلان</string>
+
+    <!--Saved fragment-->
+    <string name="anime_v2">أنمي V2</string>
+    <string name="saved">تم الحفظ</string>
+
+    <!--Permission Activity-->
+    <string name="gtand_permissions_to_start_app">منح الصلاحيات لبدء التطبيق</string>
+    <string name="storage_permission">صلاحية التخزين</string>
+    <string name="start">بدء</string>
+    <string name="title_activity_language">نشاط اللغة</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">الشاشة الأولى</string>
+    <string name="second_fragment_label">الشاشة الثانية</string>
+    <string name="previous">السابق</string>
+
+    <!--Profile Fragment-->
+    <string name="save">حفظ</string>
+    <string name="personal_info">المعلومات الشخصية</string>
+
+    <!--Language Activity-->
+    <string name="language">اللغة</string>
+    <string name="english">الإنجليزية</string>
+    <!--Setting Activity-->
+    <string name="settings">الإعدادات</string>
+    <string name="general">عام</string>
+    <string name="next_arrow"><![CDATA[>]]></string>
+    <string name="notification">الإشعارات</string>
+    <string name="security">الأمان</string>
+    <string name="follow_us_on_social_media">تابعنا على وسائل التواصل الاجتماعي</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="about_us">عنا</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="about">نبذة</string>
+
+    <!--Security Activity-->
+    <string name="biometric_id">التعرف البصري</string>
+    <string name="face_id">تعرف الوجه</string>
+    <string name="sms_authenticator">المصادقة عبر الرسائل القصيرة</string>
+    <string name="google_authenticator">مصادق Google</string>
+    <string name="device_management">إدارة الجهاز</string>
+
+    <!--Follow Us Activity-->
+    <string name="discord">ديسكورد</string>
+    <string name="instagram">إنستجرام</string>
+    <string name="twitter">تويتر</string>
+    <string name="facebook">فيسبوك</string>
+    <string name="telegram">تليجرام</string>
+
+    <!--Logout Dialog-->
+    <string name="are_you_sure_you_want_to_log_out">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="cancel">إلغاء</string>
+
+    <!--navigation menu options-->
+    <string name="home">الرئيسية</string>
+    <string name="explore">استكشاف</string>
+
+    <!-- سلاسل التوست -->
+    <string name="first_grant_all_permissions">منح الصلاحيات أولاً</string>
+    <string name="fail_to_save_details">فشل في حفظ التفاصيل!</string>
+    <string name="check_your_inbox_password_resetting_email_sent">تحقق من صندوق الوارد الخاص بك\nتم إرسال رسالة إعادة تعيين كلمة المرور</string>
+    <string name="enter_your_email">أدخل بريدك الإلكتروني!</string>
+    <string name="fail_due_to">فشل بسبب\n%1$s</string>
+    <string name="sign_in_successful">تم تسجيل الدخول بنجاح</string>
+    <string name="sign_in_failed">فشل تسجيل الدخول</string>
+    <string name="fill_all_fields">املأ جميع الحقول!</string>
+    <string name="authentication_failed">فشل التوثيق.</string>
+    <string name="accept_term_and_privacy_policy">قبول الشروط وسياسة الخصوصية</string>
+
+    <!-- الحوار -->
+    <string name="updating_info">تحديث المعلومات</string>
+    <string name="signing_in">تسجيل الدخول</string>
+    <string name="signing_up">التسجيل</string>
+
+    <!--Image Style-->
+    <string name="art_url">https://api.deepai.org/api/text2img</string>
+    <string name="creatures_url">https://api.deepai.org/api/cute-creature-generator</string>
+    <string name="fantasy_url">https://api.deepai.org/api/fantasy-world-generator</string>
+    <string name="architecture_url">https://api.deepai.org/api/text2img</string>
+    <string name="logo_url">https://api.deepai.org/api/text2img</string>
+    <string name="cyber_url">https://api.deepai.org/api/cyberpunk-generator</string>
+    <string name="anime_url">https://api.deepai.org/api/anime-portrait-generator</string>
+    <string name="old_url">https://api.deepai.org/api/old-style-generator </string>
+    <string name="painting_url">https://api.deepai.org/api/renaissance-painting-generator</string>
+    <string name="abstract_url">https://api.deepai.org/api/abstract-painting-generator</string>
+    <string name="impression_url">https://api.deepai.org/api/impressionism-painting-generator</string>
+    <string name="surreal_url">https://api.deepai.org/api/surreal-graphics-generator</string>
+    <string name="threeD_url">https://api.deepai.org/api/3d-objects-generator</string>
+    <string name="origami_url">https://api.deepai.org/api/origami-3d-generator</string>
+    <string name="hologram_url">https://api.deepai.org/api/hologram-3d-generator</string>
+    <string name="watercolor_url">https://api.deepai.org/api/watercolor-painting-generator</string>
+
+    <!--نمط الصورة-->
+    <string name="ai_art">فن الذكاء الاصطناعي</string>
+    <string name="selected">تم اختياره</string>
+    <string name="creatures">مخلوقات</string>
+    <string name="architecture">هندسة معمارية</string>
+    <string name="cyberpunk">سايبربانك</string>
+    <string name="anime">أنمي</string>
+    <string name="old_style">طراز قديم</string>
+    <string name="painting">رسم</string>
+    <string name="_abstract">تجريدي</string>
+    <string name="impressionism">الانطباعية</string>
+    <string name="surreal">سريالية</string>
+    <string name="_3d">ثلاثي الأبعاد</string>
+    <string name="origami">أوريغامي</string>
+    <string name="hologram">هولوغرام</string>
+
+
+
+</resources>
