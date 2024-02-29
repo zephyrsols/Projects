@@ -1,4 +1,4 @@
-package com.example.luxury.influencers.luxury_influencers
+package com.example.luxury_influencers
 
 import io.flutter.embedding.android.FlutterActivity
 
